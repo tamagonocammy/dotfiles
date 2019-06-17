@@ -1,0 +1,9 @@
+//META{"name":"Smaller Guild Icons","description":"Small guild icons with option to change the roundness. Please use the support server listed below if you need any help.","author":"Satoru","version":"1","website":"http://discord.gg/fjvwb95"}*//{}
+
+@import url(https://satoru8.github.io/Addons/SmallerGuildIcons.css);
+
+:root {
+    --round: 50%;  /* 50% Round, 0% Square*/
+    --size:  35px; /* Icon Size. 40px Small, 45px Default Size */
+	--friends: 25px /* 25px When Public button is on. -10px when public button is off. */
+}

@@ -1,0 +1,58 @@
+INFO 9/5/2019, 1:06:33 a. m.  cannot parse user config, use the default one
+(electron) The 'lstatSyncNoException' function has been deprecated and marked for removal.
+(electron) The 'lstatSyncNoException' function has been deprecated and marked for removal.
+DEBUG 9/5/2019, 1:06:33 a. m.  initSentry
+INFO 9/5/2019, 1:06:33 a. m.  luanchFromDiffVersion, pre version is undefined
+INFO 9/5/2019, 1:06:33 a. m.  overwriteThemeFolder
+(electron) The 'lstatSyncNoException' function has been deprecated and marked for removal.
+DEBUG 9/5/2019, 1:06:33 a. m.  initCountly
+INFO 9/5/2019, 1:06:33 a. m.  ------------------start------------------
+INFO 9/5/2019, 1:06:33 a. m.  typora version: 0.9.70
+DEBUG 9/5/2019, 1:06:33 a. m.  [ '/usr/share/typora/Typora' ]
+DEBUG 9/5/2019, 1:06:33 a. m.  /usr/share/typora/resources/app/locales/es-ES.lproj/Menu.json
+ERROR 9/5/2019, 1:06:33 a. m.  (node:28932) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+DEBUG 9/5/2019, 1:06:33 a. m.  app.openFile
+DEBUG 9/5/2019, 1:06:34 a. m.  [ 'github.css',
+  'newsprint.css',
+  'night.css',
+  'pixyll.css',
+  'whitey.css' ]
+INFO 9/5/2019, 1:06:38 a. m.  window.File && (function(){		File.setTheme();	})();
+INFO 9/5/2019, 1:07:29 a. m.  ------------------quit------------------
+(electron) The 'lstatSyncNoException' function has been deprecated and marked for removal.
+(electron) The 'lstatSyncNoException' function has been deprecated and marked for removal.
+DEBUG 9/5/2019, 1:07:38 a. m.  initSentry
+(electron) The 'lstatSyncNoException' function has been deprecated and marked for removal.
+DEBUG 9/5/2019, 1:07:38 a. m.  initCountly
+INFO 9/5/2019, 1:07:38 a. m.  ------------------start------------------
+INFO 9/5/2019, 1:07:38 a. m.  typora version: 0.9.70
+DEBUG 9/5/2019, 1:07:38 a. m.  [ '/usr/share/typora/Typora' ]
+DEBUG 9/5/2019, 1:07:38 a. m.  /usr/share/typora/resources/app/locales/es-ES.lproj/Menu.json
+ERROR 9/5/2019, 1:07:38 a. m.  (node:30353) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+DEBUG 9/5/2019, 1:07:38 a. m.  [ 'dracula.css',
+  'github.css',
+  'newsprint.css',
+  'night.css',
+  'pixyll.css',
+  'whitey.css' ]
+DEBUG 9/5/2019, 1:07:38 a. m.  app.openFile
+INFO 9/5/2019, 1:09:02 a. m.  ------------------quit------------------
+(electron) The 'lstatSyncNoException' function has been deprecated and marked for removal.
+(electron) The 'lstatSyncNoException' function has been deprecated and marked for removal.
+DEBUG 9/5/2019, 1:09:09 a. m.  initSentry
+(electron) The 'lstatSyncNoException' function has been deprecated and marked for removal.
+DEBUG 9/5/2019, 1:09:09 a. m.  initCountly
+INFO 9/5/2019, 1:09:09 a. m.  ------------------start------------------
+INFO 9/5/2019, 1:09:09 a. m.  typora version: 0.9.70
+DEBUG 9/5/2019, 1:09:09 a. m.  [ '/usr/share/typora/Typora' ]
+DEBUG 9/5/2019, 1:09:09 a. m.  /usr/share/typora/resources/app/locales/es-ES.lproj/Menu.json
+ERROR 9/5/2019, 1:09:09 a. m.  (node:32380) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+DEBUG 9/5/2019, 1:09:09 a. m.  [ 'dracula.css',
+  'github.css',
+  'newsprint.css',
+  'night.css',
+  'pixyll.css',
+  'whitey.css' ]
+DEBUG 9/5/2019, 1:09:09 a. m.  app.openFile
+INFO 9/5/2019, 1:09:13 a. m.  window.File && (function(){		File.setTheme();	})();
+INFO 9/5/2019, 1:10:32 a. m.  ------------------quit------------------

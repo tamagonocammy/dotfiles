@@ -1,0 +1,338 @@
+;=====================================================
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/jaagr/polybar
+;
+;   The README contains a lot of information
+;
+;=====================================================
+; find icon name : fc-match -a |grep -i Material
+; to find icon: xfd -fa MaterialIcons,
+; echo "\ueXXX" to print and paste here
+
+;This file has been edited by squash
+[colors]
+background = #00282a36
+;background = #222
+background-alt = #00475a36
+foreground = #f8f8f2
+;foreground = #dfdfdf
+foreground-alt = #f8f8f2
+primary = #ff79c6
+secondary = #f8f8f2
+alert = ${xrdb:color3:#ff5555}
+color2 = ${xrdb:color2:#bd93f9}
+
+
+[bar/burs]
+;monitor = ${env:MONITOR:eDP1}
+width = 100%
+height = 24
+offset-x = 2%
+offset-y = 0%
+
+bar-offset-x = 40
+bar-top-gap = 20
+bar-bottom-gap = 20
+fixed-center = true
+
+background = #aa282a36
+foreground =  #f8f8f2
+
+line-size = 4
+line-color = #00000000
+
+border-size = 3
+  border-color = #00000000
+enable-ipc = true
+;bottom = true
+border-left-size = 10
+border-right-size = 10
+border-top-size = 10
+;border-bottom-size = 10
+
+padding-left = 0
+padding-right = 2
+
+module-margin-left = 1
+module-margin-right = 2
+
+font-0 = "SauceCodePro Nerd Font:pixelsize=8;1"
+font-1 = "Wuncon Siji:style=bold:pixelsize=8:antialias=false;1"
+font-2 = Material Icons:size=8;2
+font-3 = M+ 1mn:pixelsize=8;1
+
+modules-left = i3 bspwm mpd
+modules-center =
+modules-right =   volume date battery wlan powermenu
+
+tray-detached = false
+tray-position = right
+tray-offset-x = -25
+tray-offset-y = 0
+tray-maxsize = 16
+tray-padding = 0
+tray-scale = 1
+
+wm-restack = i3
+
+[module/xwindow]
+type = internal/xwindow
+label = %title%
+label-maxlen = 50
+[module/updates-arch-combined]
+type = custom/script
+exec = ~/scripts/updates-arch-combined.sh
+interval = 600
+[module/wlan]
+
+type = internal/network
+interface = wlp3s0
+interval = 3.0
+
+format-connected = <ramp-signal> <label-connected>
+label-connected =  %essid%
+
+
+format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${self.format-connected-underline}
+label-disconnected = %ifname% disconnected
+label-disconnected-foreground = ${colors.foreground-alt}
+
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+ramp-signal-foreground = ${colors.foreground-alt}
+
+[module/filesystem]
+type = internal/fs
+interval = 25
+
+mount-0 = /
+format-mounted-prefix = " "
+label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = ${colors.foreground-alt}
+
+[module/notification-reddit]
+type = custom/script
+exec = ~/scripts/notification-reddit.sh
+interval = 60
+
+[module/bspwm]
+type = internal/bspwm
+
+ws-icon-0 = "1:一;一"
+ws-icon-1 = "2:二;二"
+ws-icon-2 = "3:三;三"
+ws-icon-3 = "4:四;四"
+ws-icon-4 = "5:五;五"
+ws-icon-5 = "6:六;六"
+ws-icon-6 = "7:七;七"
+ws-icon-7 = "8:八;八"
+ws-icon-8 = "9:九;九2
+ws-icon-9 = "0:十;十"
+
+label-focused = %icon%
+label-focused-background = #44475a
+label-focused-underline= #bd93f9
+label-focused-padding = 1
+
+label-occupied = %icon%
+label-occupied-padding = 1
+
+label-urgent = %icon%!
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 1
+
+label-empty = %icon%
+label-empty-foreground = ${colors.foreground-alt}
+label-empty-padding = 1
+
+; Separator in between workspaces
+; label-separator = |
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+label-mode-padding = 0
+label-mode-foreground = #44475a
+label-mode-background = #80282a36
+;customize workspace names
+ws-icon-0 = 1;一
+ws-icon-1 = 2;二
+ws-icon-2 = 3;三
+ws-icon-3 = 4;四
+ws-icon-4 = 5;五
+ws-icon-5 = 6;六
+ws-icon-6 = 7;七
+ws-icon-7 = 8;八
+ws-icon-8 = 9;九
+ws-icon-default =零
+; focused = Active workspace on focused monitor
+label-focused = %icon%
+label-focused-background = ${module/bspwm.label-focused-background}
+label-focused-underline = ${module/bspwm.label-focused-underline}
+label-focused-padding = ${module/bspwm.label-focused-padding}
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused = %icon%
+label-unfocused-padding = ${module/bspwm.label-occupied-padding}
+
+; visible = Active workspace on unfocused monitor
+label-visible = %icon%
+label-visible-background = ${self.label-focused-background}
+label-visible-underline = ${self.label-focused-underline}
+label-visible-padding = ${self.label-focused-padding}
+
+; urgent = Workspace with urgency hint set
+label-urgent = %icon%
+label-urgent-background = #ff5555
+label-urgent-padding = ${module/bspwm.label-urgent-padding}
+
+
+[module/mpd]
+type = internal/mpd
+format-online = <icon-prev> <icon-stop> <toggle> <label-song> <icon-next>
+
+icon-play = ⏵
+icon-pause = ⏸
+icon-stop = ⏹
+icon-prev = ⏮
+icon-next = ⏭
+icon-seekb = ⏪
+icon-seekf = ⏩
+icon-random = 🔀
+icon-repeat = 🔁
+icon-repeatone = 🔂
+icon-single = 🔂
+icon-consume = ✀
+
+
+[module/spotify]
+type = custom/script
+exec = ~/.config/polybar/spotify.sh %artist% - %title%
+tail = true
+interval = 2
+format = <label>
+
+
+[module/battery]
+
+type = internal/battery
+battery = BAT0
+adapter = AC
+full-at = 98
+
+format-charging = <animation-charging> <label-charging>
+animation-charging-0 = 
+animation-charging-1 = 
+
+format-discharging = <label-discharging>
+label-discharging =  %percentage%%
+
+format-full-prefix = " "
+format-full-prefix-foreground = ${colors.foreground-alt}
+
+
+ramp-capacity-foreground = ${colors.foreground-alt}
+
+animation-charging-foreground = ${colors.foreground-alt}
+animation-charging-framerate = 750
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+label = %percentage%%
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+label = %percentage_used%%
+
+[module/date]
+type = internal/date
+interval = 5
+
+date =
+date-alt = " %Y-%m-%d"
+
+time = %I:%M %p
+time-alt = %I:%M:%S %p
+
+format-prefix = 
+format-prefix-foreground = ${colors.foreground-alt}
+
+label = %date% %time%
+
+[module/volume]
+type = internal/alsa
+format-volume =  "<ramp-volume> <label-volume> "
+ramp-volume-0 =""
+ramp-volume-0-font = 2
+ramp-volume-1 = ""
+ramp-volume-1-font = 2
+ramp-volume-2 =" "
+ramp-volume-2-font = 2
+format-volume-foreground = ${colors.foreground-alt}
+
+format-muted = <label-muted>
+format-muted-foreground = ${colors.foreground-alt}
+label-muted ="  "
+format-muted-font = 2
+[module/temperature]
+type = internal/temperature
+thermal-zone = 0
+warn-temperature = 60
+
+format = <ramp> <label>
+
+format-warn = <ramp> <label-warn>
+format-warn-underline = ${self.format-underline}
+
+label = %temperature%
+label-warn = %temperature%
+label-warn-foreground = ${colors.secondary}
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-foreground = ${colors.foreground-alt}
+
+[module/powermenu]
+type = custom/menu
+
+format-spacing = 1
+
+label-open = 
+label-open-foreground = ${colors.secondary}
+label-close =  cancel
+label-close-foreground = ${xrdb:color9}
+label-separator = |
+label-separator-foreground = ${colors.foreground-alt}
+
+menu-0-0 = reboot
+menu-0-0-exec = reboot
+menu-0-1 = power off
+menu-0-1-exec = poweroff
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+pseudo-transparency = true
+
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+; vim:ft=dosini

@@ -1,0 +1,28 @@
+//META{"name":"Clean Dark Wallpaper Edition","description":"Simple & clean dark theme. Basic enhancements. User settings for variety. Transparent with wallpaper. Please use the support server listed below if you need any help.","author":"Satoru","version":"0.5","website":"http://discord.gg/fjvwb95"}*//{}
+
+@import url(https://satoru8.github.io/CleanDark/CleanDarkBG.css);
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans);
+
+:root {
+	--light: rgba(0, 0, 0, 0.5); /* Overall brightness. 1= black, 0 = transparent */
+	--mc: rgba(38, 50, 56, 1);	/* Main theme colour. */
+	--sc: rgb(255, 255, 255);   /* Secondary/accent colour. */
+	--chatbg: rgba(24, 24, 24, .0);	/* Chat background */
+	--text: rgb(255, 255, 255);	/* Chat text colour */
+	--round: 50%;	/* Icon Roundness. Pfps/Guilds 50% round, 5% Square. */
+	--profileradius: 0px; /* 0 is normal squared edges. Up to 45px for rounded profiles. */
+	--homeicon: url(https://rawgit.com/satoru8/Icons/master/homewhite.svg); /* Custom Home Icon. */
+	--font: 'Noto Sans',sans-serif;	
+	--fsize: 12px;	/* Font Size */
+	--sb:rgba(53, 149, 255, .1);    /* Scrollbar colour. Change .3 to 0 to hide scrollbar. */
+	--border: rgba(53, 149, 255, 0);	/* Border colour. Change .3 to 0 to hide borders. */
+    --block: none;  /* Default - none */
+
+    /* Uri's Status Chooser */
+	--sPickerOnlineBGColour: #43b581;
+    --sPickerIdleBGColour: #faa61a;
+    --sPickerDNDBGColour: #f04747;
+    --sPickerInviBGColour: #2f3136;
+}
+.appMount-3VJmYg {background: url(https://i.imgur.com/61zaWIW.jpg) center/cover no-repeat !important
+}
