@@ -11,4 +11,7 @@ They're FAR from a concise setup, mostly because I'm not a programmer, i'm just 
 * MPD
 * Sublime / Vim
 
+![Clean Desktop](https://i.imgur.com/phVglOi.png)
 
+
+![Fake Dirty](https://imgur.com/GtUIciY.png)
