@@ -50,7 +50,7 @@ Plugin 'ryanoasis/vim-devicons'
 
 " Tab behavior
 set expandtab
-let g:airline#extensions#tabline#enabled =1
+let g:airline#extensions#tabline#enabled =0
 set shiftwidth=2
 set softtabstop=2
 set tabstop=4
@@ -189,3 +189,38 @@ vmap <C-c> "+yi
 vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
 imap <C-v> <ESC>"+pa
+
+
+    " Remap Splits to not have to press ctrl-w first
+    nnoremap <C-J> <C-W><C-J>
+    nnoremap <C-K> <C-W><C-K>
+    nnoremap <C-L> <C-W><C-L>
+    nnoremap <C-H> <C-W><C-H>
+
+
+let g:startify_custom_header=[
+    \ '                          ',
+    \ '    ##############..... ##############     ',
+    \ '      ##############......##############   ',
+    \ '        ##########..........##########     ',
+    \ '        ##########........##########       ',
+    \ '        ##########.......##########        ',
+    \ '        ##########.....##########..        ',
+    \ '        ##########....##########.....      ',
+    \ '      ..##########..##########.........    ',
+    \ '    ....##########.#########.............  ',
+    \ '      ..################JJJ............    ',
+    \ '        ################.............      ',
+    \ '        ##############.JJJ.JJJJJJJJJJ      ',
+    \ '        ############...JJ...JJ..JJ  JJ     ',
+    \ '        ##########....JJ...JJ..JJ  JJ      ',
+    \ '        ########......JJJ..JJJ JJJ JJJ     ',
+    \ '        ######    .........                ',
+    \ '                .....                  ',
+    \ '                                       ',
+    \ ]
+    let g:startify_lists = [
+          \ { 'type': 'files',     'header': ['   Recent Files']            },
+          \ { 'type': 'dir',       'header': ['   Recent Files in  '. getcwd()] },
+\ ]
+    let g:startify_files_number = 5
