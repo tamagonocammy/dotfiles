@@ -5,6 +5,8 @@ nitrogen --restore
 compton -b &
 dunst &
 xfce4-power-manager &
+mpd 
+mpDris2 &
 
 ## Coloring
 getcolors () {
