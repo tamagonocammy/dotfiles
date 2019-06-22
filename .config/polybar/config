@@ -58,9 +58,9 @@ font-1 = "Wuncon Siji:style=bold:pixelsize=8:antialias=false;1"
 font-2 = Material Icons:size=8;2
 font-3 = M+ 1mn:pixelsize=8;1
 
-modules-left = player-mpris-tail 
-modules-center = i3 bspwm 
-modules-right = updates-arch pulseaudio wlan battery date powermenu
+modules-left =  i3 bspwm
+modules-center =
+modules-right = player-mpris-tail updates-arch pulseaudio wlan battery date powermenu
 
 ;tray-position = right
 tray-padding = 1
