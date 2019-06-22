@@ -1,3 +1,4 @@
+colorscheme dracula
 " Basic Vundle configuration
 set nocompatible   " Disable VI compatibility mode
 syntax on
@@ -5,9 +6,10 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 let g:dracula_colorterm = 0
-colorscheme dracula
 let g:airline_powerline_fonts = 1
-set guifont=Droid\ Sans\ Mono\ Nerd\ Font\ 11
+set mouse=a
+set guifont=SauceCodePro\ Nerd\ Font\ 11
+set guioptions-=T  "remove toolbar
 autocmd! BufWritePost ~/.vimrc nested :source ~/.vimrc
 " Bundles
 Plugin 'gmarik/vundle'
@@ -180,4 +182,10 @@ nnoremap [b :bprev<CR>
  nnoremap <leader>evm <C-w><C-v><C-l>:e $MYVIMRC<CR>
 
 map <C-S> :w<CR>
+ 
+colors dracula
 
+vmap <C-c> "+yi
+vmap <C-x> "+c
+vmap <C-v> c<ESC>"+p
+imap <C-v> <ESC>"+pa
