@@ -7,11 +7,11 @@ They're FAR from a concise setup, mostly because I'm not a programmer, i'm just 
 * Arch Linux
 * BSPWM
 * Vivaldi
-* Urxvt / st
+* Termite
 * MPD
-* Sublime / Vim
+* NeoVim
 
-![Clean Desktop](https://i.imgur.com/phVglOi.png)
+![Clean Desktop](https://imgur.com/LwZeEql.png)
 
 
-![Fake Dirty](https://imgur.com/GtUIciY.png)
+![Fake Dirty](https://imgur.com/DhwrShm.png)
