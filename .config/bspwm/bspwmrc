@@ -7,7 +7,8 @@ dunst &
 xfce4-power-manager &
 mpd 
 mpDris2 &
-
+xsetroot -cursor_name left_ptr &
+fcitx &
 ## Coloring
 getcolors () {
 	FOREGROUND=$(xrdb -query | grep 'foreground:'| awk '{print $NF}')
@@ -35,9 +36,9 @@ bspc config borderless_monocle true
 bspc config gapless_monocle true
 bspc config paddingless_monocle true
 bspc config single_monocle false
-bspc config top_padding 32
+bspc config top_padding 8
 bspc config right_padding 8
-bspc config bottom_padding 8
+bspc config bottom_padding 32
 bspc config left_padding 8
 bspc config border_radius 10
 ## Window rules
