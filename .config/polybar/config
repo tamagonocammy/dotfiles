@@ -18,7 +18,7 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #22000000
+background = #88282a36
 background-alt = #282a36
 ;foreground = ${xrdb:color7:#222}
 foreground = #f8f8f2
@@ -30,14 +30,14 @@ underline = #99ffffff
 
 [bar/burs]
 ;monitor = ${env:MONITOR:}
-width = 100%
+width = 90%
 height = 24
-;offset-x = 1%
-;offset-y = 1%
-radius = 0
+offset-x = 5%
+offset-y = 12
+radius = 10
 fixed-center = true
 enable-ipc = true
-
+bottom = true
 background = ${colors.background}
 foreground = ${colors.foreground}
 
@@ -58,9 +58,9 @@ font-1 = "Wuncon Siji:style=bold:pixelsize=8:antialias=false;1"
 font-2 = Material Icons:size=8;2
 font-3 = M+ 1mn:pixelsize=8;1
 
-modules-left =  i3 bspwm
-modules-center =
-modules-right = player-mpris-tail updates-arch pulseaudio wlan battery date powermenu
+modules-left = i3 bspwm 
+modules-center =  
+modules-right = player-mpris-tail github pulseaudio wlan battery date powermenu
 
 ;tray-position = right
 tray-padding = 1
@@ -77,6 +77,15 @@ exec = /usr/bin/weather
 interval = 1800
 format-underline = #6272a4
 
+[module/github]
+type = internal/github
+token = ${file:/home/cammy/github_token.txt}
+empty-notifications = false
+interval = 10
+format = <label>
+format-prefix = " "
+label = %notifications%
+format-underline =  #2F4F4F
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:30:...%
@@ -471,7 +480,7 @@ menu-3-0-exec = menu-open-0
 
 [settings]
 screenchange-reload = true
-;compositing-background = xor
+:compositing-background = xor
 ;compositing-background = screen
 ;compositing-foreground = source
 ;compositing-border = over
