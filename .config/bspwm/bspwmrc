@@ -9,6 +9,7 @@ mpd
 mpDris2 &
 xsetroot -cursor_name left_ptr &
 fcitx &
+xautolock -time 10 -locker slock &
 ## Coloring
 getcolors () {
 	FOREGROUND=$(xrdb -query | grep 'foreground:'| awk '{print $NF}')
@@ -44,28 +45,35 @@ bspc config border_radius 10
 ## Window rules
 # remove all rules first
 bspc rule -r *:*
-# 2 > web
-bspc rule -a Vivaldi desktop='^1' follow=on focus=on
+# 1 > web
+bspc rule -a Vivaldi-stable desktop='^1' follow=on focus=on
 bspc rule -a Transmission-gtk desktop='^1' follow=on focus=on
-# 3 > file
-bspc rule -a Thunar desktop='^3' follow=on focus=on
-bspc rule -a File-roller desktop='^3' follow=on focus=on
-# 4 > office
+# 2 > terminal and coding
+bspc rule -a Urxvt desktop='^2' follow=on focus=on
+bspc rule -a Gvim desktop='^2' follow=on focus=on
+bspc rule -a code-oss desktop='^2' follow=on focus=on
+
+# 3 > chat
+bspc rule -a discord desktop='^3' follow=on focus=on
+# 4 > file
+bspc rule -a Thunar desktop='^4' follow=on focus=on
+bspc rule -a File-roller desktop='^4' follow=on focus=on
+# 5 > office
 declare -a office=(Geany Gucharmap Evince \
 libreoffice-writer libreoffice-calc libreoffice-impress \
 libreoffice-startcenter libreoffice Soffice *:libreofficedev *:soffice)
 for i in ${office[@]}; do
-   bspc rule -a $i desktop='^4' follow=on focus=on; done
+   bspc rule -a $i desktop='^5' follow=on focus=on; done
 # 5 > media
 declare -a media=(Audacity mpv Gimp Gimp-2.8)
 for i in ${media[@]}; do
-   bspc rule -a $i desktop='^5' follow=on focus=on; done
-# 6 > settings
+   bspc rule -a $i desktop='^6' follow=on focus=on; done
+# 7 > settings
 declare -a settings=(Lxappearance Lxtask Lxrandr Arandr \
 System-config-printer.py Pavucontrol Exo-helper-1)
 for i in ${settings[@]}; do
-   bspc rule -a $i desktop='^6' state=floating follow=on focus=on; done
-bspc rule -a GParted desktop='^6' follow=on focus=on
+   bspc rule -a $i desktop='^7' state=floating follow=on focus=on; done
+bspc rule -a GParted desktop='^7' follow=on focus=on
 # special rules
 bspc rule -a Audacious state=floating follow=on focus=on
 bspc rule -a Firefox:Places state=floating follow=on focus=on
