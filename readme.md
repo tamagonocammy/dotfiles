@@ -11,7 +11,7 @@ They're FAR from a concise setup, mostly because I'm not a programmer, i'm just 
 * MPD
 * NeoVim
 
-![Clean Desktop](https://imgur.com/LwZeEql.png)
+![Clean Desktop](https://i.imgur.com/Sny486M.png)
 
 
-![Fake Dirty](https://imgur.com/DhwrShm.png)
+![Fake Dirty](https://i.imgur.com/fBihAMz.png)
