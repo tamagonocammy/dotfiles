@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-	urxvt
+	termite
 # program launcher
 super + q
 	rofi -show run 
@@ -12,22 +12,17 @@ super + Tab
     rofi -show window
 # make sxhkd reload its configuration files:
 super + s
-	pkill -USR1 -x sxhkd && dunstify -u critical "sxhkd" "Configuration reloaded!"
+	pkill -USR1 -x sxhkd; \
+    dunstify "sxhkd" "Configuration reloaded!"
 
 
 # Print screen
-# Without the sleep scrot crashes with:
-# giblib error: couldn't grab keyboard:Resource temporarily unavailable
-  Print
-      sleep 0.2; \
-      scrot -s $HOME/Imágenes/Pantallazos/%Y-%m-%d_%H%M%S-$wx$h_scrot.png
+Print
+  teiler
 
-  control + Print
-      scrot $HOME/Imágenes/Pantallazos/%Y-%m-%d_%H%M%S-$wx$h_scrot.png
 # lock screen
-
 super + c 
-    corrupter.sh
+    mantablockscreen
 #
 # bspwm hotkeys
 #
@@ -46,7 +41,9 @@ super + shift + {e,r}
 super + shift + q
 	bspc node -c
 
-
+# Help
+super + F1
+    urxvt -geometry 170x30 -name urxvt_keys_help -e ~/.config/sxhkd/show_help.sh
 
 # alternate between the tiled and monocle layout
 super + f

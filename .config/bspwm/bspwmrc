@@ -1,5 +1,6 @@
 #!/bin/bash
 sxhkd &
+polybar burs &
 nitrogen --restore 
 compton -b &
 dunst &
@@ -37,9 +38,9 @@ bspc config borderless_monocle true
 bspc config gapless_monocle true
 bspc config paddingless_monocle true
 bspc config single_monocle false
-bspc config top_padding 32
+bspc config top_padding 8
 bspc config right_padding 8
-bspc config bottom_padding 8
+bspc config bottom_padding 28
 bspc config left_padding 8
 bspc config border_radius 10
 ## Window rules
