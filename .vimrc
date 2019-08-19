@@ -1,17 +1,36 @@
-colorscheme dracula
-colors dracula
-" Basic Vundle configuration
+
+"
+"       ________ ++     ________
+"      /VVVVVVVV\++++  /VVVVVVVV\
+"      \VVVVVVVV/++++++\VVVVVVVV/
+"       |VVVVVV|++++++++/VVVVV/'
+"       |VVVVVV|++++++/VVVVV/'
+"      +|VVVVVV|++++/VVVVV/'+
+"    +++|VVVVVV|++/VVVVV/'+++++
+"  +++++|VVVVVV|/VVVVV/'+++++++++
+"    +++|VVVVVVVVVVV/'+++++++++
+"      +|VVVVVVVVV/'+++++++++
+"       |VVVVVVV/'+++++++++
+"       |VVVVV/'+++++++++
+"       |VVV/'+++++++++
+"       'V/'   ++++++
+"                ++
+"
+" My Vim's Configuration by Camila Valencia~
 set nocompatible   " Disable VI compatibility mode
 syntax on
+colorscheme dracula
+colors dracula
+set background=dark
 filetype off
 call plug#begin('~/.vim/plugged')
 let g:airline_powerline_fonts = 1
 set mouse=a
-set guifont=SauceCodePro\ Nerd\ Font\ 11
-set guioptions-=T  "remove toolbar
+set guifont=UbuntuMono\ Nerd\ Font\ 11
+set guioptions-=T
+set guioptions-=l"remove toolbar and scrollbars
 set termguicolors
 " Bundles
-Plug 'gmarik/vundle'
 Plug 'vim-ruby/vim-ruby'
 Plug 'scrooloose/syntastic'
 Plug 'scrooloose/nerdtree'
@@ -47,8 +66,20 @@ Plug 'metakirby5/codi.vim'
 Plug 'Valloric/YouCompleteMe'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'majutsushi/tagbar'
+Plug 'motemen/git-vim'
+Plug 'Townk/vim-autoclose'
+Plug 'davidhalter/jedi-vim'
+Plug 'michaeljsmith/vim-indent-object'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'lilydjwg/colorizer'
+if has('python')
+    " YAPF formatter for Python
+    Plug 'pignacio/vim-yapf-format'
+endif
+Plug 'anned20/vimsence'
 call plug#end()
-
 " Tab behavior
 set expandtab
 let g:airline#extensions#tabline#enabled =1
@@ -180,8 +211,6 @@ nnoremap [b :bprev<CR>
       map <C-S-Tab> <Esc>:tabprev<CR>
  nnoremap <leader>evm <C-w><C-v><C-l>:e $MYVIMRC<CR>
 
-map <C-S> :w<CR>
- 
 
 vmap <C-c> "+yi
 vmap <C-x> "+c
@@ -243,3 +272,20 @@ nnoremap <leader>gpl :Dispatch! git pull<CR>
 " buffer management
 nnoremap  <silent>   <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
 nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
+if has('gui_running')
+  colorscheme dracula
+endif
+
+" Jedi-vim ------------------------------
+
+" All these mappings work only for python code:
+" Go to definition
+let g:jedi#goto_command = ',d'
+" Find ocurrences
+let g:jedi#usages_command = ',o'
+" Find assignments
+let g:jedi#goto_assignments_command = ',a'
+" Go to definition in new tab
+nmap ,D :tab split<CR>:call jedi#goto()<CR>
+
+
