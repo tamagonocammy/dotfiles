@@ -5,13 +5,13 @@ These are my dotfiles, that i use on my Arch Linux partition.
 They're FAR from a concise setup, mostly because I'm not a programmer, i'm just interested on tiling wms.
 
 * Arch Linux
-* BSPWM
-* Vivaldi
-* Urxvt
-* MPD
-* NeoVim
+* XFCE/BSPWM
+* Chromium
+* Termite
+* MPD/Spotify
+* Vim
 
-![Clean Desktop](https://i.imgur.com/Sny486M.png)
+![Clean Desktop](https://i.imgur.com/RCfETCR.png)
 
 
-![Fake Dirty](https://i.imgur.com/fBihAMz.png)
+![Fake Dirty](https://imgur.com/5R6TqBU.png)
