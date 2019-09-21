@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-	termite
+	st 
 # program launcher
 super + q
 	rofi -show run 
@@ -13,16 +13,16 @@ super + Tab
 # make sxhkd reload its configuration files:
 super + s
 	pkill -USR1 -x sxhkd; \
-    dunstify "sxhkd" "Configuration reloaded!"
+    notify-send sxhkd "Configuration reloaded!"
 
 
 # Print screen
 Print
-  teiler
+ xfce4-screenshooter 
 
 # lock screen
 super + c 
-    mantablockscreen
+    xflock4
 #
 # bspwm hotkeys
 #

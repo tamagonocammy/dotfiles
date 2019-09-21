@@ -17,56 +17,72 @@
 ;==========================================================
 
 [colors]
-;background = ${xrdb:color0:#222}
-background = #80282a36
-background-alt = #282a36
-;foreground = ${xrdb:color7:#222}
-foreground = #f8f8f2
-foreground-alt = #f8f8f2
-primary = #ffb52a
-secondary = #e60053
-alert = #bd2c40
-underline = #99ffffff
+background = #96282828
+foreground = #fbf1c7
+red        = #fb4934
+green      = #b8bb26
+yellow     = #fabd2f
+blue       = #83a598
+purple     = #d3869b
+teal       = #8ec07c
+orange     = #fe8019
+gray       = #a89984
 
 [bar/burs]
-;monitor = ${env:MONITOR:}
-width = 100%
-height = 24
-offset-x = 0%
-offset-y = 5
-fixed-center = true
+; Size
+width  = 100%
+height = 22
+
+
+; Offset
+;offset-x = 0%
+;offset-y = 5
 enable-ipc = true
+
+; Position
 bottom = true
+
+; Radius
+radius = 0
+
+; Align modules fixed to middle
+fixed-center = true
+
+; Colors
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 3
-line-color = #f00
+; Underline
+line-size  = 2
+line-color = ${colors.foreground}
 
-border-size = 0
-border-color = #00000000
+; Border
+border-size  = 0
+border-color = ${colors.background}
 
-padding-left = 2
-padding-right = 2
+; Padding
+padding-left  = 0
+padding-right = 0
 
-module-margin-left = 0
-module-margin-right = 2
+; Margin of modules
+module-margin-left  = 0
+module-margin-right = 0
 
-font-0 = "SauceCodePro Nerd Font:pixelsize=8;1"
-font-1 = "Wuncon Siji:style=bold:pixelsize=8:antialias=false;1"
-font-2 = Material Icons:size=8;2
-font-3 = M+ 1mn:pixelsize=8;1
+font-0 = "UbuntuMono Nerd Font:pixelsize=10;1"
+font-1 = "Font Awesome 5 Free:style=bold:pixelsize=10:antialias=false;1"
+font-2 = Material Icons:size=10;2
+font-3 = Noto Sans CJK JP:pixelsize=9;1:antialias=true;0	
 
 modules-left = i3 bspwm 
-modules-center =  
-modules-right = player-mpris-tail kdeconnect pulseaudio wlan battery date powermenu
+modules-center =  player-mpris-tail 
+modules-right =  temperature pulseaudio battery date  
 
 ;tray-position = right
-tray-padding = 2
+tray-padding = 0
 tray-offset-x = 0
 tray-offset-y = 0
 tray-scale = 1.0
-
+tray-background = ${colors.background}
 cursor-click = pointer
 cursor-scroll = ns-resize
 
@@ -80,22 +96,8 @@ format-underline = #6272a4
 type = custom/text
 content-padding = 1
 content = menu
-content-underline = #f8f8f2
+content-underline = #ebdbb2
 click-left = "jgmenu_run >/dev/null 2>&1 &"
-
-[module/github]
-type = internal/github
-token = ${file:/home/cammy/github_token.txt}
-empty-notifications = false
-interval = 10
-format = <label>
-format-prefix = " "
-label = %notifications%
-format-underline =  #2F4F4F
-[module/xwindow]
-type = internal/xwindow
-label = %title:0:30:...%
-status_command python /usr/lib/python3.7/site-packages/powerline/bindings/i3/powerline-i3.py
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -113,16 +115,7 @@ label-indicator-margin = 1
 label-indicator-background = ${colors.secondary}
 label-indicator-underline = ${colors.secondary}
 
-[module/updates-arch]
-type = custom/script
-exec = "arch_updates -s"
-tail = true
-format = <label>
-format-prefix = " "
-click-right = "arch_updates -u&"
-click-left = "arch_updates -c&"
-click-middle = "arch_updates -n"
-format-underline = #1793d0
+
 [module/filesystem]
 type = internal/fs
 interval = 25
@@ -141,10 +134,11 @@ index-sort = true
 enable-scroll = false
 format = <label-state>
 label-focused = "%icon%"
-label-focused-padding = 2
-label-focused-underline = ${colors.underline}
+label-focused-padding = 1
+label-focused-underline = ${colors.green}
+label-focused-foreground = ${colors.foreground}
 label-occupied = "%icon%"
-label-occupied-padding = 2
+label-occupied-padding = 1
 label-empty =
 
 label-urgent = %icon%
@@ -162,46 +156,6 @@ ws-icon-6 = 7;七
 ws-icon-7 = 8;八
 ws-icon-8 = 9;九
 ws-icon-9 = 0;十
-[module/i3]
-type = internal/i3
-format = <label-state>
-pin-workspaces = true
-strip-wsnumbers = true
-index-sort = true
-enable-scroll = false
-
-ws-icon-0 = 1;一
-ws-icon-1 = 2;二
-ws-icon-2 = 3;三
-ws-icon-3 = 4;四
-ws-icon-4 = 5;五
-ws-icon-5 = 6;六
-ws-icon-6 = 7;七
-ws-icon-7 = 8;八
-ws-icon-8 = 9;九
-
-label-mode = %icon%
-label-mode-padding = 2
-label-mode-foreground = #000
-label-mode-background = ${colors.primary}
-;label-focused-foreground = ${colors.underline}
-
-label-focused = %icon%
-label-focused-padding = 2
-label-focused-underline = ${colors.underline}
-label-focused-background = #44000000
-
-label-unfocused = %icon%
-label-unfocused-padding = 2
-label-unfocused-foreground = #ffffff
-
-label-urgent = %icon%
-label-urgent-padding = 2
-label-urgent-foreground = #FF5555
-
-label-visible = %icon%
-label-visible-padding = 2
-label-visible-foreground = #ffffff
 
 
 [module/player-mpris-tail]
@@ -209,7 +163,8 @@ type = custom/script
 exec = ~/.config/polybar/player-mpris-tail.py --icon-playing  --icon-paused  --icon-stopped  --icon-none  -f ' {:artist:{artist}:}{:artist:: :}{:t60:{title}:} %{A1:~/.config/polybar/player-mpris-tail.py previous:}  %{A} %{A1:~/.config/polybar/player-mpris-tail.py play-pause:} {icon-reversed} %{A} %{A1:~/.config/polybar/player-mpris-tail.py next:}  %{A}'
 tail = true
 label = %output%
-format-underline = #bd93f9
+label-underline = #1db954
+label-padding = 1
 
 [module/mpd]
 type = internal/mpd
@@ -224,7 +179,6 @@ icon-stop = 
 icon-play = 
 icon-pause = 
 icon-next = 
-format-online-underline = #50fa7b
 
 
 [module/xbacklight]
@@ -254,7 +208,6 @@ type = internal/cpu
 interval = 1
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline =#ff5555
 
 label = %percentage:2%%
 
@@ -265,7 +218,6 @@ format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 ;format-underline = ${colors.underline}
 label = %gb_used% / %gb_total%
-format-underline = #ffb86c
 
 
 [module/eth]
@@ -296,62 +248,58 @@ time = %I:%M %p
 time-alt = %I:%M:%S %p
 
 format-prefix = 
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #ff79c6
+format-prefix-foreground = ${colors.foreground}
+
 
 label = %date% %time%
 
+label-foreground = ${colors.foreground}
+label-underline = ${colors.green}
+format-prefix-underline = ${colors.green}
+label-padding = 1
+format-prefix-padding-left = 1
 [module/pulseaudio]
 type = internal/pulseaudio
 
-format-volume 32123= <label-volume> <bar-volume>
-label-volume =  %percentage%%
-label-volume-foreground = ${root.foreground}
+; Volume label
+label-volume            =  %percentage%%
+label-volume-underline = ${colors.blue}
+label-volume-foreground = ${colors.foreground}
+label-volume-padding    = 2
 
-label-muted =  muted
-label-muted-foreground = #666
-sink = alsa_output.usb-Burr-Brown_from_TI_USB_Audio_CODEC-00
-bar-volume-width = 10
-bar-volume-foreground-0 = #55aa55
-bar-volume-foreground-1 = #55aa55
-bar-volume-foreground-2 = #55aa55
-bar-volume-foreground-3 = #55aa55
-bar-volume-foreground-4 = #55aa55
-bar-volume-foreground-5 = #f5a70a
-bar-volume-foreground-6 = #ff5555
-bar-volume-gradient = false
-bar-volume-indicator = |
-bar-volume-indicator-font = 2
-bar-volume-fill = ─
-bar-volume-fill-font = 2
-bar-volume-empty = ─
-bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${colors.foreground-alt}
-label-volume-underline = #8be9fd
-
+; Muted label
+label-muted            =  Muted
+label-muted- = ${colors.red}
+label-muted-foreground = ${colors.foreground}
+label-muted-padding    = 2
 [module/wlan]
 
 type = internal/network
 interface = wlp3s0
 interval = 3.0
 
-format-connected = <ramp-signal> <label-connected>
+format-connected = <ramp-signal><label-connected>
 label-connected =  %essid%
+label-connected-background = ${colors.blue}
+label-connected-foreground = ${colors.foreground}
 
 
 format-disconnected = <label-disconnected>
 ;format-disconnected-underline = ${self.format-connected-underline}
 label-disconnected = %ifname% disconnected
-label-disconnected-foreground = ${colors.foreground-alt}
+label-disconnected-foreground = ${colors.foreground}
+label-disconnected-background = ${colors.red}
 
 ramp-signal-0 = 
 ramp-signal-1 = 
 ramp-signal-2 = 
 ramp-signal-3 = 
 ramp-signal-4 = 
-ramp-signal-foreground = ${colors.foreground-alt}
-format-connected-underline = #ff5555
-format-disconnected-underline = #f00
+ramp-signal-foreground = ${colors.foreground}
+ramp-signal-background = ${colors.blue}
+ramp-signal-padding = 1 
+format-connected-background = ${colors.blue}
+format-disconnected-background = ${colors.red}
 [module/alsa]
 type = internal/alsa
 
@@ -382,59 +330,47 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/battery]
 type = internal/battery
+
+; Full battery level
+full-at = 96
+
+; Battery and adapter
 battery = BAT0
 adapter = ADP1
-full-at = 98
 
-format-charging = <animation-charging> <label-charging>
-format-charging-underline = ${colors.underline}
+; Charging label
+label-charging            =  %percentage%%
+label-charging-underline = ${colors.teal}
+label-charging-foreground = ${colors.foreground}
+label-charging-padding    = 2
 
-format-discharging = <animation-discharging> <label-discharging>
-format-discharging-underline = ${self.format-charging-underline}
+; Discharging label
+label-discharging            =  %percentage%%
+label-discharging-underline = ${colors.red}
+label-discharging-foreground = ${colors.foreground}
+label-discharging-padding    = 2
 
-format-full-prefix = " "
-format-full-prefix-foreground = ${colors.foreground-alt}
-format-full-underline = ${self.format-charging-underline}
-
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-foreground = ${colors.foreground-alt}
-
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-3 = 
-animation-charging-4 = 
-animation-charging-foreground = ${colors.foreground-alt}
-animation-charging-framerate = 750
-
-animation-discharging-0 = 
-animation-discharging-1 = 
-animation-discharging-2 = 
-animation-discharging-3 = 
-animation-discharging-4 = 
-animation-discharging-foreground = ${colors.foreground-alt}
-animation-discharging-framerate = 750
+; Full label
+label-full            =  100%
+label-full-underline = ${colors.teal}
+label-full-foreground = ${colors.foreground}
+label-full-padding    = 2
 
 [module/temperature]
 type = internal/temperature
-thermal-zone = 0
-warn-temperature = 60
 
-format = <ramp> <label>
-format-underline = ${colors.underline}
-format-warn = <ramp> <label-warn>
-format-warn-underline = ${self.format-underline}
+; Label
+label            =  %temperature%
+label-underline = ${colors.purple}
+label-foreground = ${colors.foreground}
+label-padding    = 2
 
-label = %temperature-c%
-label-warn = %temperature-c%
-label-warn-foreground = ${colors.secondary}
+; Warning label
+label-warn            =  %temperature%
+label-warn-underline = ${colors.red}
+label-warn-foreground = ${colors.foreground}
+label-warn-padding    = 2
 
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
-ramp-foreground = ${colors.foreground-alt}
 
 [module/powermenu]
 type = custom/menu
@@ -444,13 +380,13 @@ expand-right = true
 format-spacing = 1
 
 label-open = 
-label-open-foreground = #f8f8f2
+label-open-foreground = #ebdbb2
 label-close = 
-label-close-foreground = #ff6d6d
+label-close-foreground = #fb4934
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}
 
-format-underline = #f8f8f2
+format-underline = #ebdbb2
 
 menu-0-0 = 
 menu-0-0-foreground = #42d658
@@ -487,7 +423,7 @@ menu-3-0-exec = menu-open-0
 
 [settings]
 screenchange-reload = true
-:compositing-background = xor
+;compositing-background = xor
 ;compositing-background = screen
 ;compositing-foreground = source
 ;compositing-border = over
@@ -499,14 +435,3 @@ margin-bottom = 5
 
 ; vim:ft=dosini
 
-[module/pavolume]
-type = custom/script
-interval = 2
-label=VOLUME:%output%
-exec = ~/.config/polybar/pavolume.sh
-click-right = exec pavucontrol
-click-left = ~/.config/polybar/pavolume.sh --togmute
-scroll-up = ~/.config/polybar/pavolume.sh --up
-scroll-down = ~/.config/polybar/pavolume.sh --down
-label-padding = 2
-label-foreground = ${colors.white}
