@@ -19,17 +19,17 @@
 " My Vim's Configuration by Camila Valencia~
 set nocompatible   " Disable VI compatibility mode
 syntax on
-colorscheme dracula
-colors dracula
+colorscheme gruvbox
+set t_Co=256
+let g:gruvbox_termcolors=16
 set background=dark
-filetype off
+filetype plugin indent on
 call plug#begin('~/.vim/plugged')
 let g:airline_powerline_fonts = 1
 set mouse=a
 set guifont=UbuntuMono\ Nerd\ Font\ 11
 set guioptions-=T
 set guioptions-=l"remove toolbar and scrollbars
-set termguicolors
 " Bundles
 Plug 'vim-ruby/vim-ruby'
 Plug 'scrooloose/syntastic'
@@ -37,8 +37,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'othree/html5.vim'
-Plug 'altercation/vim-colors-solarized'
-Plug 'dracula/vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'jlanzarotta/bufexplorer'
 Plug 'pangloss/vim-javascript'
 Plug 'KabbAmine/vCoolor.vim'	
@@ -47,6 +46,7 @@ Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 Plug 'vim-airline/vim-airline'
+Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'plasticboy/vim-markdown'
 Plug 'sukima/xmledit'
@@ -78,11 +78,28 @@ if has('python')
     " YAPF formatter for Python
     Plug 'pignacio/vim-yapf-format'
 endif
-Plug 'anned20/vimsence'
+Plug '/usr/share/fzf'
+Plug 'junegunn/fzf.vim'
 call plug#end()
 " Tab behavior
 set expandtab
 let g:airline#extensions#tabline#enabled =1
+let g:airline#extensions#tabline#show_buffers = 1
+let g:airline#extensions#tabline#show_tabs = 1
+
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
+
+" enable/disable fugitive/lawrencium integration
+let g:airline#extensions#branch#enabled = 1
+
+" enable/disable showing a summary of changed hunks under source control.
+let g:airline#extensions#hunks#enabled = 1
+
+" enable/disable showing only non-zero hunks.
+let g:airline#extensions#hunks#non_zero_only = 1
+
+let g:airline#extensions#whitespace#enabled = 0
 set shiftwidth=2
 set softtabstop=2
 set tabstop=4
@@ -97,8 +114,9 @@ set noshowmode                   " Hide the default mode text
 set encoding=utf-8               " Always use UTF-8 as encoding
 set number                       " Show line numbers
 let mapleader=","                " Comma instead of backslash as <leader>
-hi Normal guibg=NONE ctermbg=NONE
-let g:airline_theme='dracula'
+let g:airline_theme='gruvbox'
+hi! Normal ctermbg=NONE guibg=NONE
+hi! NonText ctermbg=NONE guibg=NONE
 nnoremap <silent> <leader>z :Goyo<cr>
 nnoremap <Leader>ga :Git add %:p<CR><CR>
 nnoremap <Leader>gs :Gstatus<CR>
@@ -106,6 +124,7 @@ nnoremap <Leader>gb :Gblame<CR>
 nnoremap <Leader>gr :Gread<CR>
 nnoremap <Leader>gw :Gwrite<CR>
 nnoremap <Leader>gp :Git push<CR>
+let g:AutoClosePreserveDotReg = 0
 " Shortcut for turning line wrapping on/off and convenient navigation when lines are wrapped
 noremap <silent> <Leader>w :call ToggleWrap()<CR>
 function ToggleWrap()
@@ -273,7 +292,7 @@ nnoremap <leader>gpl :Dispatch! git pull<CR>
 nnoremap  <silent>   <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
 nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
 if has('gui_running')
-  colorscheme dracula
+  colorscheme gruvbox
 endif
 
 " Jedi-vim ------------------------------
@@ -288,4 +307,6 @@ let g:jedi#goto_assignments_command = ',a'
 " Go to definition in new tab
 nmap ,D :tab split<CR>:call jedi#goto()<CR>
 
-
+autocmd vimenter * syntax on
+autocmd vimenter * hi! Normal ctermbg=NONE guibg=NONE
+ 
