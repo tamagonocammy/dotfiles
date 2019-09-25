@@ -2,9 +2,9 @@
 #allow_bold = true
 #audible_bell = false
 #bold_is_bright = true
-#clickable_url = true
-#dynamic_title = true
-font =  UbuntuMono Nerd Font 11 
+clickable_url = true
+dynamic_title = true
+font =  UbuntuMono Nerd Font Mono 11 
 #fullscreen = true
 #icon_name = terminal
 #mouse_autohide = false
@@ -18,13 +18,13 @@ scrollback_lines = 10000
 #hyperlinks = false
 
 # $BROWSER is used by default if set, with xdg-open as a fallback
-#browser = xdg-open
+browser = xdg-open
 
 # "system", "on" or "off"
 #cursor_blink = system
 
 # "block", "underline" or "ibeam"
-#cursor_shape = block
+cursor_shape = underline
 
 # Hide links that are no longer valid in url select overlay mode
 #filter_unmatched_urls = true
@@ -39,48 +39,54 @@ scrollback_lines = 10000
 #scrollbar = off
 
 [colors]
+# Base16 Gruvbox dark, medium
+# Author: Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
 
-# special
-foreground        = #ebdbb2
-foreground_bold   = #ebdbb2
-cursor            = #b8bb26
-cursor_foreground = #ebdbb2
-background        = #282828
+foreground          = #d5c4a1
+foreground_bold     = #ebdbb2
+cursor              = #ebdbb2
+cursor_foreground   = #282828
+background          = rgba(40, 40, 40, 0.8)
 
+# 16 color space
 
-# black
+# Black, Gray, Silver, White
 color0  = #282828
-color8  = #4d4d4d
+color8  = #665c54
+color7  = #d5c4a1
+color15 = #fbf1c7
 
-# red
-color1  = #ff5555
-color9  = #ff6e67
+# Red
+color1  = #fb4934
+color9  = #fb4934
 
-# green
-color2  = #50fa7b
-color10 = #5af78e
+# Green
+color2  = #b8bb26
+color10 = #b8bb26
 
-# yellow
-color3  = #f1fa8c
-color11 = #f4f99d
+# Yellow
+color3  = #fabd2f
+color11 = #fabd2f
 
-# blue
-color4  = #bd93f9
-color12 = #caa9fa
+# Blue
+color4  = #83a598
+color12 = #83a598
 
-# magenta
-color5  = #ff79c6
-color13 = #ff92d0
+# Purple
+color5  = #d3869b
+color13 = #d3869b
 
-# cyan
-color6  = #8be9fd
-color14 = #9aedfe
+# Teal
+color6  = #8ec07c
+color14 = #8ec07c
 
-# white
-color7  = #bfbfbf
-color15 = #e6e6e6
-
-
+# Extra colors
+color16 = #fe8019
+color17 = #d65d0e
+color18 = #3c3836
+color19 = #504945
+color20 = #bdae93
+color21 = #ebdbb2
 [hints]
 #font = Monospace 12
 #foreground = #dcdccc

@@ -26,8 +26,12 @@ set background=dark
 filetype plugin indent on
 call plug#begin('~/.vim/plugged')
 let g:airline_powerline_fonts = 1
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+let g:airline_symbols.space = "\ua0"
 set mouse=a
-set guifont=UbuntuMono\ Nerd\ Font\ 11
+set guifont=UbuntuMono\ Nerd\ Font\ Mono\ 11
 set guioptions-=T
 set guioptions-=l"remove toolbar and scrollbars
 " Bundles
@@ -78,8 +82,9 @@ if has('python')
     " YAPF formatter for Python
     Plug 'pignacio/vim-yapf-format'
 endif
-Plug '/usr/share/fzf'
 Plug 'junegunn/fzf.vim'
+Plug '~/.fzf'
+Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 " Tab behavior
 set expandtab
@@ -307,6 +312,26 @@ let g:jedi#goto_assignments_command = ',a'
 " Go to definition in new tab
 nmap ,D :tab split<CR>:call jedi#goto()<CR>
 
-autocmd vimenter * syntax on
-autocmd vimenter * hi! Normal ctermbg=NONE guibg=NONE
- 
+autocmd VimEnter * hi Normal ctermbg=none
+
+" Customize fzf colors to match your color scheme
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
+let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -l -g ""'
+
+" Source the vimrc file after saving it
+if has("autocmd")
+    autocmd bufwritepost .vimrc source $MYVIMRC
+  endif

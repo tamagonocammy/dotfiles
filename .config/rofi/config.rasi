@@ -1,100 +1,138 @@
-/*
- * ROFI One Dark
- *
- * Based on OneDark.vim (https://github.com/joshdick/onedark.vim)
- *
- * Author: Benjamin Stauss
- * User: me-benni
- *
+/**
+ * ROFI Color theme
+ * User: bresilla
+ copy those lines to: ~/.conf/rofi/ or ~/.Xdefaults
+	rofi.fullscreen:true
+	rofi.theme: ~/.i3/rofi.rasi
  */
 
-
 * {
-  black:      #000000;
-  red:        #ff5555;
-  green:      #50fa7b;
-  yellow:     #f1fa8c;
-  blue:       #6272a4;
-  mangenta:   #bd92f9;
-  cyan:       #8be9fd;
-  emphasis:   #44475a;
-  text:       #f8f8f2;
-  text-alt:   #b2b2b2;
-  fg:         #f8f8f2;
-  bg:         #282a36;
+	accent: #ebdbb2;
+    foreground:         		@accent;
+    background:         		rgba(40, 40, 40, 0.70);
+    transparent:				rgba(0, 0, 0, 0);
 
-  spacing: 0;
-  background-color: transparent;
+    normal-background: 			@transparent;
+    normal-foreground: 			@foreground;
+    urgent-background: 			@transparent;
+    urgent-foreground:			@foreground;
+    active-background: 			@transparent;
+    active-foreground:			@foreground;
 
-  font: "Source Code Pro 12";
-  text-color: @text;
+    selected-normal-background:  @foreground;
+    selected-normal-foreground:  @background;
+    selected-urgent-background:  @foreground;
+    selected-urgent-foreground:  @background;
+    selected-active-background:  @foreground;
+    selected-active-foreground:  @background;
+
+    alternate-normal-background: @transparent;
+    alternate-normal-foreground: @foreground;
+    alternate-active-background: @transparent;
+    alternate-active-foreground: @active-foreground;
+    alternate-urgent-background: @transparent;
+    alternate-urgent-foreground: @urgent-foreground;
+
+    border-color:                @background;
+    separatorcolor:              @foreground;
+    background-color:            @transparent;
+    spacing:                     10;
 }
 
-window {
-  transparency: "real";
-  fullscreen: true;
-  background-color: #282a36bf;
+#window {
+    background-color: 		@background;
+    border:   				0;
+    padding: 				0;
+}
+#mainbox {
+    border:   				0;
+    padding: 				30%;
+}
+#message {
+    border:       			2px 0px 0px ;
+    border-color: 			@separatorcolor;
+    padding: 				10 1% 10;
+}
+#textbox {
+    text-color: 			@foreground;
+}
+#listview {
+    fixed-height: 			0;
+    border:       			2px 0px 0px ;
+    border-color: 			@separatorcolor;
+    spacing:      			10px;
+    padding: 				10 1% 10;
 }
 
-mainbox {
-  padding: 30% 30%;
+#element {
+    border:  				0;
+    padding: 				10 10 10;
+}
+#element.normal.normal {
+    background-color: 		@normal-background;
+    text-color:       		@normal-foreground;
+}
+#element.normal.urgent {
+    background-color: 		@urgent-background;
+    text-color:       		@urgent-foreground;
+}
+#element.normal.active {
+    background-color: 		@active-background;
+    text-color:       		@active-foreground;
+}
+#element.selected.normal {
+    background-color: 		@selected-normal-background;
+    text-color:       		@selected-normal-foreground;
+}
+#element.selected.urgent {
+    background-color: 		@selected-urgent-background;
+    text-color:       		@selected-urgent-foreground;
+}
+#element.selected.active {
+    background-color: 		@selected-active-background;
+    text-color:       		@selected-active-foreground;
+}
+#element.alternate.normal {
+    background-color: 		@alternate-normal-background;
+    text-color:       		@alternate-normal-foreground;
+}
+#element.alternate.urgent {
+    background-color: 		@alternate-urgent-background;
+    text-color:       		@alternate-urgent-foreground;
+}
+#element.alternate.active {
+    background-color: 		@alternate-active-background;
+    text-color:       		@alternate-active-foreground;
 }
 
-inputbar {
-  margin: 0px 0px 20px 0px;
-  children: [prompt, textbox-prompt-colon, entry, case-indicator];
+#scrollbar {
+    width:        			4px ;
+    border:       			0;
+    handle-width: 			8px ;
+    padding:      			0;
 }
-
-prompt {
-  text-color: @blue;
+#sidebar {
+    border:       			2px 0px 0px ;
+    border-color: 			@separatorcolor;
 }
-
-textbox-prompt-colon {
-  expand: false;
-  str: ":";
-  text-color: @text-alt;
+#button.selected {
+    background-color: 		@selected-normal-background;
+    text-color:       		@selected-normal-foreground;
 }
-
-entry {
-  margin: 0px 10px;
+#inputbar {
+    spacing:    			0;
+    text-color: 			@normal-foreground;
+    padding:    			1px ;
 }
-
-listview {
-  spacing: 5px;
-  dynamic: true;
-  scrollbar: false;
+#case-indicator {
+    spacing:    			0;
+    text-color: 			@normal-foreground;
 }
-
-element {
-  padding: 5px;
-  text-color: @text-alt;
-  highlight: bold #bd93f9; 
-  border-radius: 3px;
+#entry {
+    spacing:    			0;
+    text-color: 			@normal-foreground;
 }
-
-element selected {
-  background-color: @emphasis;
-  text-color: @text;
-}
-
-element urgent, element selected urgent {
-  text-color: @red;
-}
-
-element active, element selected active {
-  text-color: @purple;
-}
-
-message {
-  padding: 5px;
-  border-radius: 3px;
-  background-color: @emphasis;
-  border: 1px;
-  border-color: @cyan;
-}
-
-button selected {
-  padding: 5px;
-  border-radius: 3px;
-  background-color: @emphasis;
+#prompt, button{
+    spacing:    			0;
+    text-color: 			@normal-foreground;
 }
