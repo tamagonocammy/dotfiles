@@ -34,6 +34,8 @@ set mouse=a
 set guifont=UbuntuMono\ Nerd\ Font\ Mono\ 11
 set guioptions-=T
 set guioptions-=l"remove toolbar and scrollbars
+set guioptions-=r
+set guioptions-=R
 " Bundles
 Plug 'vim-ruby/vim-ruby'
 Plug 'scrooloose/syntastic'
@@ -85,6 +87,8 @@ endif
 Plug 'junegunn/fzf.vim'
 Plug '~/.fzf'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'mileszs/ack.vim'
+
 call plug#end()
 " Tab behavior
 set expandtab
@@ -122,7 +126,6 @@ let mapleader=","                " Comma instead of backslash as <leader>
 let g:airline_theme='gruvbox'
 hi! Normal ctermbg=NONE guibg=NONE
 hi! NonText ctermbg=NONE guibg=NONE
-nnoremap <silent> <leader>z :Goyo<cr>
 nnoremap <Leader>ga :Git add %:p<CR><CR>
 nnoremap <Leader>gs :Gstatus<CR>
 nnoremap <Leader>gb :Gblame<CR>
@@ -130,6 +133,12 @@ nnoremap <Leader>gr :Gread<CR>
 nnoremap <Leader>gw :Gwrite<CR>
 nnoremap <Leader>gp :Git push<CR>
 let g:AutoClosePreserveDotReg = 0
+" Fast saving
+nmap <leader>w :w!<cr>
+" Highlight search results
+set hlsearch
+" Makes search act like search in modern browsers
+set incsearch
 " Shortcut for turning line wrapping on/off and convenient navigation when lines are wrapped
 noremap <silent> <Leader>w :call ToggleWrap()<CR>
 function ToggleWrap()
@@ -161,30 +170,53 @@ function ToggleWrap()
   endif
 endfunction
 
-" NERDTree behavior
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif   " Close vim if the only window left open is a NERDTree
-map <leader>n :NERDTreeToggle<CR>
-let NERDTreeMinimalUI = 1
-let NERDTreeDirArrows = 1
-let NERDTreeAutoDeleteBuffer = 1
-let NERDTreeQuitOnOpen = 1
-
-let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "✹",
-    \ "Staged"    : "✚",
-    \ "Untracked" : "✭",
-    \ "Renamed"   : "➜",
-    \ "Unmerged"  : "═",
-    \ "Deleted"   : "✖",
-    \ "Dirty"     : "✗",
-    \ "Clean"     : "✔︎",
-    \ 'Ignored'   : '☒',
-    \ "Unknown"   : "?"
-    \ }
-
+""""""""""""""""""""""""""""""
+" => Visual mode related
+""""""""""""""""""""""""""""""
+" Visual mode pressing * or # searches for the current selection
+" Super useful! From an idea by Michael Naumann
+vnoremap <silent> * :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
+vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 
 " CtrlP behavior
 let g:ctrlp_working_path_mode=0   " Start searching from the currend working directory
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Ack searching and cope displaying
+"    requires ack.vim - it's much better than vimgrep/grep
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Use the the_silver_searcher if possible (much faster than Ack)
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep --smart-case'
+endif
+
+" When you press gv you Ack after the selected text
+vnoremap <silent> gv :call VisualSelection('gv', '')<CR>
+
+" Open Ack and put the cursor in the right position
+map <leader>g :Ack
+
+" When you press <leader>r you can search and replace the selected text
+vnoremap <silent> <leader>r :call VisualSelection('replace', '')<CR>
+
+" Do :help cope if you are unsure what cope is. It's super useful!
+"
+" When you search with Ack, display your results in cope by doing:
+"   <leader>cc
+"
+" To go to the next search result do:
+"   <leader>n
+"
+" To go to the previous search results do:
+"   <leader>p
+"
+map <leader>cc :botright cope<cr>
+map <leader>co ggVGy:tabnew<cr>:set syntax=qf<cr>pgg
+map <leader>n :cn<cr>
+map <leader>p :cp<cr>
+
+" Make sure that enter is never overriden in the quickfix window
+autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
 
 " Windows behavior
 if has("win32")
@@ -225,8 +257,13 @@ nnoremap ]l :lnext<CR>zz
 nnoremap [l :lprev<CR>zz
 
 " move through buffers
-nnoremap ]b :bnext<CR>
-nnoremap [b :bprev<CR>
+
+map <leader>l :bnext<cr>
+map <leader>h :bprevious<cr>
+
+
+" Switch CWD to the directory of the open buffer
+map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 " move through tabs
       map <C-t> <Esc>:tabnew<CR>
@@ -335,3 +372,147 @@ let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -l -g ""'
 if has("autocmd")
     autocmd bufwritepost .vimrc source $MYVIMRC
   endif
+  """"""""""""""""""""""""""""""
+" => Python section
+""""""""""""""""""""""""""""""
+let python_highlight_all = 1
+au FileType python syn keyword pythonDecorator True None False self
+
+au BufNewFile,BufRead *.jinja set syntax=htmljinja
+au BufNewFile,BufRead *.mako set ft=mako
+
+au FileType python map <buffer> F :set foldmethod=indent<cr>
+
+au FileType python inoremap <buffer> $r return
+au FileType python inoremap <buffer> $i import
+au FileType python inoremap <buffer> $p print
+au FileType python inoremap <buffer> $f # --- <esc>a
+au FileType python map <buffer> <leader>1 /class
+au FileType python map <buffer> <leader>2 /def
+au FileType python map <buffer> <leader>C ?class
+au FileType python map <buffer> <leader>D ?def
+au FileType python set cindent
+au FileType python set cinkeys-=0#
+au FileType python set indentkeys-=0#
+
+
+""""""""""""""""""""""""""""""
+" => JavaScript section
+"""""""""""""""""""""""""""""""
+au FileType javascript call JavaScriptFold()
+au FileType javascript setl fen
+au FileType javascript setl nocindent
+
+au FileType javascript imap <c-t> $log();<esc>hi
+au FileType javascript imap <c-a> alert();<esc>hi
+
+au FileType javascript inoremap <buffer> $r return
+au FileType javascript inoremap <buffer> $f // --- PH<esc>FP2xi
+
+function! JavaScriptFold()
+    setl foldmethod=syntax
+    setl foldlevelstart=1
+    syn region foldBraces start=/{/ end=/}/ transparent fold keepend extend
+
+    function! FoldText()
+        return substitute(getline(v:foldstart), '{.*', '{...}', '')
+    endfunction
+    setl foldtext=FoldText()
+endfunction
+
+
+""""""""""""""""""""""""""""""
+" => CoffeeScript section
+"""""""""""""""""""""""""""""""
+function! CoffeeScriptFold()
+    setl foldmethod=indent
+    setl foldlevelstart=1
+endfunction
+au FileType coffee call CoffeeScriptFold()
+
+au FileType gitcommit call setpos('.', [0, 1, 1, 0])
+
+
+""""""""""""""""""""""""""""""
+" => Shell section
+""""""""""""""""""""""""""""""
+if exists('$TMUX')
+    if has('nvim')
+        set termguicolors
+    else
+        set term=screen-256color
+    endif
+endif
+
+
+""""""""""""""""""""""""""""""
+" => Twig section
+""""""""""""""""""""""""""""""
+autocmd BufRead *.twig set syntax=html filetype=html
+
+
+""""""""""""""""""""""""""""""
+" => bufExplorer plugin
+""""""""""""""""""""""""""""""
+let g:bufExplorerDefaultHelp=0
+let g:bufExplorerShowRelativePath=1
+let g:bufExplorerFindActive=1
+let g:bufExplorerSortBy='name'
+map <leader>o :BufExplorer<cr>
+
+
+" NERDTree behavior
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif   " Close vim if the only window left open is a NERDTree
+map <leader>n :NERDTreeToggle<CR>
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+let NERDTreeAutoDeleteBuffer = 1
+let NERDTreeQuitOnOpen = 1
+let NERDTreeShowHidden=0
+let g:NERDTreeWinSize=35
+map <leader>nf :NERDTreeFind<cr>
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ 'Ignored'   : '☒',
+    \ "Unknown"   : "?"
+    \ }
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Vimroom
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:goyo_width=100
+let g:goyo_margin_top = 2
+let g:goyo_margin_bottom = 2
+nnoremap <silent> <leader>z :Goyo<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Syntastic (syntax checker)
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ale_linters = {
+\   'javascript': ['jshint'],
+\   'python': ['flake8'],
+\   'go': ['go', 'golint', 'errcheck']
+\}
+
+nmap <silent> <leader>a <Plug>(ale_next_wrap)
+
+" Disabling highlighting
+let g:ale_set_highlights = 0
+
+" Only run linting when saving the file
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_enter = 0
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Git gutter (Git diff)
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:gitgutter_enabled=0
+nnoremap <silent> <leader>d :GitGutterToggle<cr>
