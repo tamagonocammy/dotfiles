@@ -25,11 +25,6 @@ let g:gruvbox_termcolors=16
 set background=dark
 filetype plugin indent on
 call plug#begin('~/.vim/plugged')
-let g:airline_powerline_fonts = 1
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
-let g:airline_symbols.space = "\ua0"
 set mouse=a
 set guifont=UbuntuMono\ Nerd\ Font\ Mono\ 11
 set guioptions-=T
@@ -51,9 +46,7 @@ Plug 'tomtom/tlib_vim'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
-Plug 'vim-airline/vim-airline'
 Plug 'morhetz/gruvbox'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'plasticboy/vim-markdown'
 Plug 'sukima/xmledit'
 Plug 'kovetskiy/sxhkd-vim'
@@ -88,27 +81,17 @@ Plug 'junegunn/fzf.vim'
 Plug '~/.fzf'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'mileszs/ack.vim'
-
+Plug 'itchyny/lightline.vim'
+Plug 'sainnhe/artify.vim'
+Plug 'itchyny/vim-gitbranch'
+Plug 'macthecadillac/lightline-gitdiff'
+Plug 'maximbaz/lightline-ale'
+Plug 'albertomontesg/lightline-asyncrun'
+Plug 'rmolin88/pomodoro.vim'
+Plug 'shinchu/lightline-gruvbox.vim'
 call plug#end()
 " Tab behavior
 set expandtab
-let g:airline#extensions#tabline#enabled =1
-let g:airline#extensions#tabline#show_buffers = 1
-let g:airline#extensions#tabline#show_tabs = 1
-
-" Show just the filename
-let g:airline#extensions#tabline#fnamemod = ':t'
-
-" enable/disable fugitive/lawrencium integration
-let g:airline#extensions#branch#enabled = 1
-
-" enable/disable showing a summary of changed hunks under source control.
-let g:airline#extensions#hunks#enabled = 1
-
-" enable/disable showing only non-zero hunks.
-let g:airline#extensions#hunks#non_zero_only = 1
-
-let g:airline#extensions#whitespace#enabled = 0
 set shiftwidth=2
 set softtabstop=2
 set tabstop=4
@@ -123,7 +106,6 @@ set noshowmode                   " Hide the default mode text
 set encoding=utf-8               " Always use UTF-8 as encoding
 set number                       " Show line numbers
 let mapleader=","                " Comma instead of backslash as <leader>
-let g:airline_theme='gruvbox'
 hi! Normal ctermbg=NONE guibg=NONE
 hi! NonText ctermbg=NONE guibg=NONE
 nnoremap <Leader>ga :Git add %:p<CR><CR>
@@ -133,8 +115,16 @@ nnoremap <Leader>gr :Gread<CR>
 nnoremap <Leader>gw :Gwrite<CR>
 nnoremap <Leader>gp :Git push<CR>
 let g:AutoClosePreserveDotReg = 0
+if executable('tmux') && filereadable(expand('~/.zshrc')) && $TMUX !=# ''
+    let g:vimIsInTmux = 1
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+    set termguicolors
+else
+    let g:vimIsInTmux = 0
+  endif
 " Fast saving
-nmap <leader>w :w!<cr>
+nmap <leader>ww :w!<cr>
 " Highlight search results
 set hlsearch
 " Makes search act like search in modern browsers
@@ -516,3 +506,32 @@ let g:ale_lint_on_enter = 0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:gitgutter_enabled=0
 nnoremap <silent> <leader>d :GitGutterToggle<cr>
+
+" Lightline settings
+"
+let g:lightline = {
+      \ 'colorscheme': 'gruvbox',
+      \ }
+
+let g:lightline = {
+      \ 'colorscheme': 'gruvbox',
+      \ 'active': {
+      \   'left': [ ['mode', 'paste'],
+      \             ['fugitive', 'readonly', 'filename', 'modified'] ],
+      \   'right': [ [ 'lineinfo' ], ['percent'] ]
+      \ },
+      \ 'component': {
+      \   'readonly': '%{&filetype=="help"?"":&readonly?"🔒":""}',
+      \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
+      \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
+      \ },
+      \ 'component_visible_condition': {
+      \   'readonly': '(&filetype!="help"&& &readonly)',
+      \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
+      \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
+      \ },
+      \ 'separator': { 'left': ' ', 'right': ' ' },
+      \ 'subseparator': { 'left': ' ', 'right': ' ' }
+      \ }
+
+
