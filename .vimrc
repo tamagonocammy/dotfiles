@@ -21,7 +21,7 @@ set nocompatible   " Disable VI compatibility mode
 syntax on
 colorscheme gruvbox
 set t_Co=256
-let g:gruvbox_termcolors=16
+let g:gruvbox_termcolors=256
 set background=dark
 filetype plugin indent on
 call plug#begin('~/.vim/plugged')

@@ -21,13 +21,13 @@ set nocompatible   " Disable VI compatibility mode
 syntax on
 colorscheme gruvbox
 set t_Co=256
-let g:gruvbox_termcolors=16
+let g:gruvbox_termcolors=256
 set background=dark
 filetype plugin indent on
 call plug#begin('~/.config/nvim/plugged')
 let g:airline_powerline_fonts = 1
 set mouse=a
-set guifont=UbuntuMono\ Nerd\ Font\ 11
+set guifont=UbuntuMono\ Nerd\ Font\ Mono\ 11
 set guioptions-=T
 set guioptions-=l"remove toolbar and scrollbars
 " Bundles
