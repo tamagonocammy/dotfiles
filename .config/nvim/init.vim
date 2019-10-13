@@ -45,6 +45,7 @@ Plug 'tomtom/tlib_vim'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
+Plug 'SirVer/ultisnips'
 Plug 'vim-airline/vim-airline'
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline-themes'
@@ -84,21 +85,17 @@ call plug#end()
 " Tab behavior
 set expandtab
 let g:airline#extensions#tabline#enabled =1
-let g:airline#extensions#tabline#show_buffers = 1
-let g:airline#extensions#tabline#show_tabs = 1
-
+let g:airline#extensions#tabline#show_buffers = 0
+let g:airline#extensions#tabline#show_tabs = 0
+let g:airline_skip_empty_sections = 1
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
-
 " enable/disable fugitive/lawrencium integration
 let g:airline#extensions#branch#enabled = 1
-
 " enable/disable showing a summary of changed hunks under source control.
 let g:airline#extensions#hunks#enabled = 1
-
 " enable/disable showing only non-zero hunks.
 let g:airline#extensions#hunks#non_zero_only = 1
-
 let g:airline#extensions#whitespace#enabled = 0
 set shiftwidth=2
 set softtabstop=2
@@ -114,7 +111,7 @@ set noshowmode                   " Hide the default mode text
 set encoding=utf-8               " Always use UTF-8 as encoding
 set number                       " Show line numbers
 let mapleader=","                " Comma instead of backslash as <leader>
-let g:airline_theme='gruvbox'
+let g:airline_theme='base16_gruvbox_dark_hard'
 hi! Normal ctermbg=NONE guibg=NONE
 hi! NonText ctermbg=NONE guibg=NONE
 nnoremap <silent> <leader>z :Goyo<cr>
@@ -163,7 +160,11 @@ let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeQuitOnOpen = 1
-
+let NERDTreeShowHidden=1
+let nerdchristmastree=1
+let g:NERDTreeDirArrowExpandable = '▷'
+let g:NERDTreeDirArrowCollapsible = '▼'
+let NERDTreeAutoCenter=1
 let g:NERDTreeIndicatorMapCustom = {
     \ "Modified"  : "✹",
     \ "Staged"    : "✚",
@@ -226,8 +227,8 @@ nnoremap [b :bprev<CR>
 " move through tabs
       map <C-t> <Esc>:tabnew<CR>
       map <C-F4> <Esc>:tabclose<CR>
-      map <C-Tab> <Esc>:tabnext<CR>
-      map <C-S-Tab> <Esc>:tabprev<CR>
+      map <M-Tab> <Esc>:tabnext<CR>
+      map <M-S-Tab> <Esc>:tabprev<CR>
  nnoremap <leader>evm <C-w><C-v><C-l>:e $MYVIMRC<CR>
 
 
@@ -307,4 +308,38 @@ let g:jedi#goto_assignments_command = ',a'
 " Go to definition in new tab
 nmap ,D :tab split<CR>:call jedi#goto()<CR>
 
+  " ---> youcompleteme configuration <---
+  let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+  
+  " ---> compatibility with another plugin (ultisnips) <---
+  let g:ycm_key_list_select_completion = [ '<C-n>', '<Down>' ] 
+  let g:ycm_key_list_previous_completion = [ '<C-p>', '<Up>' ]
+  let g:SuperTabDefaultCompletionType = '<C-n>'
+" ---> disable preview window <---
+  set completeopt-=preview
+" ---> navigating to the definition of a a symbol <---
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+"""""""""""""""
+" Git Gutter  "
+"""""""""""""""
+let g:gitgutter_enabled = 1
+let g:gitgutter_grep=''
+""""""""""""""
+"Devicons   "
+"""""""""""""
+let g:webdevicons_enable = 1
+let g:webdevicons_enable_unite = 1
+let g:webdevicons_enable_denite = 1
+let g:webdevicons_enable_nerdtree = 1
+let g:webdevicons_enable_airline_tabline = 1
+let g:webdevicons_enable_vimfiler = 1
+let g:WebDevIconsUnicodeDecorateFileNodes = 1
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
+let g:webdevicons_enable_airline_statusline = 1
+let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
+let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
+let g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ''
+let g:DevIconsDefaultFolderOpenSymbol = ''
 
