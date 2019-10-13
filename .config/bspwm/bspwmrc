@@ -1,40 +1,8 @@
-
-#         _____                    _____                    _____                    _____                    _____          
-#        /\    \                  /\    \                  /\    \                  /\    \                  /\    \         
-#       /::\    \                /::\    \                /::\    \                /::\____\                /::\____\        
-#      /::::\    \              /::::\    \              /::::\    \              /:::/    /               /::::|   |        
-#     /::::::\    \            /::::::\    \            /::::::\    \            /:::/   _/___            /:::::|   |        
-#    /:::/\:::\    \          /:::/\:::\    \          /:::/\:::\    \          /:::/   /\    \          /::::::|   |        
-#   /:::/__\:::\    \        /:::/__\:::\    \        /:::/__\:::\    \        /:::/   /::\____\        /:::/|::|   |        
-#  /::::\   \:::\    \       \:::\   \:::\    \      /::::\   \:::\    \      /:::/   /:::/    /       /:::/ |::|   |        
-# /::::::\   \:::\    \    ___\:::\   \:::\    \    /::::::\   \:::\    \    /:::/   /:::/   _/___    /:::/  |::|___|______  
-#/:::/\:::\   \:::\ ___\  /\   \:::\   \:::\    \  /:::/\:::\   \:::\____\  /:::/___/:::/   /\    \  /:::/   |::::::::\    \ 
-#:::/__\:::\   \:::|    |/::\   \:::\   \:::\____\/:::/  \:::\   \:::|    ||:::|   /:::/   /::\____\/:::/    |:::::::::\____\
-#:::\   \:::\  /:::|____|\:::\   \:::\   \::/    /\::/    \:::\  /:::|____||:::|__/:::/   /:::/    /\::/    / ~~~~~/:::/    /
-#\:::\   \:::\/:::/    /  \:::\   \:::\   \/____/  \/_____/\:::\/:::/    /  \:::\/:::/   /:::/    /  \/____/      /:::/    / 
-# \:::\   \::::::/    /    \:::\   \:::\    \               \::::::/    /    \::::::/   /:::/    /               /:::/    /  
-#  \:::\   \::::/    /      \:::\   \:::\____\               \::::/    /      \::::/___/:::/    /               /:::/    /   
-#   \:::\  /:::/    /        \:::\  /:::/    /                \::/____/        \:::\__/:::/    /               /:::/    /    
-#    \:::\/:::/    /          \:::\/:::/    /                  ~~               \::::::::/    /               /:::/    /     
-#     \::::::/    /            \::::::/    /                                     \::::::/    /               /:::/    /      
-#      \::::/    /              \::::/    /                                       \::::/    /               /:::/    /       
-#       \::/____/                \::/    /                                         \::/____/                \::/    /        
-#        ~~                       \/____/                                           ~~                       \/____/         
-# Camila's bspwm config~                                                                                                                            
 #!/bin/bash
-sxhkd &
-polybar burs &
-nitrogen --restore 
-compton -b &
-dunst &
-xfce4-power-manager &
 mpd 
 mpDris2 &
 xsetroot -cursor_name left_ptr &
-fcitx &
-xautolock -time 10 -locker mantablockscreen &
-redshift &
-## Coloring
+# Coloring
 getcolors () {
 	FOREGROUND=$(xrdb -query | grep 'foreground:'| awk '{print $NF}')
 	BACKGROUND=$(xrdb -query | grep 'background:'| awk '{print $NF}')
@@ -61,27 +29,28 @@ bspc config borderless_monocle true
 bspc config gapless_monocle true
 bspc config paddingless_monocle true
 bspc config single_monocle false
-bspc config top_padding 8
+bspc config top_padding 18
 bspc config right_padding 8
-bspc config bottom_padding 28
+bspc config bottom_padding 8
 bspc config left_padding 8
 bspc config border_radius 10
 ## Window rules
 # remove all rules first
 bspc rule -r *:*
 # 1 > web
-bspc rule -a Vivaldi-stable desktop='^1' follow=on focus=on
+bspc rule -a Chromium desktop='^1'
 bspc rule -a Transmission-gtk desktop='^1' follow=on focus=on
 # 2 > terminal and coding
 bspc rule -a Urxvt desktop='^2' follow=on focus=on
 bspc rule -a Gvim desktop='^2' follow=on focus=on
 bspc rule -a code-oss desktop='^2' follow=on focus=on
+bspc rule -a Termite desktop='^2' 
 
-# 3 > chat
-bspc rule -a discord desktop='^3' follow=on 
-# 4 > file
-bspc rule -a Thunar desktop='^4' follow=on focus=on
-bspc rule -a File-roller desktop='^4' follow=on focus=on
+# 3 > chat and music 
+bspc rule -a discord desktop='^3'  
+# 4 > files
+bspc rule -a Thunar desktop='^4' 
+bspc rule -a Engrampa desktop='^4' 
 # 5 > office
 declare -a office=(Geany Gucharmap Evince \
 libreoffice-writer libreoffice-calc libreoffice-impress \
@@ -89,7 +58,7 @@ libreoffice-startcenter libreoffice Soffice *:libreofficedev *:soffice)
 for i in ${office[@]}; do
    bspc rule -a $i desktop='^5' follow=on focus=on; done
 # 5 > media
-declare -a media=(Audacity mpv Gimp Gimp-2.8)
+declare -a media=(Audacity mpv Gimp Gimp-2.8 vlc Inkscape)
 for i in ${media[@]}; do
    bspc rule -a $i desktop='^6' follow=on focus=on; done
 # 7 > settings

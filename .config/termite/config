@@ -38,55 +38,45 @@ cursor_shape = underline
 # "off", "left" or "right"
 #scrollbar = off
 
+ 
 [colors]
-# Base16 Gruvbox dark, medium
-# Author: Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
+# hard contrast: background = #1d2021
+# soft contrast: background = #32302f
+background = rgba(40, 40, 40, 0.8)
+foreground = #ebdbb2
+foreground_bold = #ebdbb2
 
-foreground          = #d5c4a1
-foreground_bold     = #ebdbb2
-cursor              = #ebdbb2
-cursor_foreground   = #282828
-background          = rgba(40, 40, 40, 0.8)
+# Black + DarkGrey
+color0 = #282828
+color8 = #928374
 
-# 16 color space
+# DarkRed + Red
+color1 = #cc241d
+color9 = #fb4934
 
-# Black, Gray, Silver, White
-color0  = #282828
-color8  = #665c54
-color7  = #d5c4a1
-color15 = #fbf1c7
-
-# Red
-color1  = #fb4934
-color9  = #fb4934
-
-# Green
-color2  = #b8bb26
+# DarkGreen + Green
+color2 = #98971a
 color10 = #b8bb26
 
-# Yellow
-color3  = #fabd2f
+# DarkYellow + Yellow
+color3 = #d79921
 color11 = #fabd2f
 
-# Blue
-color4  = #83a598
+# DarkBlue + Blue
+color4 = #458588
 color12 = #83a598
 
-# Purple
-color5  = #d3869b
+# DarkMagenta + Magenta
+color5 = #b16286
 color13 = #d3869b
 
-# Teal
-color6  = #8ec07c
+# DarkCyan + Cyan
+color6 = #689d6a
 color14 = #8ec07c
 
-# Extra colors
-color16 = #fe8019
-color17 = #d65d0e
-color18 = #3c3836
-color19 = #504945
-color20 = #bdae93
-color21 = #ebdbb2
+# LightGrey + White
+color7 = #a89984
+color15 = #ebdbb2
 [hints]
 #font = Monospace 12
 #foreground = #dcdccc

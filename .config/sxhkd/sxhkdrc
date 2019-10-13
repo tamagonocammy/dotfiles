@@ -4,16 +4,15 @@
 
 # terminal emulator
 super + Return
-	st 
+	urxvt 
 # program launcher
 super + q
-	rofi -show run 
+	rofi -show run -display-run ">>>" 
 super + Tab 
     rofi -show window
 # make sxhkd reload its configuration files:
 super + s
-	pkill -USR1 -x sxhkd; \
-    notify-send sxhkd "Configuration reloaded!"
+    ~/.config/sxhkd/rofi-system-menu.sh
 
 
 # Print screen
