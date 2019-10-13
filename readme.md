@@ -7,9 +7,9 @@ They're FAR from a concise setup, mostly because I'm not a programmer, i'm just 
 * Arch Linux
 * XFCE/BSPWM
 * Chromium
-* Termite
+* Termite/URxvt/st
 * MPD/Spotify
-* Vim
+* Neovim
 
 ![Clean Desktop](https://imgur.com/sjZps8f.png)
 
