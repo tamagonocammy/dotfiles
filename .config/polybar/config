@@ -269,7 +269,7 @@ label-volume-padding    = 2
 
 ; Muted label
 label-muted            =  Muted
-label-muted- = ${colors.red}
+label-muted = ${colors.red}
 label-muted-foreground = ${colors.foreground}
 label-muted-padding    = 2
 [module/wlan]
