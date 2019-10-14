@@ -40,7 +40,7 @@ height = 22
 enable-ipc = true
 
 ; Position
-bottom = true
+bottom = false
 
 ; Radius
 radius = 0
