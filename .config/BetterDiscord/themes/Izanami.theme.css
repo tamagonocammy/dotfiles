@@ -14,11 +14,11 @@
     --scrollBars: #80808080;
     --unread: #bd93f9;  /* All unread notifs colour */
 
-    --homeIcon: url('https://i.imgur.com/WO3IfbO.png') ;
+    --homeIcon: url('https://i.imgur.com/XNKv5vN.jpg') ;
 
     --chatTxtColour: #ffffff;
     --fontSize: .9375rem;
-    --font: Droid Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+    --font: Ubuntu,Helvetica Neue,Helvetica,Arial,sans-serif;
 
     --hlBG: rgba(0, 0, 0, 0.75);   /* Highlight background */
     --hlColour: #282a36;
