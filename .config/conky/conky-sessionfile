@@ -1,0 +1,1 @@
+conky -c /home/cammy/.conkyrc & sleep 1s

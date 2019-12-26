@@ -2,7 +2,7 @@
     "settings": {
         "stable": {
             "settings": {
-                "bda-gs-1": true,
+                "bda-gs-1": false,
                 "bda-gs-2": false,
                 "bda-gs-3": false,
                 "bda-gs-4": false,
@@ -11,11 +11,11 @@
                 "bda-gs-7": false,
                 "bda-gs-8": false,
                 "bda-es-0": true,
-                "bda-es-1": false,
-                "bda-es-2": false,
+                "bda-es-1": true,
+                "bda-es-2": true,
                 "bda-es-4": false,
                 "bda-es-6": true,
-                "bda-es-7": false,
+                "bda-es-7": true,
                 "bda-gs-b": false,
                 "bda-es-8": true,
                 "bda-dc-0": false,
@@ -35,14 +35,17 @@
             },
             "plugins": {},
             "themes": {
-                "Full Transparency": true,
+                "        Reborn": false,
                 "An_Orion_Deep_Field": false,
                 "Aurora": false,
                 "BGRM Example": false,
+                "        Black Hole": false,
                 "Clean Dark": false,
                 "Clean Dark Wallpaper Edition": false,
                 "Dark_Matter": false,
                 "Reborn": false,
+                "Frosted Glass": true,
+                "Full Transparency": false,
                 "Izanami": false,
                 "Midnight": false,
                 "NoGameNoLife_Theme": false,
@@ -57,5 +60,5 @@
         "ptb": {}
     },
     "emoteCacheDays": 7,
-    "emoteCacheDate": "2019-06-13T18:11:28.017Z"
+    "emoteCacheDate": "2019-12-24T21:00:14.633Z"
 }

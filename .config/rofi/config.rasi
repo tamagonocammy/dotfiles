@@ -7,9 +7,9 @@
  */
 
 * {
-	accent: #ebdbb2;
+	accent: #eceff4;
     foreground:         		@accent;
-    background:         		rgba(40, 40, 40, 0.70);
+    background:         		rgba(46, 52, 64, 0.70);
     transparent:				rgba(0, 0, 0, 0);
 
     normal-background: 			@transparent;
@@ -46,7 +46,7 @@
 }
 #mainbox {
     border:   				0;
-    padding: 				30%;
+    padding: 				10%;
 }
 #message {
     border:       			2px 0px 0px ;

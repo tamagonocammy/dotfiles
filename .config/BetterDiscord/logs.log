@@ -1,15 +1,15 @@
-[INF][17/6/2019, 10:48:01 a. m.] Hooking dom-ready
-[INF][17/6/2019, 10:48:04 a. m.] Hooked dom-ready
-[INF][17/6/2019, 10:48:05 a. m.] Getting updater
-[INF][17/6/2019, 10:48:05 a. m.] Getting hash from: https://api.github.com/repos/rauenzi/BetterDiscordApp/commits/injector
-[INF][17/6/2019, 10:48:05 a. m.] Getting version from: https://cdn.statically.io/gh/rauenzi/BetterDiscordApp/1c2e6f6cb17dea5ee24499cd065a7718bd1ff2f9/betterdiscord/config.json
-[INF][17/6/2019, 10:48:06 a. m.] Latest Version: 0.3.2
-[INF][17/6/2019, 10:48:06 a. m.] Getting commit hash
-[INF][17/6/2019, 10:48:06 a. m.] Getting hash from: https://api.github.com/repos/rauenzi/BetterDiscordApp/commits/master
-[INF][17/6/2019, 10:48:08 a. m.] 3aebec800eedffb234ec19815283182a29b200fd
-[INF][17/6/2019, 10:48:08 a. m.] Using hash: 3aebec800eedffb234ec19815283182a29b200fd
-[INF][17/6/2019, 10:48:08 a. m.] Loading
-[INF][17/6/2019, 10:48:09 a. m.] Loading Resource (//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js)
-[INF][17/6/2019, 10:48:10 a. m.] Loading Resource (//cdn.staticaly.com/gh/rauenzi/BetterDiscordApp/3aebec800eedffb234ec19815283182a29b200fd/css/main.min.css)
-[INF][17/6/2019, 10:48:10 a. m.] Loading Resource (//cdn.staticaly.com/gh/rauenzi/BetterDiscordApp/3aebec800eedffb234ec19815283182a29b200fd/js/main.min.js)
-[INF][17/6/2019, 10:48:10 a. m.] Starting Up
+[INF][25/12/2019, 11:24:07 a. m.] Hooking dom-ready
+[INF][25/12/2019, 11:24:09 a. m.] Hooked dom-ready
+[INF][25/12/2019, 11:24:09 a. m.] Getting updater
+[INF][25/12/2019, 11:24:09 a. m.] Getting hash from: https://api.github.com/repos/rauenzi/BetterDiscordApp/commits/injector
+[INF][25/12/2019, 11:24:09 a. m.] Getting version from: https://cdn.statically.io/gh/rauenzi/BetterDiscordApp/f76eaf54a9d5c13d9a3c082da3650bb8aec43509/betterdiscord/config.json
+[INF][25/12/2019, 11:24:10 a. m.] Latest Version: 0.3.2
+[INF][25/12/2019, 11:24:10 a. m.] Getting commit hash
+[INF][25/12/2019, 11:24:10 a. m.] Getting hash from: https://api.github.com/repos/rauenzi/BetterDiscordApp/commits/master
+[INF][25/12/2019, 11:24:10 a. m.] 21981b15e8fdf48fdb3d12318f1aeb34970443ae
+[INF][25/12/2019, 11:24:10 a. m.] Using hash: 21981b15e8fdf48fdb3d12318f1aeb34970443ae
+[INF][25/12/2019, 11:24:10 a. m.] Loading
+[INF][25/12/2019, 11:24:13 a. m.] Loading Resource (//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js)
+[INF][25/12/2019, 11:24:13 a. m.] Loading Resource (//cdn.staticaly.com/gh/rauenzi/BetterDiscordApp/21981b15e8fdf48fdb3d12318f1aeb34970443ae/css/main.min.css)
+[INF][25/12/2019, 11:24:13 a. m.] Loading Resource (//cdn.staticaly.com/gh/rauenzi/BetterDiscordApp/21981b15e8fdf48fdb3d12318f1aeb34970443ae/js/main.min.js)
+[INF][25/12/2019, 11:24:13 a. m.] Starting Up

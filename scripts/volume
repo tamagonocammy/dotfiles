@@ -1,0 +1,22 @@
+#!/bin/bash
+
+## sound level
+STATUS=`amixer get Master | grep -m 1 '%' | cut -d'[' -f2 | cut -d'%' -f1`
+
+## changing sound level
+if [ "$1" = "toggle" ]; then
+	amixer set Master toggle
+elif [ "$1" = "volup" ]; then
+	amixer set Master unmute
+	amixer set Master 10%+
+elif [ "$1" = "voldown" ]; then
+	amixer set Master unmute
+	amixer set Master 10%-
+fi
+
+## playing sound
+play /usr/share/sounds/freedesktop/stereo/bell.oga -q
+
+## killing existing notifications
+(pidof xfce4-notifyd 1>/dev/null && killall xfce4-notifyd)
+

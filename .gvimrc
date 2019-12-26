@@ -1,1 +1,1 @@
-colorscheme dracula
+colorscheme nord

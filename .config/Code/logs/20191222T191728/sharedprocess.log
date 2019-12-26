@@ -1,0 +1,8 @@
+[2019-12-22 19:17:31.992] [sharedprocess] [info] main {"machineId":"cfd2eba2d7bb46b15a7720b7cf4668a388f2444a35ff223060469dac39e10544","windowId":2}
+[2019-12-22 19:18:12.000] [sharedprocess] [info] Starting to clean up unused language packs.
+[2019-12-22 19:19:03.523] [sharedprocess] [info] Installing extension: naumovs.color-highlight
+[2019-12-22 19:19:04.556] [sharedprocess] [info] Downloaded extension: naumovs.color-highlight /tmp/7f9f6a84-0297-4ddf-9cbf-0a9c8bd46bf9
+[2019-12-22 19:19:04.720] [sharedprocess] [info] Extracted extension to /home/cammy/.vscode/extensions/.naumovs.color-highlight-2.3.0: naumovs.color-highlight
+[2019-12-22 19:19:04.721] [sharedprocess] [info] Renamed to /home/cammy/.vscode/extensions/naumovs.color-highlight-2.3.0
+[2019-12-22 19:19:04.722] [sharedprocess] [info] Installation completed. naumovs.color-highlight
+[2019-12-22 19:19:04.766] [sharedprocess] [info] Extensions installed successfully: naumovs.color-highlight

@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH="/home/cammy/.oh-my-zsh"
+export ZSH="/home/cammy/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -68,8 +68,7 @@ ZSH_THEME="bullet-train"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git archlinux)
-
+plugins=(git archlinux debian)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -96,13 +95,7 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
-  # alias ohmyzsh="mate ~/.oh-my-zsh"
-  source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-  #
-
-eval $(thefuck --alias)
-BULLETTRAIN_NVM_FG="black"
-BULLETTRAIN_DIR_FG="black"
-BULLETTRAIN_NVM_PREFIX=" "
-BULLETTRAIN_GIT_BG="cyan"
-BULLETTRAIN_GIT_FG="black"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias vim="nvim"
+alias vi="nvim"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

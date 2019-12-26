@@ -12,7 +12,7 @@ song_window_title_format = "{%a - }{%t}|{%f}"
 song_columns_list_format = "(5f)[blue]{l} (33)[cyan]{t} (32)[green]{a} (30)[magenta]{b}"
 playlist_display_mode = "columns" (classic/columns)
 browser_display_mode = "columns" (classic/columns)
-titles_visibility = "yes"
+titles_visibility = "no"
 progressbar_look = "─╼"
 user_interface = "classic" (classic/alternative)
 header_text_scrolling = "yes"
@@ -32,5 +32,11 @@ main_window_highlight_color = "cyan"
 progressbar_color = "yellow"
 statusbar_color = "cyan" 
 active_column_color = "cyan"
-
+autocenter_mode = "yes"
+visualizer_fifo_path = "/tmp/mpd.fifo"
+visualizer_output_name = "my_fifo"
+visualizer_sync_interval = "30" 
+visualizer_in_stereo = "yes"
+visualizer_type = "spectrum"
+visualizer_look = "+|"
 
