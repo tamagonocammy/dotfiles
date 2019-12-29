@@ -59,7 +59,7 @@ Plug 'scrooloose/syntastic'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf'
 Plug 'othree/html5.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'jlanzarotta/bufexplorer'
@@ -100,6 +100,7 @@ Plug 'michaeljsmith/vim-indent-object'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'lilydjwg/colorizer'
+Plug 'aurieh/discord.nvim'
 if has('python')
     " YAPF formatter for Python
     Plug 'pignacio/vim-yapf-format'
