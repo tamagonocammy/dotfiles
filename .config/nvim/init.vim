@@ -19,14 +19,14 @@
 " General stuff {{{
 set nocompatible   " Disable VI compatibility mode
 syntax on
-colorscheme nord
+colorscheme gruvbox 
 set t_Co=256
 set background=dark
 filetype plugin indent on
 call plug#begin('~/.config/nvim/plugged')
 let g:airline_powerline_fonts = 1
 set mouse=a
-set guifont=Hack\ Nerd\ Font\ Mono\ 11
+set guifont=FuraMono\ Nerd\ Font\ Mono\ 10
 set guioptions-=T
 set guioptions-=l "remove toolbar and scrollbars
 set foldmethod=marker
@@ -43,7 +43,7 @@ set nobackup
 set nowritebackup
 " Better display for messages
 set cmdheight=2
-let g:airline_theme='nord'
+let g:airline_theme='base16_gruvbox_dark_hard'
 hi! Normal ctermbg=NONE guibg=NONE
 hi! NonText ctermbg=NONE guibg=NONE
 " You will have bad experience for diagnostic messages when it's default 4000.
@@ -72,7 +72,7 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'honza/vim-snippets'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'vim-airline/vim-airline'
-Plug 'morhetz/gruvbox'
+Plug 'gruvbox-community/gruvbox'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'plasticboy/vim-markdown'
 Plug 'sukima/xmledit'

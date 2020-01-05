@@ -2,3 +2,6 @@
 	path = .startpage
 	url = https://github.com/tamagonocammy/startpage
 
+[submodule ".themes/Pop-gruvbox"]
+	path = .themes/Pop-gruvbox
+	url = https://github.com/salimundo/Pop-gruvbox

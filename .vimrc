@@ -19,7 +19,7 @@
 " My Vim's Configuration by Camila Valencia~
 set nocompatible   " Disable VI compatibility mode
 syntax on
-colorscheme nord
+colorscheme gruvbox
 set t_Co=256
 let g:gruvbox_termcolors=256
 set background=dark
@@ -50,7 +50,7 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'honza/vim-snippets'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'vim-airline/vim-airline'
-Plug 'morhetz/gruvbox'
+Plug 'gruvbox-community/gruvbox'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'plasticboy/vim-markdown'
 Plug 'sukima/xmledit'
@@ -122,7 +122,7 @@ set nowritebackup
 " Better display for messages
 set cmdheight=2
 
-let g:airline_theme='nord'
+let g:airline_theme='base16_gruvbox_dark_hard'
 hi! Normal ctermbg=NONE guibg=NONE
 hi! NonText ctermbg=NONE guibg=NONE
 nnoremap <silent> <leader>z :Goyo<cr>
