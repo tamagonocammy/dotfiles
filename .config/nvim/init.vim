@@ -144,7 +144,7 @@ let g:AutoClosePreserveDotReg = 0
 " Shortcut for turning line wrapping on/off and convenient navigation when lines are wrapped
 noremap <silent> <Leader>w :call ToggleWrap()<CR>
 function ToggleWrap()
- l if &wrap
+ if &wrap
     echo "Wrap OFF"
     setlocal nowrap
     set virtualedit=all
