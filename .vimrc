@@ -27,7 +27,7 @@ filetype plugin indent on
 call plug#begin('~/.config/nvim/plugged')
 let g:airline_powerline_fonts = 1
 set mouse=a
-set guifont=Fantasque\ Sans\ Mono\ Nerd\ Font\ Mono\ 10
+set guifont=FuraSans\ Mono\ Nerd\ Font\ Mono\ 10
 set guioptions-=T
 set guioptions-=lrb "remove toolbar and scrollbars
 
@@ -42,7 +42,7 @@ Plug 'othree/html5.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'jlanzarotta/bufexplorer'
 Plug 'pangloss/vim-javascript'
-Plug 'KabbAmine/vCoolor.vim'	
+Plug 'KabbAmine/vCoolor.vim'
 Plug 'tomtom/tlib_vim'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'garbas/vim-snipmate'
@@ -198,7 +198,7 @@ if has("win32")
   set ffs=dos   " On Windows assume Cr-Lf line endings
   set directory=$TMP
 else
-  set directory=/tmp 
+  set directory=/tmp
 endif
 
 " Vim-airline behavior
@@ -319,9 +319,9 @@ nmap ,D :tab split<CR>:call jedi#goto()<CR>
 
   " ---> youcompleteme configuration <---
   let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
-  
+
   " ---> compatibility with another plugin (ultisnips) <---
-  let g:ycm_key_list_select_completion = [ '<C-n>', '<Down>' ] 
+  let g:ycm_key_list_select_completion = [ '<C-n>', '<Down>' ]
   let g:ycm_key_list_previous_completion = [ '<C-p>', '<Up>' ]
   let g:SuperTabDefaultCompletionType = '<C-n>'
 " ---> disable preview window <---
