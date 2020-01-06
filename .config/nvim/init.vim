@@ -59,7 +59,7 @@ Plug 'scrooloose/syntastic'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'junegunn/fzf'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'othree/html5.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'jlanzarotta/bufexplorer'
@@ -77,7 +77,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'plasticboy/vim-markdown'
 Plug 'sukima/xmledit'
 Plug 'kovetskiy/sxhkd-vim'
-Plug 'tpope/vim-eunuch'
+Plug 'lambdalisue/suda.vim'
 Plug 'tpope/vim-surround'
 Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/goyo.vim'
@@ -110,6 +110,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
+Plug 'edkolev/tmuxline.vim'
 call plug#end()
 "}}}
 " Tab behavior{{{
@@ -269,7 +270,15 @@ let g:NERDTreeIndicatorMapCustom = {
     \ "Unknown"   : "?"
     \ }
 
-
+" Tmuxline behavior
+let g:tmuxline_preset = { 
+      \'a'    : '#(whoami)',
+      \'b'    : '#H',
+      \'win'  : ['#I', '#W'],
+      \'cwin' : ['#I', '#W'],
+      \'x'    : '#(~/scripts/tmux-nowplayer)',
+      \'y'    : '#(date +"%I:%M %p")',
+      \'z'    : '#S'}
 " CtrlP behavior
 let g:ctrlp_working_path_mode=0   " Start searching from the currend working directory
 
