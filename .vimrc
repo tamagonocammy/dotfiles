@@ -1,4 +1,3 @@
-
 "
 "       ________ ++     ________
 "      /VVVVVVVV\++++  /VVVVVVVV\
@@ -16,33 +15,57 @@
 "       'V/'   ++++++
 "                ++
 "
-" My Vim's Configuration by Camila Valencia~
+" My Neovim's Configuration by Camila Valencia~
+" General stuff {{{
 set nocompatible   " Disable VI compatibility mode
 syntax on
-colorscheme gruvbox
+colorscheme gruvbox 
 set t_Co=256
-let g:gruvbox_termcolors=256
 set background=dark
 filetype plugin indent on
 call plug#begin('~/.config/nvim/plugged')
 let g:airline_powerline_fonts = 1
 set mouse=a
-set guifont=FuraSans\ Mono\ Nerd\ Font\ Mono\ 10
+set guifont=FuraMono\ Nerd\ Font\ Mono\ 9
 set guioptions-=T
-set guioptions-=lrb "remove toolbar and scrollbars
-
-" Bundles
+set guioptions-=L
+set guioptions-=r"remove toolbar and scrollbars
+set foldmethod=marker
+set nowrap                       " Not wrapping lines
+set autowrite                    " Auto-save files before executing make
+set hidden                       " Allow unsaved buffers
+set backspace=indent,eol,start   " Backspace also via line breaks
+set laststatus=2                 " Always display status bar
+set noshowmode                   " Hide the default mode text
+set encoding=utf-8               " Always use UTF-8 as encoding
+set number                       " Show line numbers
+let mapleader=","                " Comma instead of backslash as <leader>
+set nobackup
+set nowritebackup
+" Better display for messages
+set cmdheight=2
+let g:airline_theme='base16_gruvbox_dark_hard'
+hi! Normal ctermbg=NONE guibg=NONE
+hi! NonText ctermbg=NONE guibg=NONE
+" You will have bad experience for diagnostic messages when it's default 4000.
+set updatetime=300
+" don't give |ins-completion-menu| messages.
+set shortmess+=c
+" always show signcolumns
+set signcolumn=yes
+"}}}
+" Bundles{{{
 Plug 'vim-ruby/vim-ruby'
 Plug 'scrooloose/syntastic'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf'
 Plug 'othree/html5.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'jlanzarotta/bufexplorer'
 Plug 'pangloss/vim-javascript'
-Plug 'KabbAmine/vCoolor.vim'
+Plug 'KabbAmine/vCoolor.vim'	
 Plug 'tomtom/tlib_vim'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'garbas/vim-snipmate'
@@ -55,7 +78,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'plasticboy/vim-markdown'
 Plug 'sukima/xmledit'
 Plug 'kovetskiy/sxhkd-vim'
-Plug 'tpope/vim-eunuch'
+Plug 'lambdalisue/suda.vim'
 Plug 'tpope/vim-surround'
 Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/goyo.vim'
@@ -88,7 +111,8 @@ Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 call plug#end()
-" Tab behavior
+"}}}
+" Tab behavior{{{
 set expandtab
 let g:airline#extensions#tabline#enabled =1
 let g:airline#extensions#tabline#show_buffers = 0
@@ -107,24 +131,8 @@ set shiftwidth=2
 set softtabstop=2
 set tabstop=4
 let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -l -g ""'
-" General behavior
-set nowrap                       " Not wrapping lines
-set autowrite                    " Auto-save files before executing make
-set hidden                       " Allow unsaved buffers
-set backspace=indent,eol,start   " Backspace also via line breaks
-set laststatus=2                 " Always display status bar
-set noshowmode                   " Hide the default mode text
-set encoding=utf-8               " Always use UTF-8 as encoding
-set number                       " Show line numbers
-let mapleader=","                " Comma instead of backslash as <leader>
-set nobackup
-set nowritebackup
-" Better display for messages
-set cmdheight=2
-
-let g:airline_theme='base16_gruvbox_dark_hard'
-hi! Normal ctermbg=NONE guibg=NONE
-hi! NonText ctermbg=NONE guibg=NONE
+"}}}
+" Keybindings{{{
 nnoremap <silent> <leader>z :Goyo<cr>
 nnoremap <Leader>ga :Git add %:p<CR><CR>
 nnoremap <Leader>gs :Gstatus<CR>
@@ -136,7 +144,7 @@ let g:AutoClosePreserveDotReg = 0
 " Shortcut for turning line wrapping on/off and convenient navigation when lines are wrapped
 noremap <silent> <Leader>w :call ToggleWrap()<CR>
 function ToggleWrap()
- l if &wrap
+ if &wrap
     echo "Wrap OFF"
     setlocal nowrap
     set virtualedit=all
@@ -163,47 +171,6 @@ function ToggleWrap()
     inoremap <buffer> <silent> <End>  <C-o>g<End>
   endif
 endfunction
-
-" NERDTree behavior
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif   " Close vim if the only window left open is a NERDTree
-map <leader>n :NERDTreeToggle<CR>
-let NERDTreeMinimalUI = 1
-let NERDTreeDirArrows = 1
-let NERDTreeAutoDeleteBuffer = 1
-let NERDTreeQuitOnOpen = 1
-let NERDTreeShowHidden=1
-let nerdchristmastree=1
-let g:NERDTreeDirArrowExpandable = '▷'
-let g:NERDTreeDirArrowCollapsible = '▼'
-let NERDTreeAutoCenter=1
-let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "✹",
-    \ "Staged"    : "✚",
-    \ "Untracked" : "✭",
-    \ "Renamed"   : "➜",
-    \ "Unmerged"  : "═",
-    \ "Deleted"   : "✖",
-    \ "Dirty"     : "✗",
-    \ "Clean"     : "✔︎",
-    \ 'Ignored'   : '☒',
-    \ "Unknown"   : "?"
-    \ }
-
-
-" CtrlP behavior
-let g:ctrlp_working_path_mode=0   " Start searching from the currend working directory
-
-" Windows behavior
-if has("win32")
-  set ffs=dos   " On Windows assume Cr-Lf line endings
-  set directory=$TMP
-else
-  set directory=/tmp
-endif
-
-" Vim-airline behavior
-let g:airline#extensions#whitespace#enabled=0   " Disable whitespace checks
-
 " File type specific behavior
 autocmd FileType mkd setlocal shiftwidth=4 softtabstop=4
 
@@ -255,6 +222,68 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" fugitive git bindings
+nnoremap <leader>ga :Git add %:p<CR><CR>
+nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gc :Gcommit -v -q<CR>
+nnoremap <leader>gt :Gcommit -v -q %:p<CR>
+nnoremap <leader>gd :Gdiff<CR>
+nnoremap <leader>ge :Gedit<CR>
+nnoremap <leader>gr :Gread<CR>
+nnoremap <leader>gw :Gwrite<CR><CR>
+nnoremap <leader>gl :silent! Glog<CR>:bot copen<CR>
+nnoremap <leader>gp :Ggrep<Space>
+nnoremap <leader>gm :Gmove<Space>
+nnoremap <leader>gb :Git branch<Space>
+nnoremap <leader>go :Git checkout<Space>
+nnoremap <leader>gps :Dispatch! git push<CR>
+nnoremap <leader>gpl :Dispatch! git pull<CR>
+
+" buffer management
+nnoremap  <silent>   <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
+nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
+"}}}
+" Plugin settings{{{
+" " NERDTree behavior
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif   " Close vim if the only window left open is a NERDTree
+map <leader>n :NERDTreeToggle<CR>
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+let NERDTreeAutoDeleteBuffer = 1
+let NERDTreeQuitOnOpen = 1
+let NERDTreeShowHidden=1
+let nerdchristmastree=1
+let g:NERDTreeDirArrowExpandable = '▷'
+let g:NERDTreeDirArrowCollapsible = '▼'
+let NERDTreeAutoCenter=1
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ 'Ignored'   : '☒',
+    \ "Unknown"   : "?"
+    \ }
+
+
+" CtrlP behavior
+let g:ctrlp_working_path_mode=0   " Start searching from the currend working directory
+
+" Windows behavior
+if has("win32")
+  set ffs=dos   " On Windows assume Cr-Lf line endings
+  set directory=$TMP
+else
+  set directory=/tmp 
+endif
+
+" Vim-airline behavior
+let g:airline#extensions#whitespace#enabled=0   " Disable whitespace checks
+
 
 let g:startify_custom_header=[
     \ '                          ',
@@ -283,27 +312,6 @@ let g:startify_custom_header=[
 \ ]
     let g:startify_files_number = 5
 
-" fugitive git bindings
-nnoremap <leader>ga :Git add %:p<CR><CR>
-nnoremap <leader>gs :Gstatus<CR>
-nnoremap <leader>gc :Gcommit -v -q<CR>
-nnoremap <leader>gt :Gcommit -v -q %:p<CR>
-nnoremap <leader>gd :Gdiff<CR>
-nnoremap <leader>ge :Gedit<CR>
-nnoremap <leader>gr :Gread<CR>
-nnoremap <leader>gw :Gwrite<CR><CR>
-nnoremap <leader>gl :silent! Glog<CR>:bot copen<CR>
-nnoremap <leader>gp :Ggrep<Space>
-nnoremap <leader>gm :Gmove<Space>
-nnoremap <leader>gb :Git branch<Space>
-nnoremap <leader>go :Git checkout<Space>
-nnoremap <leader>gps :Dispatch! git push<CR>
-nnoremap <leader>gpl :Dispatch! git pull<CR>
-
-" buffer management
-nnoremap  <silent>   <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
-nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
-
 
 " Jedi-vim ------------------------------
 
@@ -319,9 +327,9 @@ nmap ,D :tab split<CR>:call jedi#goto()<CR>
 
   " ---> youcompleteme configuration <---
   let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
-
+  
   " ---> compatibility with another plugin (ultisnips) <---
-  let g:ycm_key_list_select_completion = [ '<C-n>', '<Down>' ]
+  let g:ycm_key_list_select_completion = [ '<C-n>', '<Down>' ] 
   let g:ycm_key_list_previous_completion = [ '<C-p>', '<Up>' ]
   let g:SuperTabDefaultCompletionType = '<C-n>'
 " ---> disable preview window <---
@@ -351,15 +359,6 @@ let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
 let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
 let g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ''
 let g:DevIconsDefaultFolderOpenSymbol = ''
-" You will have bad experience for diagnostic messages when it's default 4000.
-set updatetime=300
-
-" don't give |ins-completion-menu| messages.
-set shortmess+=c
-
-" always show signcolumns
-set signcolumn=yes
-
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
 inoremap <silent><expr> <TAB>
@@ -469,3 +468,4 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silen> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>t
+"}}}
