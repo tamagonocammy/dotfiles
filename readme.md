@@ -11,7 +11,7 @@ They're FAR from a concise setup, mostly because I'm not a programmer, i'm just 
 * MPD/Spotify
 * Neovim
 
-![Clean Desktop](https://imgur.com/sjZps8f.png)
+![Clean Desktop](https://i.imgur.com/5gxf8h3.png)
 
 
-![Fake Dirty](https://imgur.com/WIabiLf.png)
+![Fake Dirty](https://i.imgur.com/63wwsyL.png)
