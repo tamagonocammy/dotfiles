@@ -276,7 +276,7 @@ let g:tmuxline_preset = {
       \'b'    : '#H',
       \'win'  : ['#I', '#W'],
       \'cwin' : ['#I', '#W'],
-      \'x'    : '#(~/scripts/tmux-nowplayer)',
+      \'x'    : ['#(~/scripts/tmux-nowplayer)'],
       \'y'    : '#(date +"%I:%M %p")',
       \'z'    : '#S'}
 " CtrlP behavior
