@@ -19,16 +19,16 @@
 " General stuff {{{
 set nocompatible   " Disable VI compatibility mode
 syntax on
-colorscheme gruvbox 
+colorscheme dracula 
 set t_Co=256
 set background=dark
 filetype plugin indent on
 call plug#begin('~/.config/nvim/plugged')
 let g:airline_powerline_fonts = 1
 set mouse=a
-set guifont=FuraMono\ Nerd\ Font\ Mono\ 10
-set guioptions-=T
-set guioptions-=l "remove toolbar and scrollbars
+set guifont=FuraMono\ Nerd\ Font\ Mono\ 9
+set guioptions=m
+nnoremap <C-F1> :if &go=~#'m'<Bar>set go-=m<Bar>else<Bar>set go+=m<Bar>endif<CR>
 set foldmethod=marker
 set nowrap                       " Not wrapping lines
 set autowrite                    " Auto-save files before executing make
@@ -43,7 +43,7 @@ set nobackup
 set nowritebackup
 " Better display for messages
 set cmdheight=2
-let g:airline_theme='base16_gruvbox_dark_hard'
+let g:airline_theme='dracula'
 hi! Normal ctermbg=NONE guibg=NONE
 hi! NonText ctermbg=NONE guibg=NONE
 " You will have bad experience for diagnostic messages when it's default 4000.
@@ -63,8 +63,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'othree/html5.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'jlanzarotta/bufexplorer'
-Plug 'pangloss/vim-javascript'
-Plug 'KabbAmine/vCoolor.vim'	
+Plug 'pangloss/vim-javascript'	
 Plug 'tomtom/tlib_vim'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'garbas/vim-snipmate'
@@ -79,6 +78,7 @@ Plug 'sukima/xmledit'
 Plug 'kovetskiy/sxhkd-vim'
 Plug 'lambdalisue/suda.vim'
 Plug 'tpope/vim-surround'
+Plug 'chrisbra/Colorizer'
 Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/goyo.vim'
 Plug 'tpope/vim-fugitive'
@@ -100,7 +100,7 @@ Plug 'michaeljsmith/vim-indent-object'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'lilydjwg/colorizer'
-Plug 'aurieh/discord.nvim'
+Plug 'liuchengxui/vista.vim'
 if has('python')
     " YAPF formatter for Python
     Plug 'pignacio/vim-yapf-format'
@@ -111,13 +111,12 @@ Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 Plug 'edkolev/tmuxline.vim'
+Plug 'edkolev/promptline.vim'
 call plug#end()
 "}}}
 " Tab behavior{{{
 set expandtab
 let g:airline#extensions#tabline#enabled =1
-let g:airline#extensions#tabline#show_buffers = 0
-let g:airline#extensions#tabline#show_tabs = 0
 let g:airline_skip_empty_sections = 1
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
@@ -128,10 +127,12 @@ let g:airline#extensions#hunks#enabled = 1
 " enable/disable showing only non-zero hunks.
 let g:airline#extensions#hunks#non_zero_only = 1
 let g:airline#extensions#whitespace#enabled = 0
+
 set shiftwidth=2
 set softtabstop=2
 set tabstop=4
 let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -l -g ""'
+nmap <c-f> :Ag<CR>
 "}}}
 " Keybindings{{{
 nnoremap <silent> <leader>z :Goyo<cr>
@@ -248,11 +249,14 @@ nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :wri
 " " NERDTree behavior
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif   " Close vim if the only window left open is a NERDTree
 map <leader>n :NERDTreeToggle<CR>
+nmap <Leader>nf :NERDTreeFind<CR>
+let NERDTreeCascadeSingleChildDir=0
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeQuitOnOpen = 1
 let NERDTreeShowHidden=1
+nmap <leader>rn :NERDTree<cr> \| R \| <c-w><c-p>
 let nerdchristmastree=1
 let g:NERDTreeDirArrowExpandable = '▷'
 let g:NERDTreeDirArrowCollapsible = '▼'
@@ -279,6 +283,17 @@ let g:tmuxline_preset = {
       \'x'    : ['#(~/scripts/tmux-nowplayer)'],
       \'y'    : '#(date +"%I:%M %p")',
       \'z'    : '#S'}
+
+let g:airline#extensions#tmuxline#enabled = 1
+let airline#extensions#tmuxline#snapshot_file = "~/.tmux-status.conf"
+" promptline behavior "
+let g:promptline_preset = {
+        \'a' : [ promptline#slices#host() ],
+        \'b' : [ promptline#slices#user() ],
+        \'c' : [ promptline#slices#cwd() ],
+        \'y' : [ promptline#slices#vcs_branch() ],
+        \'warn' : [ promptline#slices#last_exit_code() ]}
+let g:promptline_theme = 'airline'
 " CtrlP behavior
 let g:ctrlp_working_path_mode=0   " Start searching from the currend working directory
 
@@ -368,6 +383,25 @@ let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
 let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
 let g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ''
 let g:DevIconsDefaultFolderOpenSymbol = ''
+""""""""""""""
+" coc.nvim "
+""""""""""""""
+" list extensions
+ let g:coc_global_extensions = [
+       \ 'coc-lists',
+       \ 'coc-eslint',
+       \ 'coc-snippets',
+       \ 'coc-emmet',
+       \ 'coc-yank', 
+       \ 'coc-highlight',
+       \ 'coc-tsserver',
+       \ 'coc-python',
+       \ 'coc-html',
+       \ 'coc-json',
+       \ 'coc-yaml',
+       \ 'coc-markdownlint',
+       \ 'coc-css',
+       \]
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
 inoremap <silent><expr> <TAB>
@@ -477,4 +511,8 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silen> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>t
+
+"liuchengxu/vista.vim
+let g:vista_default_executive = 'coc'
+nmap <Leader>v :Vista!!<CR>
 "}}}
