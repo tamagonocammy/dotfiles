@@ -19,7 +19,7 @@
 " General stuff {{{
 set nocompatible   " Disable VI compatibility mode
 syntax on
-colorscheme dracula 
+colorscheme gruvbox 
 set t_Co=256
 set background=dark
 filetype plugin indent on
@@ -43,7 +43,7 @@ set nobackup
 set nowritebackup
 " Better display for messages
 set cmdheight=2
-let g:airline_theme='dracula'
+let g:airline_theme='base16_gruvbox_dark_hard'
 hi! Normal ctermbg=NONE guibg=NONE
 hi! NonText ctermbg=NONE guibg=NONE
 " You will have bad experience for diagnostic messages when it's default 4000.
