@@ -100,7 +100,7 @@ Plug 'michaeljsmith/vim-indent-object'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'lilydjwg/colorizer'
-Plug 'liuchengxui/vista.vim'
+Plug 'liuchengxu/vista.vim'
 if has('python')
     " YAPF formatter for Python
     Plug 'pignacio/vim-yapf-format'
