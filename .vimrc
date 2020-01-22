@@ -116,18 +116,6 @@ call plug#end()
 "}}}
 " Tab behavior{{{
 set expandtab
-let g:airline#extensions#tabline#enabled =1
-let g:airline_skip_empty_sections = 1
-" Show just the filename
-let g:airline#extensions#tabline#fnamemod = ':t'
-" enable/disable fugitive/lawrencium integration
-let g:airline#extensions#branch#enabled = 1
-" enable/disable showing a summary of changed hunks under source control.
-let g:airline#extensions#hunks#enabled = 1
-" enable/disable showing only non-zero hunks.
-let g:airline#extensions#hunks#non_zero_only = 1
-let g:airline#extensions#whitespace#enabled = 0
-
 set shiftwidth=2
 set softtabstop=2
 set tabstop=4
@@ -307,6 +295,17 @@ endif
 
 " Vim-airline behavior
 let g:airline#extensions#whitespace#enabled=0   " Disable whitespace checks
+let g:airline#extensions#tabline#enabled =1
+let g:airline_skip_empty_sections = 1
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
+" enable/disable fugitive/lawrencium integration
+let g:airline#extensions#branch#enabled = 1
+" enable/disable showing a summary of changed hunks under source control.
+let g:airline#extensions#hunks#enabled = 1
+" enable/disable showing only non-zero hunks.
+let g:airline#extensions#hunks#non_zero_only = 1
+let g:airline#extensions#whitespace#enabled = 0
 
 
 let g:startify_custom_header=[
