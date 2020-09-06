@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="maximize.svg"
+   id="svg2"
+   height="26"
+   width="104"
+   version="1.0">
+  <sodipodi:namedview
+     inkscape:document-rotation="0"
+     inkscape:lockguides="true"
+     inkscape:current-layer="svg2"
+     inkscape:window-maximized="1"
+     inkscape:window-y="0"
+     inkscape:window-x="0"
+     inkscape:cy="36.627957"
+     inkscape:cx="35.717478"
+     inkscape:zoom="6.1717625"
+     showgrid="false"
+     id="namedview30"
+     inkscape:window-height="1015"
+     inkscape:window-width="1920"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     bordercolor="#666666"
+     pagecolor="#ffffff" />
+  <metadata
+     id="metadata11">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs4">
+    <style
+       id="current-color-scheme"
+       type="text/css">
+      }
+    </style>
+  </defs>
+  <g
+     id="active-center"
+     transform="matrix(1.3,0,0,1.3,19.733583,23.657219)">
+    <rect
+       style="opacity:0;fill:#000000;fill-opacity:1;stroke:none"
+       id="rect3058-6"
+       y="-18.197861"
+       x="-15.179679"
+       height="20"
+       width="20" />
+    <g
+       id="g5785"
+       transform="translate(-55.950236,-148.30115)" />
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#a3be8c;stroke-width:1.81603;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path3833-6"
+       d="m -8.2978554,-6.4127525 3.2103125,-3.2103127 3.2103133,3.2103136" />
+  </g>
+  <g
+     id="hover-center"
+     transform="matrix(1.3,0,0,1.3,45.733583,23.657219)">
+    <rect
+       style="opacity:0;fill:#000000;fill-opacity:1;stroke:none"
+       id="rect3079"
+       y="-18.197861"
+       x="-15.179679"
+       height="20"
+       width="20" />
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#00785a;stroke-width:1.87735;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path3833-6-3"
+       d="m -8.4062624,-6.3585489 3.31872,-3.3187201 3.31872,3.318721" />
+  </g>
+  <g
+     id="inactive-center"
+     transform="matrix(1.3,0,0,1.3,97.73358,23.657219)">
+    <rect
+       style="opacity:0;fill:#bfc3c7;fill-opacity:1;stroke:none"
+       id="rect3890"
+       y="-18.197861"
+       x="-15.179679"
+       height="20"
+       width="20" />
+    <g
+       id="g3892"
+       transform="translate(-55.950236,-148.30115)" />
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#88c0d0;stroke-width:1.81603;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path3894"
+       d="m -8.2978554,-6.4127525 3.2103125,-3.2103127 3.2103133,3.2103136" />
+  </g>
+  <g
+     id="pressed-center"
+     transform="matrix(1.3,0,0,1.3,71.733583,23.657219)">
+    <rect
+       style="opacity:0;fill:#000000;fill-opacity:1;stroke:none"
+       id="rect3838"
+       y="-18.197861"
+       x="-15.179679"
+       height="20"
+       width="20" />
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#00aa7f;stroke-width:1.87735;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path3842"
+       d="m -8.4062624,-6.3585489 3.31872,-3.3187201 3.31872,3.318721" />
+  </g>
+</svg>

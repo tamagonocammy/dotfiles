@@ -1,5 +1,7 @@
 {
-    "workbench.colorTheme": "Arc Dark Theme",
+    "workbench.colorTheme": "Nord",
     "window.menuBarVisibility": "hidden",
-    "editor.fontFamily": "'Noto Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'"
+    "editor.fontFamily": "'Meslo LG S', 'monospace', monospace, 'Droid Sans Fallback'",
+    "terminal.integrated.fontFamily": "MesloLGS Nerd Font",
+    "terminal.integrated.fontSize": 11
 }

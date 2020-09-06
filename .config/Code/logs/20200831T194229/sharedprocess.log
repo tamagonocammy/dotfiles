@@ -1,0 +1,16 @@
+[2020-08-31 19:42:33.171] [sharedprocess] [info] main {"machineId":"cfd2eba2d7bb46b15a7720b7cf4668a388f2444a35ff223060469dac39e10544","windowId":2}
+[2020-08-31 19:42:33.269] [sharedprocess] [error] [File Watcher (node.js)] Error: ENOENT: no such file or directory, stat '/home/cammy/.config/Code/User/snippets'
+[2020-08-31 19:43:13.224] [sharedprocess] [info] Starting to clean up unused language packs.
+[2020-08-31 19:45:21.157] [sharedprocess] [info] Installing extension: ms-ceintl.vscode-language-pack-es
+[2020-08-31 19:45:21.964] [sharedprocess] [info] Downloaded extension: ms-ceintl.vscode-language-pack-es /home/cammy/.config/Code/CachedExtensionVSIXs/ms-ceintl.vscode-language-pack-es-1.48.3
+[2020-08-31 19:45:22.190] [sharedprocess] [info] Extracted extension to /home/cammy/.vscode/extensions/.ms-ceintl.vscode-language-pack-es-1.48.3: ms-ceintl.vscode-language-pack-es
+[2020-08-31 19:45:22.191] [sharedprocess] [info] Renamed to /home/cammy/.vscode/extensions/ms-ceintl.vscode-language-pack-es-1.48.3
+[2020-08-31 19:45:22.192] [sharedprocess] [info] Installation completed. ms-ceintl.vscode-language-pack-es
+[2020-08-31 19:45:22.265] [sharedprocess] [info] Extensions installed successfully: ms-ceintl.vscode-language-pack-es
+[2020-08-31 19:45:35.130] [sharedprocess] [info] Installing extension: alvesvaren.arc-dark
+[2020-08-31 19:45:35.557] [sharedprocess] [info] Downloaded extension: alvesvaren.arc-dark /home/cammy/.config/Code/CachedExtensionVSIXs/alvesvaren.arc-dark-0.4.0
+[2020-08-31 19:45:35.576] [sharedprocess] [info] Extracted extension to /home/cammy/.vscode/extensions/.alvesvaren.arc-dark-0.4.0: alvesvaren.arc-dark
+[2020-08-31 19:45:35.576] [sharedprocess] [info] Renamed to /home/cammy/.vscode/extensions/alvesvaren.arc-dark-0.4.0
+[2020-08-31 19:45:35.577] [sharedprocess] [info] Installation completed. alvesvaren.arc-dark
+[2020-08-31 19:45:35.614] [sharedprocess] [info] Extensions installed successfully: alvesvaren.arc-dark
+[2020-08-31 19:45:48.784] [sharedprocess] [info] main {"machineId":"cfd2eba2d7bb46b15a7720b7cf4668a388f2444a35ff223060469dac39e10544","windowId":2}
