@@ -19,14 +19,14 @@
 " General stuff {{{
 set nocompatible   " Disable VI compatibility mode
 syntax on
-colorscheme dracula 
+colorscheme nord
 set t_Co=256
 set background=dark
 filetype plugin indent on
 call plug#begin('~/.config/nvim/plugged')
 let g:airline_powerline_fonts = 1
 set mouse=a
-set guifont=FuraMono\ Nerd\ Font\ Mono\ 9
+set guifont=MesloLGS\ Nerd\ Font\ Mono\ 9
 set guioptions=m
 nnoremap <C-F1> :if &go=~#'m'<Bar>set go-=m<Bar>else<Bar>set go+=m<Bar>endif<CR>
 set foldmethod=marker
@@ -43,7 +43,7 @@ set nobackup
 set nowritebackup
 " Better display for messages
 set cmdheight=2
-let g:airline_theme='dracula'
+let g:airline_theme='nord'
 hi! Normal ctermbg=NONE guibg=NONE
 hi! NonText ctermbg=NONE guibg=NONE
 " You will have bad experience for diagnostic messages when it's default 4000.
@@ -86,7 +86,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'PotatoesMaster/i3-vim-syntax'
 Plug 'airblade/vim-gitgutter'
 Plug 'mhinz/vim-startify'
-Plug 'terryma/vim-multiple-cursors'
+Plug 'mg979/vim-visual-multi'
 Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'metakirby5/codi.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -101,10 +101,6 @@ Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'lilydjwg/colorizer'
 Plug 'liuchengxu/vista.vim'
-if has('python')
-    " YAPF formatter for Python
-    Plug 'pignacio/vim-yapf-format'
-endif
 Plug 'junegunn/fzf.vim'
 " post install (yarn install | npm install) then load plugin only for editing supported files
 Plug 'prettier/vim-prettier', {
@@ -261,7 +257,7 @@ let nerdchristmastree=1
 let g:NERDTreeDirArrowExpandable = '▷'
 let g:NERDTreeDirArrowCollapsible = '▼'
 let NERDTreeAutoCenter=1
-let g:NERDTreeIndicatorMapCustom = {
+let g:NERDTreeGitStatusIndicatorMapCustom = {
     \ "Modified"  : "✹",
     \ "Staged"    : "✚",
     \ "Untracked" : "✭",
@@ -280,7 +276,7 @@ let g:tmuxline_preset = {
       \'b'    : '#H',
       \'win'  : ['#I', '#W'],
       \'cwin' : ['#I', '#W'],
-      \'x'    : ['#(~/scripts/tmux-nowplayer)'],
+      \'x'    : ['#(~/Scripts/tmux-nowplayer)'],
       \'y'    : '#(date +"%I:%M %p")',
       \'z'    : '#S'}
 
@@ -288,8 +284,8 @@ let g:airline#extensions#tmuxline#enabled = 1
 let airline#extensions#tmuxline#snapshot_file = "~/.tmux-status.conf"
 " promptline behavior "
 let g:promptline_preset = {
-        \'a' : [ promptline#slices#host() ],
-        \'b' : [ promptline#slices#user() ],
+        \'a' : [ promptline#slices#user() ],
+        \'b' : [ promptline#slices#host() ],
         \'c' : [ promptline#slices#cwd() ],
         \'y' : [ promptline#slices#vcs_branch() ],
         \'warn' : [ promptline#slices#last_exit_code() ]}
