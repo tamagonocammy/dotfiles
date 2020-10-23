@@ -59,7 +59,7 @@ Xcursor.theme: Vanilla-DMZ
 Xcursor.size:                     0
 ! Urxvt prefs 
 URxvt*letterSpace: 0
-URxvt*font: xft:Overpass Mono Nerd Font:size=9, xft:DejaVu Sans:size=11,\
+URxvt*font: xft:MesloLGS NF RegularForPowerline:size=9, xft:DejaVu Sans:size=11,\
             xft:Noto Sans Mono CJK JP:pixelsize=18:antialias=true:hinting=true,\
             xft:Font Awesome 5 Brands:pixelsize=13:antialias=true:hinting=true,\
             xft:Sans:size=9:antialias=false
