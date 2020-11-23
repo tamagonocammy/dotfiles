@@ -19,14 +19,14 @@
 " General stuff {{{
 set nocompatible   " Disable VI compatibility mode
 syntax on
-colorscheme nord
+colorscheme dracula 
 set t_Co=256
 set background=dark
 filetype plugin indent on
 call plug#begin('~/.config/nvim/plugged')
 let g:airline_powerline_fonts = 1
 set mouse=a
-set guifont=MesloLGS\ Nerd\ Font\ Mono\ 9
+set guifont=UbuntuMono\ Nerd\ Font\ Mono\ 10
 set guioptions=m
 nnoremap <C-F1> :if &go=~#'m'<Bar>set go-=m<Bar>else<Bar>set go+=m<Bar>endif<CR>
 set foldmethod=marker
@@ -43,7 +43,7 @@ set nobackup
 set nowritebackup
 " Better display for messages
 set cmdheight=2
-let g:airline_theme='nord'
+let g:airline_theme='dracula'
 hi! Normal ctermbg=NONE guibg=NONE
 hi! NonText ctermbg=NONE guibg=NONE
 " You will have bad experience for diagnostic messages when it's default 4000.
@@ -52,6 +52,7 @@ set updatetime=300
 set shortmess+=c
 " always show signcolumns
 set signcolumn=yes
+set title
 "}}}
 " Bundles{{{
 Plug 'vim-ruby/vim-ruby'
@@ -72,6 +73,7 @@ Plug 'honza/vim-snippets'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'vim-airline/vim-airline'
 Plug 'gruvbox-community/gruvbox'
+Plug 'crusoexia/vim-monokai'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'plasticboy/vim-markdown'
 Plug 'sukima/xmledit'
@@ -108,6 +110,7 @@ Plug 'prettier/vim-prettier', {
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 Plug 'edkolev/tmuxline.vim'
 Plug 'edkolev/promptline.vim'
+Plug 'Yavor-Ivanov/airline-monokai-subtle.vim'
 call plug#end()
 "}}}
 " Tab behavior{{{
@@ -272,13 +275,12 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 
 " Tmuxline behavior
 let g:tmuxline_preset = { 
-      \'a'    : '#(whoami)',
-      \'b'    : '#H',
+      \'a'    : ' #(whoami)',
       \'win'  : ['#I', '#W'],
       \'cwin' : ['#I', '#W'],
-      \'x'    : ['#(~/Scripts/tmux-nowplayer)'],
-      \'y'    : '#(date +"%I:%M %p")',
-      \'z'    : '#S'}
+      \'x'    : [' #(~/Scripts/tmux-nowplayer)'],
+      \'y'    : ' #(date +"%I:%M %p")',
+      \'z'    : '漢#H'}
 
 let g:airline#extensions#tmuxline#enabled = 1
 let airline#extensions#tmuxline#snapshot_file = "~/.tmux-status.conf"
