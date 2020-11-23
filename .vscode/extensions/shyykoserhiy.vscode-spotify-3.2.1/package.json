@@ -1,0 +1,435 @@
+{
+	"name": "vscode-spotify",
+	"description": "Use Spotify inside vscode.",
+	"version": "3.2.1",
+	"publisher": "shyykoserhiy",
+	"license": "MIT",
+	"engines": {
+		"vscode": "^1.49.0"
+	},
+	"icon": "media/icon.png",
+	"galleryBanner": {
+		"color": "#11B460",
+		"theme": "light"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ShyykoSerhiy/vscode-spotify.git"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"contributes": {
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "vscode-spotify",
+					"title": "vscode-spotify",
+					"icon": "resources/dark/logo.svg"
+				}
+			]
+		},
+		"views": {
+			"vscode-spotify": [
+				{
+					"id": "vscode-spotify-playlists",
+					"name": "Playlists"
+				},
+				{
+					"id": "vscode-spotify-tracks",
+					"name": "Tracks"
+				}
+			]
+		},
+		"commands": [
+			{
+				"command": "spotify.next",
+				"title": "Spotify Play Next Song"
+			},
+			{
+				"command": "spotify.previous",
+				"title": "Spotify Play Previous Song"
+			},
+			{
+				"command": "spotify.play",
+				"title": "Spotify Play"
+			},
+			{
+				"command": "spotify.pause",
+				"title": "Spotify Pause"
+			},
+			{
+				"command": "spotify.playPause",
+				"title": "Spotify Play|Pause"
+			},
+			{
+				"command": "spotify.muteVolume",
+				"title": "Spotify Mute Volume"
+			},
+			{
+				"command": "spotify.unmuteVolume",
+				"title": "Spotify Unmute Volume"
+			},
+			{
+				"command": "spotify.muteUnmuteVolume",
+				"title": "Spotify Mute|Unmute Volume"
+			},
+			{
+				"command": "spotify.volumeUp",
+				"title": "Spotify Volume Up"
+			},
+			{
+				"command": "spotify.volumeDown",
+				"title": "Spotify Volume Down"
+			},
+			{
+				"command": "spotify.toggleRepeating",
+				"title": "Spotify Toggle Repeating"
+			},
+			{
+				"command": "spotify.toggleShuffling",
+				"title": "Spotify Toggle Shuffling"
+			},
+			{
+				"command": "spotify.lyrics",
+				"title": "Spotify Lyrics"
+			},
+			{
+				"command": "spotify.signIn",
+				"title": "Spotify Sign In"
+			},
+			{
+				"command": "spotify.signOut",
+				"title": "Spotify Sign Out"
+			},
+			{
+				"command": "spotify.loadPlaylists",
+				"title": "Spotify Load Playlists",
+				"icon": {
+					"light": "resources/light/refresh.svg",
+					"dark": "resources/dark/refresh.svg"
+				}
+			},
+			{
+				"command": "spotify.loadTracks",
+				"title": "Spotify Load Tracks",
+				"icon": {
+					"light": "resources/light/refresh.svg",
+					"dark": "resources/dark/refresh.svg"
+				}
+			},
+			{
+				"command": "spotify.trackInfoClick",
+				"title": "Spotify TrackInfo Click"
+			},
+			{
+				"command": "spotify.seekTo",
+				"title": "Spotify Seek To"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "spotify.next",
+				"key": "ctrl+shift+]",
+				"mac": "ctrl+cmd+]"
+			},
+			{
+				"command": "spotify.previous",
+				"key": "ctrl+shift+[",
+				"mac": "ctrl+cmd+["
+			},
+			{
+				"command": "spotify.volumeUp",
+				"key": "ctrl+shift+'",
+				"mac": "cmd+shift+'"
+			},
+			{
+				"command": "spotify.volumeDown",
+				"key": "ctrl+shift+;",
+				"mac": "cmd+shift+;"
+			}
+		],
+		"menus": {
+			"view/title": [
+				{
+					"command": "spotify.loadPlaylists",
+					"when": "view == vscode-spotify-playlists",
+					"group": "navigation"
+				},
+				{
+					"command": "spotify.loadTracks",
+					"when": "view == vscode-spotify-tracks",
+					"group": "navigation"
+				}
+			]
+		},
+		"configuration": {
+			"type": "object",
+			"title": "vscode-spotify configuration",
+			"properties": {
+				"spotify.trackInfoFormat": {
+					"type": "string",
+					"default": "artistName - trackName",
+					"description": "Current track info that will be displayed. Available keywords: albumName, artistName, trackName"
+				},
+				"spotify.trackInfoClickBehaviour": {
+					"type": "string",
+					"enum": [
+						"none",
+						"focus_song",
+						"play_pause"
+					],
+					"default": "focus_song",
+					"description": "What to do when trackInfo is clicked: 'none' - do nothing, 'focus_song' - current song will be selected Playlists/Tracks section if it exists there, 'play_pause' - trackInfo essentially becomes playPause button (great option for minimal ui). "
+				},
+				"spotify.showNextButton": {
+					"type": "boolean",
+					"default": true,
+					"description": "Whether to show next button."
+				},
+				"spotify.showPreviousButton": {
+					"type": "boolean",
+					"default": true,
+					"description": "Whether to show previous button."
+				},
+				"spotify.showPlayButton": {
+					"type": "boolean",
+					"default": false,
+					"description": "Whether to show play button."
+				},
+				"spotify.showPauseButton": {
+					"type": "boolean",
+					"default": false,
+					"description": "Whether to show pause button."
+				},
+				"spotify.showPlayPauseButton": {
+					"type": "boolean",
+					"default": true,
+					"description": "Whether to show play|pause button."
+				},
+				"spotify.showMuteVolumeButton": {
+					"type": "boolean",
+					"default": false,
+					"description": "Whether to show mute button."
+				},
+				"spotify.showUnmuteVolumeButton": {
+					"type": "boolean",
+					"default": false,
+					"description": "Whether to show unmute button."
+				},
+				"spotify.showMuteUnmuteVolumeButton": {
+					"type": "boolean",
+					"default": true,
+					"description": "Whether to show mute|unmute button."
+				},
+				"spotify.showVolumeUpButton": {
+					"type": "boolean",
+					"default": false,
+					"description": "Whether to show volume up button."
+				},
+				"spotify.showVolumeDownButton": {
+					"type": "boolean",
+					"default": false,
+					"description": "Whether to show volume down button."
+				},
+				"spotify.showToggleRepeatingButton": {
+					"type": "boolean",
+					"default": false,
+					"description": "Whether to show toggle repeating button."
+				},
+				"spotify.showToggleShufflingButton": {
+					"type": "boolean",
+					"default": false,
+					"description": "Whether to show toggle shuffling button."
+				},
+				"spotify.showLyricsButton": {
+					"type": "boolean",
+					"default": true,
+					"description": "Whether to show lyrics button."
+				},
+				"spotify.showSignInButton": {
+					"type": "boolean",
+					"default": true,
+					"description": "Whether to show sign in button."
+				},
+				"spotify.showSignOutButton": {
+					"type": "boolean",
+					"default": true,
+					"description": "Whether to show sign out button."
+				},
+				"spotify.openPanelLyrics": {
+					"type": "number",
+					"default": 1,
+					"enum": [
+						1,
+						2,
+						3
+					],
+					"description": "Panel to display the Lyrics"
+				},
+				"spotify.priorityBase": {
+					"type": "number",
+					"default": 30,
+					"description": "Base value of priority for all vscode-spotify elements in Status Bar(priority = basePriority+priority). This is done to avoid 'conflicts' with other extensions. "
+				},
+				"spotify.nextButtonPriority": {
+					"type": "number",
+					"default": 8,
+					"description": "Priority of next button."
+				},
+				"spotify.previousButtonPriority": {
+					"type": "number",
+					"default": 10,
+					"description": "Priority of previous button."
+				},
+				"spotify.playButtonPriority": {
+					"type": "number",
+					"default": 7,
+					"description": "Priority of play button."
+				},
+				"spotify.pauseButtonPriority": {
+					"type": "number",
+					"default": 6,
+					"description": "Priority of pause button."
+				},
+				"spotify.playPauseButtonPriority": {
+					"type": "number",
+					"default": 9,
+					"description": "Priority of play|pause button."
+				},
+				"spotify.muteButtonPriority": {
+					"type": "number",
+					"default": 5,
+					"description": "Priority of mute button."
+				},
+				"spotify.unmuteButtonPriority": {
+					"type": "number",
+					"default": 4,
+					"description": "Priority of unmute button."
+				},
+				"spotify.muteUnmuteButtonPriority": {
+					"type": "number",
+					"default": 3,
+					"description": "Priority of mute|unmute button."
+				},
+				"spotify.volumeUpButtonPriority": {
+					"type": "number",
+					"default": 2,
+					"description": "Priority of volume up button."
+				},
+				"spotify.volumeDownButtonPriority": {
+					"type": "number",
+					"default": 1,
+					"description": "Priority of volume down button."
+				},
+				"spotify.trackInfoPriority": {
+					"type": "number",
+					"default": 0,
+					"description": "Priority of track info."
+				},
+				"spotify.toggleRepeatingButtonPriority": {
+					"type": "number",
+					"default": 11,
+					"description": "Priority of toggle repeating button."
+				},
+				"spotify.toggleShufflingButtonPriority": {
+					"type": "number",
+					"default": 12,
+					"description": "Priority of toggle shuffling button."
+				},
+				"spotify.lyricsButtonPriority": {
+					"type": "number",
+					"default": 0,
+					"description": "Priority of lyrics button."
+				},
+				"spotify.signInButtonPriority": {
+					"type": "number",
+					"default": 15,
+					"description": "Priority of sign in button."
+				},
+				"spotify.signOutButtonPriority": {
+					"type": "number",
+					"default": 15,
+					"description": "Priority of sign out button."
+				},
+				"spotify.statusCheckInterval": {
+					"type": "number",
+					"default": 5000,
+					"description": "Interval of spotify status checks. Frequent status checks may result in faster battery drain and high CPU load (especially on MacOs). Note that with web api implementation 5000 is mimimal possible value."
+				},
+				"spotify.lyricsServerUrl": {
+					"type": "string",
+					"default": "https://vscode-spotify-lyrics.azurewebsites.net/v3/songs",
+					"description": "Url for lyrics server. @see https://github.com/ShyykoSerhiy/vscode-spotify-lyrics ."
+				},
+				"spotify.authServerUrl": {
+					"type": "string",
+					"default": "https://vscode-spotify-auth.azurewebsites.net",
+					"description": "Url to auth server. @see https://github.com/ShyykoSerhiy/vscode-spotify-auth"
+				},
+				"spotify.spotifyApiUrl": {
+					"type": "string",
+					"default": "https://api.spotify.com/v1",
+					"description": "Url to spotify api server. @see https://beta.developer.spotify.com/documentation/web-api/reference/playlists/"
+				},
+				"spotify.forceWebApiImplementation": {
+					"type": "boolean",
+					"default": false,
+					"description": "Whether to force web api implementation on Linux or MacOs. If you you want this enabled, please, consider using your own spotify.authServerUrl ."
+				},
+				"spotify.enableLogs": {
+					"type": "boolean",
+					"default": false,
+					"description": "Whether to enable logs."
+				}
+			}
+		}
+	},
+	"main": "./out/extension.js",
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "eslint src --ext ts",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"madge:circular": "npx madge --circular --extensions ts ./src",
+		"contributors:add": "all-contributors add",
+		"contributors:generate": "all-contributors generate",
+		"contributors:check": "all-contributors check"
+	},
+	"devDependencies": {
+		"@types/express": "^4.11.1",
+		"@types/mocha": "^8.0.0",
+		"@types/node": "^14.0.27",
+		"@types/superagent": "^2.0.36",
+		"@types/vscode": "^1.49.0",
+		"@types/cheerio": "^0.22.22",
+		"all-contributors-cli": "^6.17.4",
+		"typescript": "^4.0.2",
+		"eslint": "^7.9.0",
+		"@typescript-eslint/eslint-plugin": "^4.1.1",
+		"@typescript-eslint/parser": "^4.1.1",
+		"vscode-test": "^1.4.0"
+	},
+	"dependencies": {
+		"@vscodespotify/spotify-common": "1.4.1",
+		"autobind-decorator": "^2.1.0",
+		"cheerio": "^1.0.0-rc.3",
+		"child_process": "^1.0.2",
+		"express": "^4.16.2",
+		"immutable": "^3.8.2",
+		"moment": "^2.22.2",
+		"redux": "^3.7.2",
+		"redux-persist": "^5.10.0",
+		"request-light": "^0.2.1",
+		"spotify-node-applescript": "1.1.1"
+	},
+	"__metadata": {
+		"id": "4b0bb8e1-8f9a-42c4-b0dd-03691bdcc309",
+		"publisherId": "9d5baa6a-45a1-4148-9464-10076a02e3ec",
+		"publisherDisplayName": "shyykoserhiy"
+	}
+}

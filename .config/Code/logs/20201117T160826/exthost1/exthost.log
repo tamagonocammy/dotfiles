@@ -1,0 +1,25 @@
+[2020-11-17 16:08:29.975] [exthost] [info] extension host started
+[2020-11-17 16:08:30.005] [exthost] [info] ExtensionService#_doActivateExtension vscode.microsoft-authentication {"startup":false,"extensionId":{"value":"vscode.microsoft-authentication","_lower":"vscode.microsoft-authentication"},"activationEvent":"onAuthenticationRequest:microsoft"}
+[2020-11-17 16:08:30.005] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/microsoft-authentication/dist/extension.js
+[2020-11-17 16:08:30.019] [exthost] [info] ExtensionService#_doActivateExtension vscode.github-authentication {"startup":false,"extensionId":{"value":"vscode.github-authentication","_lower":"vscode.github-authentication"},"activationEvent":"onAuthenticationRequest:github"}
+[2020-11-17 16:08:30.019] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/github-authentication/dist/extension.js
+[2020-11-17 16:08:30.028] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"extensionId":{"value":"vscode.debug-auto-launch","_lower":"vscode.debug-auto-launch"},"activationEvent":"*"}
+[2020-11-17 16:08:30.028] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/debug-auto-launch/dist/extension
+[2020-11-17 16:08:30.030] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"extensionId":{"value":"vscode.emmet","_lower":"vscode.emmet"},"activationEvent":"*"}
+[2020-11-17 16:08:30.030] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/emmet/dist/node/emmetNodeMain
+[2020-11-17 16:08:30.044] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"extensionId":{"value":"vscode.github","_lower":"vscode.github"},"activationEvent":"*"}
+[2020-11-17 16:08:30.044] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/git/dist/main
+[2020-11-17 16:08:30.064] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"extensionId":{"value":"vscode.merge-conflict","_lower":"vscode.merge-conflict"},"activationEvent":"*"}
+[2020-11-17 16:08:30.064] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/merge-conflict/dist/mergeConflictMain
+[2020-11-17 16:08:30.067] [exthost] [info] ExtensionService#_doActivateExtension vscode.search-result {"startup":true,"extensionId":{"value":"vscode.search-result","_lower":"vscode.search-result"},"activationEvent":"*"}
+[2020-11-17 16:08:30.067] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/search-result/dist/extension.js
+[2020-11-17 16:08:30.069] [exthost] [info] ExtensionService#_doActivateExtension icrawl.discord-vscode {"startup":true,"extensionId":{"value":"icrawl.discord-vscode","_lower":"icrawl.discord-vscode"},"activationEvent":"*"}
+[2020-11-17 16:08:30.069] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/cammy/.vscode/extensions/icrawl.discord-vscode-4.0.0/dist/extension
+[2020-11-17 16:08:30.078] [exthost] [info] ExtensionService#_doActivateExtension monokai.theme-monokai-pro-vscode {"startup":true,"extensionId":{"value":"monokai.theme-monokai-pro-vscode","_lower":"monokai.theme-monokai-pro-vscode"},"activationEvent":"*"}
+[2020-11-17 16:08:30.078] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/cammy/.vscode/extensions/monokai.theme-monokai-pro-vscode-1.1.17/js/main
+[2020-11-17 16:08:30.082] [exthost] [info] ExtensionService#_doActivateExtension naumovs.color-highlight {"startup":true,"extensionId":{"value":"naumovs.color-highlight","_lower":"naumovs.color-highlight"},"activationEvent":"*"}
+[2020-11-17 16:08:30.082] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/cammy/.vscode/extensions/naumovs.color-highlight-2.3.0/dist/extension
+[2020-11-17 16:08:30.099] [exthost] [info] ExtensionService#_doActivateExtension nowsci.glassit-linux {"startup":true,"extensionId":{"value":"nowsci.glassit-linux","_lower":"nowsci.glassit-linux"},"activationEvent":"*"}
+[2020-11-17 16:08:30.099] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/cammy/.vscode/extensions/nowsci.glassit-linux-1.0.0/extension.js
+[2020-11-17 16:08:30.100] [exthost] [info] ExtensionService#_doActivateExtension vscode-icons-team.vscode-icons {"startup":true,"extensionId":{"value":"vscode-icons-team.vscode-icons","_lower":"vscode-icons-team.vscode-icons"},"activationEvent":"*"}
+[2020-11-17 16:08:30.100] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/cammy/.vscode/extensions/vscode-icons-team.vscode-icons-11.0.0/dist/src/vscode-icons.bundle.js

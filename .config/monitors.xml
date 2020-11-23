@@ -1,0 +1,24 @@
+<monitors version="2">
+  <configuration>
+    <logicalmonitor>
+      <x>0</x>
+      <y>0</y>
+      <scale>1</scale>
+      <primary>yes</primary>
+      <monitor>
+        <monitorspec>
+          <connector>HDMI-A-0</connector>
+          <vendor>GSM</vendor>
+          <product>LG TV</product>
+          <serial>0x01010101</serial>
+        </monitorspec>
+        <mode>
+          <width>1920</width>
+          <height>1080</height>
+          <rate>60</rate>
+        </mode>
+        <underscanning>yes</underscanning>
+      </monitor>
+    </logicalmonitor>
+  </configuration>
+</monitors>

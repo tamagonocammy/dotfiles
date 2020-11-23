@@ -1,0 +1,15 @@
+[2020-11-16 22:02:17.403] [sharedprocess] [info] main {"machineId":"cfd2eba2d7bb46b15a7720b7cf4668a388f2444a35ff223060469dac39e10544","windowId":2}
+[2020-11-16 22:02:18.480] [sharedprocess] [info] Deleted from disk arcticicestudio.nord-visual-studio-code /home/cammy/.vscode/extensions/arcticicestudio.nord-visual-studio-code-0.14.0
+[2020-11-16 22:02:20.826] [sharedprocess] [info] Installing extension: shyykoserhiy.vscode-spotify
+[2020-11-16 22:02:20.827] [sharedprocess] [info] Installing extension: zhuangtongfa.material-theme
+[2020-11-16 22:02:22.924] [sharedprocess] [info] Downloaded extension: zhuangtongfa.material-theme undefined
+[2020-11-16 22:02:23.290] [sharedprocess] [info] Downloaded extension: shyykoserhiy.vscode-spotify undefined
+[2020-11-16 22:02:23.302] [sharedprocess] [info] Extracted extension to /home/cammy/.vscode/extensions/.zhuangtongfa.material-theme-3.9.6: zhuangtongfa.material-theme
+[2020-11-16 22:02:23.303] [sharedprocess] [info] Renamed to /home/cammy/.vscode/extensions/zhuangtongfa.material-theme-3.9.6
+[2020-11-16 22:02:23.304] [sharedprocess] [info] Installation completed. zhuangtongfa.material-theme
+[2020-11-16 22:02:23.586] [sharedprocess] [info] Extensions installed successfully: zhuangtongfa.material-theme
+[2020-11-16 22:02:27.783] [sharedprocess] [info] Extracted extension to /home/cammy/.vscode/extensions/.shyykoserhiy.vscode-spotify-3.2.1: shyykoserhiy.vscode-spotify
+[2020-11-16 22:02:27.783] [sharedprocess] [info] Renamed to /home/cammy/.vscode/extensions/shyykoserhiy.vscode-spotify-3.2.1
+[2020-11-16 22:02:27.785] [sharedprocess] [info] Installation completed. shyykoserhiy.vscode-spotify
+[2020-11-16 22:02:28.025] [sharedprocess] [info] Extensions installed successfully: shyykoserhiy.vscode-spotify
+[2020-11-16 22:02:57.431] [sharedprocess] [info] Starting to clean up unused language packs.

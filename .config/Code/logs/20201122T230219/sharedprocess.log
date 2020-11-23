@@ -1,0 +1,14 @@
+[2020-11-22 23:02:24.489] [sharedprocess] [info] main {"machineId":"cfd2eba2d7bb46b15a7720b7cf4668a388f2444a35ff223060469dac39e10544","windowId":2}
+[2020-11-22 23:02:27.620] [sharedprocess] [info] Installing extension: zhuangtongfa.material-theme
+[2020-11-22 23:02:28.853] [sharedprocess] [info] Downloaded extension: zhuangtongfa.material-theme undefined
+[2020-11-22 23:02:29.199] [sharedprocess] [info] Extracted extension to /home/cammy/.vscode/extensions/.zhuangtongfa.material-theme-3.9.7: zhuangtongfa.material-theme
+[2020-11-22 23:02:29.199] [sharedprocess] [info] Renamed to /home/cammy/.vscode/extensions/zhuangtongfa.material-theme-3.9.7
+[2020-11-22 23:02:29.201] [sharedprocess] [info] Installation completed. zhuangtongfa.material-theme
+[2020-11-22 23:02:29.468] [sharedprocess] [info] Extensions installed successfully: zhuangtongfa.material-theme
+[2020-11-22 23:03:04.516] [sharedprocess] [info] Starting to clean up unused language packs.
+[2020-11-22 23:13:28.582] [sharedprocess] [info] Installing extension: github.vscode-pull-request-github
+[2020-11-22 23:13:29.700] [sharedprocess] [info] Downloaded extension: github.vscode-pull-request-github undefined
+[2020-11-22 23:13:29.964] [sharedprocess] [info] Extracted extension to /home/cammy/.vscode/extensions/.github.vscode-pull-request-github-0.21.2: github.vscode-pull-request-github
+[2020-11-22 23:13:29.964] [sharedprocess] [info] Renamed to /home/cammy/.vscode/extensions/github.vscode-pull-request-github-0.21.2
+[2020-11-22 23:13:29.968] [sharedprocess] [info] Installation completed. github.vscode-pull-request-github
+[2020-11-22 23:13:30.011] [sharedprocess] [info] Extensions installed successfully: github.vscode-pull-request-github

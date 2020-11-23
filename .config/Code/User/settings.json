@@ -1,7 +1,16 @@
 {
-    "workbench.colorTheme": "Nord",
-    "window.menuBarVisibility": "hidden",
-    "editor.fontFamily": "'Meslo LG S', 'monospace', monospace, 'Droid Sans Fallback'",
-    "terminal.integrated.fontFamily": "MesloLGS Nerd Font",
-    "terminal.integrated.fontSize": 11
+    "workbench.colorTheme": "Dracula",
+    "editor.fontFamily": "'UbuntuMono Nerd Font Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "terminal.integrated.fontFamily": "UbuntuMono Nerd Font Mono",
+    "terminal.integrated.fontSize": 12,
+    "workbench.iconTheme": "Monokai Pro (Filter Spectrum) Icons",
+    "spotify.showPauseButton": true,
+    "spotify.showPlayButton": true,
+    "glassit-linux.opacity": 85,
+    "window.menuBarVisibility": "toggle",
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.fontSize": 15,
+    "window.zoomLevel": 0,
+    "git.autofetch": true,
+    "git.confirmSync": false
 }

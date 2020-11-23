@@ -1,0 +1,126 @@
+[2020-11-16 22:54:16.668] [userDataSync] [info] Using settings sync service https://vscode-sync.trafficmanager.net/
+[2020-11-16 22:54:16.668] [userDataSync] [info] Auto Sync is enabled.
+[2020-11-16 22:54:16.668] [userDataSync] [info] Auto Sync: Suspended until auth token is available.
+[2020-11-16 22:54:23.724] [userDataSync] [info] Auto Sync: Started
+[2020-11-16 22:54:23.724] [userDataSync] [info] Auto Sync: Triggered by Interval
+[2020-11-16 22:54:24.304] [userDataSync] [info] Settings: No changes found during synchronizing settings.
+[2020-11-16 22:54:24.336] [userDataSync] [info] Keybindings: No changes found during synchronizing keybindings.
+[2020-11-16 22:54:24.347] [userDataSync] [info] Snippets: No changes found during synchronizing snippets.
+[2020-11-16 22:54:24.600] [userDataSync] [info] GlobalState: Updated remote ui state
+[2020-11-16 22:54:24.655] [userDataSync] [info] GlobalState: Updated last synchronized ui state
+[2020-11-16 22:54:25.610] [userDataSync] [info] Extensions: Updated remote extensions
+[2020-11-16 22:54:25.701] [userDataSync] [info] Extensions: Updated last synchronized extensions
+[2020-11-16 22:54:25.703] [userDataSync] [info] Sync done. Took 1444ms
+[2020-11-16 22:54:25.705] [userDataSync] [info] Auto Sync: Triggered by Activity
+[2020-11-16 22:54:25.800] [userDataSync] [info] Settings: No changes found during synchronizing settings.
+[2020-11-16 22:54:25.804] [userDataSync] [info] Keybindings: No changes found during synchronizing keybindings.
+[2020-11-16 22:54:25.811] [userDataSync] [info] Snippets: No changes found during synchronizing snippets.
+[2020-11-16 22:54:25.823] [userDataSync] [info] GlobalState: No changes found during synchronizing ui state.
+[2020-11-16 22:54:25.891] [userDataSync] [info] Extensions: No changes found during synchronizing extensions.
+[2020-11-16 22:54:25.892] [userDataSync] [info] Sync done. Took 99ms
+[2020-11-16 22:54:31.020] [userDataSync] [info] Auto Sync: Triggered by Activity
+[2020-11-16 22:54:31.316] [userDataSync] [info] Settings: Updated remote settings
+[2020-11-16 22:54:31.362] [userDataSync] [info] Settings: Updated last synchronized settings
+[2020-11-16 22:54:31.365] [userDataSync] [info] Keybindings: No changes found during synchronizing keybindings.
+[2020-11-16 22:54:31.368] [userDataSync] [info] Snippets: No changes found during synchronizing snippets.
+[2020-11-16 22:54:31.598] [userDataSync] [info] GlobalState: Updated remote ui state
+[2020-11-16 22:54:31.641] [userDataSync] [info] GlobalState: Updated last synchronized ui state
+[2020-11-16 22:54:31.933] [userDataSync] [info] Extensions: Updated remote extensions
+[2020-11-16 22:54:31.993] [userDataSync] [info] Extensions: Updated last synchronized extensions
+[2020-11-16 22:54:31.994] [userDataSync] [info] Sync done. Took 876ms
+[2020-11-16 22:54:32.070] [userDataSync] [info] Auto Sync: Triggered by Activity
+[2020-11-16 22:54:32.171] [userDataSync] [info] Settings: No changes found during synchronizing settings.
+[2020-11-16 22:54:32.173] [userDataSync] [info] Keybindings: No changes found during synchronizing keybindings.
+[2020-11-16 22:54:32.176] [userDataSync] [info] Snippets: No changes found during synchronizing snippets.
+[2020-11-16 22:54:32.184] [userDataSync] [info] GlobalState: No changes found during synchronizing ui state.
+[2020-11-16 22:54:32.243] [userDataSync] [info] Extensions: No changes found during synchronizing extensions.
+[2020-11-16 22:54:32.244] [userDataSync] [info] Sync done. Took 76ms
+[2020-11-16 22:54:50.359] [userDataSync] [info] Auto Sync: Triggered by Activity
+[2020-11-16 22:54:50.466] [userDataSync] [info] Settings: No changes found during synchronizing settings.
+[2020-11-16 22:54:50.469] [userDataSync] [info] Keybindings: No changes found during synchronizing keybindings.
+[2020-11-16 22:54:50.472] [userDataSync] [info] Snippets: No changes found during synchronizing snippets.
+[2020-11-16 22:54:50.492] [userDataSync] [info] GlobalState: No changes found during synchronizing ui state.
+[2020-11-16 22:54:50.562] [userDataSync] [info] Extensions: No changes found during synchronizing extensions.
+[2020-11-16 22:54:50.563] [userDataSync] [info] Sync done. Took 102ms
+[2020-11-16 22:55:35.818] [userDataSync] [info] Auto Sync: Triggered by Activity
+[2020-11-16 22:55:35.921] [userDataSync] [info] Settings: No changes found during synchronizing settings.
+[2020-11-16 22:55:35.924] [userDataSync] [info] Keybindings: No changes found during synchronizing keybindings.
+[2020-11-16 22:55:35.927] [userDataSync] [info] Snippets: No changes found during synchronizing snippets.
+[2020-11-16 22:55:35.964] [userDataSync] [info] GlobalState: No changes found during synchronizing ui state.
+[2020-11-16 22:55:36.060] [userDataSync] [info] Extensions: No changes found during synchronizing extensions.
+[2020-11-16 22:55:36.061] [userDataSync] [info] Sync done. Took 148ms
+[2020-11-16 22:55:51.715] [userDataSync] [info] Auto Sync: Triggered by Activity
+[2020-11-16 22:55:51.863] [userDataSync] [info] Settings: No changes found during synchronizing settings.
+[2020-11-16 22:55:51.866] [userDataSync] [info] Keybindings: No changes found during synchronizing keybindings.
+[2020-11-16 22:55:51.870] [userDataSync] [info] Snippets: No changes found during synchronizing snippets.
+[2020-11-16 22:55:51.893] [userDataSync] [info] GlobalState: No changes found during synchronizing ui state.
+[2020-11-16 22:55:51.970] [userDataSync] [info] Extensions: No changes found during synchronizing extensions.
+[2020-11-16 22:55:51.971] [userDataSync] [info] Sync done. Took 113ms
+[2020-11-16 22:56:11.224] [userDataSync] [info] Auto Sync: Triggered by Activity
+[2020-11-16 22:56:11.322] [userDataSync] [info] Settings: No changes found during synchronizing settings.
+[2020-11-16 22:56:11.325] [userDataSync] [info] Keybindings: No changes found during synchronizing keybindings.
+[2020-11-16 22:56:11.329] [userDataSync] [info] Snippets: No changes found during synchronizing snippets.
+[2020-11-16 22:56:11.351] [userDataSync] [info] GlobalState: No changes found during synchronizing ui state.
+[2020-11-16 22:56:11.415] [userDataSync] [info] Extensions: No changes found during synchronizing extensions.
+[2020-11-16 22:56:11.415] [userDataSync] [info] Sync done. Took 97ms
+[2020-11-16 22:56:23.918] [userDataSync] [info] Auto Sync: Triggered by Activity
+[2020-11-16 22:56:24.021] [userDataSync] [info] Settings: No changes found during synchronizing settings.
+[2020-11-16 22:56:24.024] [userDataSync] [info] Keybindings: No changes found during synchronizing keybindings.
+[2020-11-16 22:56:24.028] [userDataSync] [info] Snippets: No changes found during synchronizing snippets.
+[2020-11-16 22:56:24.043] [userDataSync] [info] GlobalState: No changes found during synchronizing ui state.
+[2020-11-16 22:56:24.182] [userDataSync] [info] GlobalState: Updated last synchronized ui state
+[2020-11-16 22:56:24.251] [userDataSync] [info] Extensions: No changes found during synchronizing extensions.
+[2020-11-16 22:56:24.252] [userDataSync] [info] Sync done. Took 237ms
+[2020-11-16 22:56:31.194] [userDataSync] [info] Auto Sync: Stopped
+[2020-11-16 22:56:35.769] [userDataSync] [info] Using settings sync service https://vscode-sync.trafficmanager.net/
+[2020-11-16 22:56:35.769] [userDataSync] [info] Auto Sync is enabled.
+[2020-11-16 22:56:35.769] [userDataSync] [info] Auto Sync: Suspended until auth token is available.
+[2020-11-16 22:56:37.170] [userDataSync] [info] Auto Sync: Started
+[2020-11-16 22:56:37.170] [userDataSync] [info] Auto Sync: Triggered by Interval
+[2020-11-16 22:56:37.989] [userDataSync] [info] Settings: Updated remote settings
+[2020-11-16 22:56:38.038] [userDataSync] [info] Settings: Updated last synchronized settings
+[2020-11-16 22:56:38.145] [userDataSync] [info] Keybindings: No changes found during synchronizing keybindings.
+[2020-11-16 22:56:38.148] [userDataSync] [info] Snippets: No changes found during synchronizing snippets.
+[2020-11-16 22:56:38.159] [userDataSync] [info] GlobalState: No changes found during synchronizing ui state.
+[2020-11-16 22:56:38.241] [userDataSync] [info] GlobalState: Updated last synchronized ui state
+[2020-11-16 22:56:38.322] [userDataSync] [info] Extensions: No changes found during synchronizing extensions.
+[2020-11-16 22:56:38.323] [userDataSync] [info] Sync done. Took 579ms
+[2020-11-16 22:56:42.633] [userDataSync] [info] Auto Sync: Triggered by Activity
+[2020-11-16 22:56:42.747] [userDataSync] [info] Settings: No changes found during synchronizing settings.
+[2020-11-16 22:56:42.750] [userDataSync] [info] Keybindings: No changes found during synchronizing keybindings.
+[2020-11-16 22:56:42.753] [userDataSync] [info] Snippets: No changes found during synchronizing snippets.
+[2020-11-16 22:56:43.023] [userDataSync] [info] GlobalState: Updated remote ui state
+[2020-11-16 22:56:43.078] [userDataSync] [info] GlobalState: Updated last synchronized ui state
+[2020-11-16 22:56:43.141] [userDataSync] [info] Extensions: No changes found during synchronizing extensions.
+[2020-11-16 22:56:43.142] [userDataSync] [info] Sync done. Took 400ms
+[2020-11-16 22:56:51.207] [userDataSync] [info] Auto Sync: Triggered by Activity
+[2020-11-16 22:56:51.622] [userDataSync] [info] Settings: Updated remote settings
+[2020-11-16 22:56:51.664] [userDataSync] [info] Settings: Updated last synchronized settings
+[2020-11-16 22:56:51.668] [userDataSync] [info] Keybindings: No changes found during synchronizing keybindings.
+[2020-11-16 22:56:51.671] [userDataSync] [info] Snippets: No changes found during synchronizing snippets.
+[2020-11-16 22:56:51.689] [userDataSync] [info] GlobalState: No changes found during synchronizing ui state.
+[2020-11-16 22:56:51.762] [userDataSync] [info] Extensions: No changes found during synchronizing extensions.
+[2020-11-16 22:56:51.762] [userDataSync] [info] Sync done. Took 452ms
+[2020-11-16 22:56:54.301] [userDataSync] [info] Auto Sync: Triggered by Activity
+[2020-11-16 22:56:54.677] [userDataSync] [info] Settings: Updated remote settings
+[2020-11-16 22:56:54.714] [userDataSync] [info] Settings: Updated last synchronized settings
+[2020-11-16 22:56:54.717] [userDataSync] [info] Keybindings: No changes found during synchronizing keybindings.
+[2020-11-16 22:56:54.720] [userDataSync] [info] Snippets: No changes found during synchronizing snippets.
+[2020-11-16 22:56:54.732] [userDataSync] [info] GlobalState: No changes found during synchronizing ui state.
+[2020-11-16 22:56:54.795] [userDataSync] [info] Extensions: No changes found during synchronizing extensions.
+[2020-11-16 22:56:54.796] [userDataSync] [info] Sync done. Took 388ms
+[2020-11-16 22:57:13.800] [userDataSync] [info] Auto Sync: Triggered by Activity
+[2020-11-16 22:57:13.903] [userDataSync] [info] Settings: No changes found during synchronizing settings.
+[2020-11-16 22:57:13.905] [userDataSync] [info] Keybindings: No changes found during synchronizing keybindings.
+[2020-11-16 22:57:13.909] [userDataSync] [info] Snippets: No changes found during synchronizing snippets.
+[2020-11-16 22:57:13.928] [userDataSync] [info] GlobalState: No changes found during synchronizing ui state.
+[2020-11-16 22:57:13.998] [userDataSync] [info] Extensions: No changes found during synchronizing extensions.
+[2020-11-16 22:57:13.999] [userDataSync] [info] Sync done. Took 101ms
+[2020-11-16 22:57:25.361] [userDataSync] [info] Auto Sync: Triggered by Activity
+[2020-11-16 22:57:25.472] [userDataSync] [info] Settings: No changes found during synchronizing settings.
+[2020-11-16 22:57:25.474] [userDataSync] [info] Keybindings: No changes found during synchronizing keybindings.
+[2020-11-16 22:57:25.477] [userDataSync] [info] Snippets: No changes found during synchronizing snippets.
+[2020-11-16 22:57:25.507] [userDataSync] [info] GlobalState: No changes found during synchronizing ui state.
+[2020-11-16 22:57:25.609] [userDataSync] [info] Extensions: No changes found during synchronizing extensions.
+[2020-11-16 22:57:25.610] [userDataSync] [info] Sync done. Took 145ms
+[2020-11-16 22:57:30.857] [userDataSync] [info] Auto Sync: Stopped

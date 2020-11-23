@@ -10,42 +10,40 @@
  * @website https://gibbu.me
 */
 
-/* This theme was edited using https://gibbu.me/editor/frostedglass */
-
-@import url('https://fonts.googleapis.com/css?family=Roboto:300&display=swap');
-@import url('https://gibbu.github.io/BetterDiscord-Themes/FrostedGlass/base.css');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@100;300;400;500;700&display=swap');
+@import url('https://discordstyles.github.io/FrostedGlass/base.css');
 @import url('https://discord-custom-covers.github.io/usrbg/snippets/userPopouts.css');
 @import url('https://discord-custom-covers.github.io/usrbg/snippets/modals.css');
 @import url('https://monstrousdev.github.io/themes/addons/user-tags.css');
 @import url('https://gibbu.github.io/BetterDiscord-Themes/addons/windows-titlebar.css');
 
 :root {
-  --background-image: url('https://i.imgur.com/T4xDPfE.jpg');
+  --background-image: url('https://i.imgur.com/PHZPWvo.png');
   --background-image-blur: 5px;
   --background-image-size: cover;
-  --background-image-position: center;
-  --popout-modal-image: url('https://i.imgur.com/T4xDPfE.jpg');
+  --background-image-position: center center;
+  --popout-modal-image: var(--background-image);
   --popout-modal-blur: 5px;
   --popout-modal-size: cover;
-  --popout-modal-position: center;
+  --popout-modal-position: center center;
   --home-button-image: url('https://gibbu.github.io/BetterDiscord-Themes/FrostedGlass/assets/discord.svg');
   --home-button-size: cover;
-  --home-button-position: center;
-  --serverlist-brightness: 0.6;
-  --left-brightness: 0.6;
-  --middle-brightness: 0.5;
+  --home-button-position: center center;
+  --serverlist-brightness: 0.8;
+  --left-brightness: 0.8;
+  --middle-brightness: 0.6;
   --right-brightness: 0;
-  --popout-modal-brightness: 0.65;
-  --tint-colour: 59,222,28;
+  --popout-modal-brightness: 0.75;
+  --gradient-primary: 59,66,82;
+  --gradient-secondary: 76,86,106;
+  --scrollbar-colour: rgba(255,255,255,0.05);
+  --link-colour: #8fbcbb;
+  --gradient-direction: 320deg;
+  --tint-colour: 255,51,159;
   --tint-brightness: 0;
-  --gradient-primary: 103,58,183;
-  --gradient-secondary: 63,81,181;
-  --gradient-direction: 288deg;
-  --window-padding: 10px;
+  --font: 'Ubuntu';
+  --window-padding: 20px;
   --window-roundness: 10px;
-  --scrollbar-colour: rgba(255,255,255,0.5);
-  --link-colour: #b48ead;
   --show-gift-gif-buttons: none;
-  --font: 'Roboto';
   --update-notice-1: none;
 }
