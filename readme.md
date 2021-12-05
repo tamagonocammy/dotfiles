@@ -13,5 +13,4 @@ They're FAR from a concise setup, mostly because I'm not a programmer.
 
 ![Clean Desktop](https://i.imgur.com/rn9dMSd.png)
 
-
 ![Fake Dirty](https://i.imgur.com/dgkbOXL.png)
