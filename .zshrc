@@ -7,10 +7,10 @@ fi
 
 # If you come from bash you might have to change your $PATH.
  export PATH=$HOME/bin:/usr/local/bin:$GOPATH/bin:$HOME/Scripts:$HOME/.spicetify-cli:$PATH
- export SPICETIFY_INSTALL="/home/cammy/.spicetify-cli" 
+ export SPICETIFY_INSTALL="/Users/cammy/.spicetify-cli" 
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/cammy/.oh-my-zsh"
+export ZSH="/Users/cammy/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -114,3 +114,6 @@ alias rkill='kill -9 $(ps a | rofi -dmenu | awk "{ print $1 }")'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+autoload -U compinit
+compinit -i
+
