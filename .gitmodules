@@ -1,0 +1,3 @@
+[submodule ".config/nvim/nvim-basic-ide"]
+	path = .config/nvim/nvim-basic-ide
+	url = https://github.com/LunarVim/nvim-basic-ide.git
