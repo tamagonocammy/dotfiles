@@ -1,15 +1,15 @@
 # Dotfiles
 
-These are my dotfiles, that i use on my Linux partition.
+These are my dotfiles, that i use on my Arch Linux partition
 
 They're FAR from a concise setup, mostly because I'm not a programmer.
 
-* macOS
-* Rectangle
-* Vivaldi
-* iTerm2
-* Spotify
-* Neovim
+* Archcraft/macOS
+* bspwm/Rectangle
+* Firefox/Safari
+* Alacritty/iTerm2
+* Spotify/MPD/Apple Music
+* [LunarVim](https://www.lunarvim.org/)
 
 ![Clean Desktop](https://i.imgur.com/rn9dMSd.png)
 
