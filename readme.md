@@ -1,6 +1,6 @@
 # Dotfiles
 
-These are my dotfiles, that i use on my Arch Linux partition
+These are my dotfiles, that I use on my Arch Linux partition
 
 They're FAR from a concise setup, mostly because I'm not a programmer.
 
