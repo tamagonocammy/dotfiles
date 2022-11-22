@@ -188,4 +188,4 @@ python -m http.server 8000 --directory /home/cammy/.startpage &
 
 # Set keyboard 
 
-setxkbmap latam 
+setxkbmap latam nodeadkeys
