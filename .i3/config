@@ -27,7 +27,7 @@ font xft:Source Code Pro 11
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec st 
+bindsym $mod+Return exec alacritty 
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -138,14 +138,14 @@ bindsym $mod+Shift+p exec polybar-msg cmd restart
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
-set $ws1 1
-set $ws2 2
-set $ws3 3
-set $ws4 4
-set $ws5 5
-set $ws6 6
-set $ws7 7
-set $ws8 8
+set $ws1 
+set $ws2 
+set $ws3 
+set $ws4 
+set $ws5 
+set $ws6 ﭮ
+set $ws7 ﱘ
+set $ws8 
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -184,14 +184,10 @@ for_window [class="Clipgrab"] floating enable
 for_window [title="File Transfer*"] floating enable
 for_window [class="Galculator"] floating enable border pixel 1
 for_window [class="GParted"] floating enable border normal
-for_window [title="i3_help"] floating enable sticky enable border normal
 for_window [class="Lightdm-settings"] floating enable
 for_window [class="Lxappearance"] floating enable sticky enable border normal
 for_window [title="MuseScore: Play Panel"] floating enable
 for_window [class="Nitrogen"] floating enable sticky enable border normal
-for_window [class="Oblogout"] fullscreen enable
-for_window [class="octopi"] floating enable
-for_window [title="About Pale Moon"] floating enable
 for_window [class="Pamac-manager"] floating enable
 for_window [class="Pavucontrol"] floating enable
 for_window [class="qt5ct"] floating enable sticky enable border normal
@@ -213,7 +209,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec ~/.config/rofi/powermenu/type-2/powermenu.sh
 # Resize window (you can also use the mouse for that)
 bindsym $mod+r mode "resize"
 mode "resize" {
@@ -239,69 +235,17 @@ mode "resize" {
 }
 
 # Lock screen
-bindsym $mod+c exec --no-startup-id $HOME/scripts/corrupter.sh
+bindsym $mod+c exec --no-startup-id betterlockscreen --lock
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id nitrogen --restore; sleep 1; compton -b
-exec --no-startup-id nm-applet
+exec --no-startup-id nitrogen --restore; sleep 1;  
 exec --no-startup-id xfce4-power-manager
-exec_always --no-startup-id setxkbmap latam
+exec_always --no-startup-id setxkbmap latam nodeadkeys
 # exec --no-startup-id pamac-tray
-exec --no-startup-id clipit
-exec --no-startup-id blueman-applet
-# exec_always --no-startup-id sbxkb
-# exec --no-startup-id start_conky_maia
-# exec --no-startup-id start_conky_green
-exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id ff-theme-util
-exec_always --no-startup-id fix_xcursor
- exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+ exec_always --no-startup-id $HOME/.config/bspwm/bin/bspbar
 exec --no-startup-id fcitx &
-# Color palette used for the terminal ( ~/.Xresources file )
-# Colors are gathered based on the documentation:
-# https://i3wm.org/docs/userguide.html#xresources
-# Change the variable name at the place you want to match the color
-# of your terminal like this:
-# [example]
-# If you want your bar to have the same background color as your 
-# terminal background change the line 362 from:
-# background #14191D
-# to:
-# background $term_background
-# Same logic applied to everything else.
-set_from_resource $term_background background
-set_from_resource $term_foreground foreground
-set_from_resource $term_color0     color0
-set_from_resource $term_color1     color1
-set_from_resource $term_color2     color2
-set_from_resource $term_color3     color3
-set_from_resource $term_color4     color4
-set_from_resource $term_color5     color5
-set_from_resource $term_color6     color6
-set_from_resource $term_color7     color7
-set_from_resource $term_color8     color8
-set_from_resource $term_color9     color9
-set_from_resource $term_color10    color10
-set_from_resource $term_color11    color11
-set_from_resource $term_color12    color12
-set_from_resource $term_color13    color13
-set_from_resource $term_color14    color14
-set_from_resource $term_color15    color15
-
-# hide/unhide i3status bar
-bindsym $mod+m bar mode toggle
-
-
-# class                 border  backgr. text    indicator child_border
-client.focused          #44475a #6272a4 #f8f8f2 #8be9fd   #6272a4
-client.focused_inactive #282a36 #5f676a #f8f8f2 #484e50   #5f676a
-client.unfocused        #282a36 #222222 #888888 #292d2e   #222222
-client.urgent           #2f343a #ff5555 #f8f8f2 #ff5555   #ff5555
-client.placeholder      #000000 #0c0c0c #f8f8f2 #000000   #0c0c0c
-
-client.background       #f8f8f2
-
 
 #############################
 ### settings for i3-gaps: ###
