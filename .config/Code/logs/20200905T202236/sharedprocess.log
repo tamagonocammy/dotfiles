@@ -1,9 +1,0 @@
-[2020-09-05 20:22:46.133] [sharedprocess] [info] main {"machineId":"cfd2eba2d7bb46b15a7720b7cf4668a388f2444a35ff223060469dac39e10544","windowId":2}
-[2020-09-05 20:23:26.156] [sharedprocess] [info] Starting to clean up unused language packs.
-[2020-09-05 20:23:26.159] [sharedprocess] [info] Skipping directory 14e88bd21a91785a64e14b8358b54928.es. Language pack still in use.
-[2020-09-05 20:27:02.282] [sharedprocess] [info] Installing extension: shyykoserhiy.vscode-spotify
-[2020-09-05 20:27:03.977] [sharedprocess] [info] Downloaded extension: shyykoserhiy.vscode-spotify /home/cammy/.config/Code/CachedExtensionVSIXs/shyykoserhiy.vscode-spotify-3.1.0
-[2020-09-05 20:27:07.693] [sharedprocess] [info] Extracted extension to /home/cammy/.vscode/extensions/.shyykoserhiy.vscode-spotify-3.1.0: shyykoserhiy.vscode-spotify
-[2020-09-05 20:27:07.694] [sharedprocess] [info] Renamed to /home/cammy/.vscode/extensions/shyykoserhiy.vscode-spotify-3.1.0
-[2020-09-05 20:27:07.696] [sharedprocess] [info] Installation completed. shyykoserhiy.vscode-spotify
-[2020-09-05 20:27:07.788] [sharedprocess] [info] Extensions installed successfully: shyykoserhiy.vscode-spotify

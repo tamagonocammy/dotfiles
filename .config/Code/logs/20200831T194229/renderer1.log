@@ -1,8 +1,0 @@
-[2020-08-31 19:42:33.530] [renderer1] [error] Error: Unable to read file '/home/cammy/.config/tint2/repentance/repentance.tint2rc' (Error: Unable to resolve non-existing file '/home/cammy/.config/tint2/repentance/repentance.tint2rc')
-    at Object.t.createErrorWithActions (file:///opt/visual-studio-code/resources/app/out/vs/workbench/workbench.desktop.main.js:53:257)
-    at w.handleSetInputError (file:///opt/visual-studio-code/resources/app/out/vs/workbench/workbench.desktop.main.js:5862:907)
-    at w.handleSetInputError (file:///opt/visual-studio-code/resources/app/out/vs/workbench/workbench.desktop.main.js:5865:647)
-    at w.setInput (file:///opt/visual-studio-code/resources/app/out/vs/workbench/workbench.desktop.main.js:5862:623)
-    at processTicksAndRejections (internal/process/task_queues.js:85:5)
-[2020-08-31 19:42:33.530] [renderer1] [error] Error: [File Watcher (node.js)] Error: ENOENT: no such file or directory, stat '/home/cammy/.config/BetterDiscord/themes/FrostedGlass.theme.css'
-[2020-08-31 19:42:33.530] [renderer1] [error] [File Watcher (node.js)] Error: ENOENT: no such file or directory, stat '/home/cammy/.config/BetterDiscord/themes/FrostedGlass.theme.css'
