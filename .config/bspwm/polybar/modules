@@ -385,11 +385,11 @@ click-middle = playerctl --player=spotify previous
 
 [module/pacman-updates]
 type = custom/script
-exec = checkupdates | wc -l  
+exec = checkupdates 2> /dev/null | wc -l  
 interval = 120
 label = %output%
 format-foreground = ${color.FOREGROUND}
-format-prefix = " · "
+format-prefix = "  "
 format-prefix-foreground = ${color.BLUE}
 
 

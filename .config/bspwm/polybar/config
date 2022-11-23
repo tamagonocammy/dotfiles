@@ -49,7 +49,7 @@ font-3 = "M PLUS 1 Code:style=bold:size=10;3"
 font-4 = "M PLUS 1 Code:style=Medium,Regular:size=10;3"
 modules-left = mpd spotify
 modules-center = bspwm 
-modules-right = ethernet sep volume sep date
+modules-right = pacman-updates sep volume sep date
 
 separator =
 spacing = 0
