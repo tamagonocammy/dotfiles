@@ -215,8 +215,8 @@ label-empty-foreground = ${color.FOREGROUND}
 label-empty-padding = 1
 
 ; Separator in between workspaces
-label-separator = " · "
-label-separator-padding = 0
+label-separator = " ·"
+label-separator-padding = 0 
 label-separator-foreground = ${color.ALTBLACK}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -251,7 +251,7 @@ time = %I:%M %P
 time-alt = %A, %d de %B de %Y
 
 format = <label>
-format-prefix = " "
+format-prefix = " "
 format-prefix-font = 3
 format-prefix-foreground = ${color.ALTRED}
 
@@ -312,12 +312,12 @@ accumulate-stats = true
 unknown-as-up = true
 
 format-connected = <label-connected>
-format-connected-prefix = " "
-format-connected-prefix-font = 3
+format-connected-prefix = "  "
+format-connected-prefix-font = 2
 format-connected-prefix-foreground = ${color.CYAN}
 
 format-disconnected = <label-disconnected>
-format-disconnected-prefix = " "
+format-disconnected-prefix = "  "   
 format-disconnected-prefix-font = 3
 format-disconnected-prefix-foreground = ${color.RED}
 
@@ -360,10 +360,10 @@ ramp-signal-foreground = ${color.CYAN}
 
 [module/sep]
 type = custom/text
-content = ·
+content = 
 
 content-background = ${color.BACKGROUND}
-content-foreground = ${color.ALTWHITE}
+content-foreground = ${color.ALTBLACK}
 content-padding = 2
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -392,6 +392,23 @@ format-foreground = ${color.FOREGROUND}
 format-prefix = "  "
 format-prefix-foreground = ${color.BLUE}
 
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/news]
+type = custom/script
+tail = true
+interval = 1
+format-prefix = " :"
+format-prefix-foreground = ${color.ALTBLUE}
+format = <label>
+label-padding = 1
+exec = ~/.config/bspwm/bin/scroll_news_status.sh
+;click-left = < ~/.config/polybar/scripts/news/current_url.txt xargs -I % xdg-open %
+
+[module/news-grab]
+type = custom/script
+exec = ~/.config/bspwm/bin/news.py
+interval = 900
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 ;;	    __________  ______

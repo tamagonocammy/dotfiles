@@ -125,7 +125,7 @@ bspc rule -a 'VirtualBox Manager' desktop='^8' follow=on focus=on
 bspc rule -a GParted desktop='^8' follow=on focus=on
 declare -a settings=(Lxappearance Lxtask Lxrandr Arandr Nitrogen \
 System-config-printer.py Pavucontrol Exo-helper-1 \
-Xfce4-power-manager-settings)
+Xfce4-power-manager-settings Pamac-manager)
 for i in ${settings[@]}; do
    bspc rule -a $i desktop='^8' state=floating follow=on focus=on; done
 
@@ -187,5 +187,4 @@ bspfloat &
 python -m http.server 8000 --directory /home/cammy/.startpage &
 
 # Set keyboard 
-
 setxkbmap latam nodeadkeys

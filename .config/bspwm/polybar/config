@@ -18,24 +18,24 @@ monitor =
 monitor-strict = false
 override-redirect = false
 
-bottom = false
+bottom = true
 fixed-center = true
 
 width = 90%
 height = 24
 offset-x = 5%
-offset-y = 5
+offset-y = 10
 
 background = ${color.BACKGROUND}
 foreground = ${color.FOREGROUND}
 
-radius-top = 5.0
-radius-bottom = 5.0
+radius-top = 10.0
+radius-bottom = 10.0
 
 line-size = 0.5
 line-color = ${color.BLUE}
 
-border-size = 4
+border-size = 5
 border-color = ${color.BACKGROUND}
 
 padding = 1
@@ -44,7 +44,7 @@ module-margin-right = 0
 
 font-0 = "M PLUS 1 Code Nerd Font:size=10;3"
 font-1 = "M PLUS 1 Code Nerd Font:size=10;3"
-font-2 = "google\-mdi:size=10;3"
+font-2 = "Font Awesome 6 Free:size=10;3"
 font-3 = "M PLUS 1 Code:style=bold:size=10;3"
 font-4 = "M PLUS 1 Code:style=Medium,Regular:size=10;3"
 modules-left = mpd spotify

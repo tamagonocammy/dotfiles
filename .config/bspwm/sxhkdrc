@@ -21,7 +21,7 @@ super + t
 
 # Rofi App Launcher
 alt + F1
-	sh ~/.config/rofi/launchers/type-3/launcher.sh
+	sh ~/.config/rofi/launchers/type-4/launcher.sh
 
 # Rofi Network Menu
 super + n
