@@ -35,7 +35,7 @@ XF86Tools
 	sh ~/.config/rofi/applets/bin/volume.sh
 
 super + x
-  sh ~/.config/rofi/powermenu/type-2/powermenu.sh
+    sh ~/.config/rofi/powermenu/type-2/powermenu.sh
 ##---------- Applications ----------##
 
 # Launch Apps
@@ -44,7 +44,7 @@ super + shift + {f,w,e}
 
 # Terminal Apps
 ctrl + alt + {v,r,h,n}
-	alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e {nvim,ranger,htop,ncmpcpp}
+	alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e {~/.local/bin/lvim,ranger,htop,ncmpcpp}
 
 # Color Picker
 super + p

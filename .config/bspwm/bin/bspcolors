@@ -116,13 +116,13 @@ bspdunst () {
 		timeout = 2
 		background = "${BACKGROUND}"
 		foreground = "${FOREGROUND}"
-		frame_color = "${BLUE}"
+		frame_color = "${BACKGROUND}"
 
 		[urgency_normal]
 		timeout = 5
 		background = "${BACKGROUND}"
 		foreground = "${FOREGROUND}"
-		frame_color = "${BLUE}"
+		frame_color = "${BACKGROUND}"
 
 		[urgency_critical]
 		timeout = 0

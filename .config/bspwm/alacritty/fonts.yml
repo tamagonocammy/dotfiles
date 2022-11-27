@@ -5,22 +5,22 @@
 font:
   # Normal (roman) font face
   normal:
-    family: "M PLUS 1 Code Nerd Font"
+    family: "mononoki Nerd Font"
     #style: Regular
 
   # Bold font face
   bold:
-    family: "M PLUS 1 Code Nerd Font"
+    family: "mononoki Nerd Font"
     #style: Bold
 
   # Italic font face
   italic:
-    family: "M PLUS 1 Code Nerd Font"
+    family: "mononoki Nerd Font"
     #style: Italic
 
   # Bold italic font face
   bold_italic:
-    family: "M PLUS 1 Code Nerd Font"
+    family: "mononoki Nerd Font"
     #style: Bold Italic
 
   # Point size

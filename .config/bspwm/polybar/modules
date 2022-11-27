@@ -193,19 +193,19 @@ label-monitor = %name%
 ;label-dimmed-focused-background = ${color.BACKGROUND}
 
 label-focused = %name%
-label-focused-foreground = ${color.MAGENTA}
+label-focused-foreground = ${color.RED}
 label-focused-background = ${color.BACKGROUND}
 ;label-focused-underline = ${color.MAGENTA}
 label-focused-padding = 1
 
 label-occupied = %name%
-label-occupied-foreground = ${color.GREEN}
+label-occupied-foreground = ${color.ALTMAGENTA}
 label-occupied-background = ${color.BACKGROUND}
-;label-occupied-underline = ${color.GREEN}
+;label-occupied-underline = ${color.ALTMAGENTA}
 label-occupied-padding = 1
 
 label-urgent = %name%
-label-urgent-foreground = ${color.RED}
+label-urgent-foreground = ${color.ALTRED}
 label-urgent-background = ${color.BACKGROUND}
 ;label-urgent-underline = ${color.RED}
 label-urgent-padding = 1
@@ -375,7 +375,7 @@ format-prefix = "  "
 format = <label>
 exec = python /usr/bin/polybar-spotify  -f '{song} · {artist}' -t 60
 format-foreground = ${color.FOREGROUND}
-format-prefix-foreground = ${color.ALTGREEN} 
+format-prefix-foreground = ${color.GREEN} 
 ;control players (optional)
 click-left = playerctl --player=spotify play-pause 
 click-right = playerctl --player=spotify next 
