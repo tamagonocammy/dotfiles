@@ -11,6 +11,6 @@ They're FAR from a concise setup, mostly because I'm not a programmer.
 * Spotify/MPD/Apple Music
 * [LunarVim](https://www.lunarvim.org/)
 
-![Clean Desktop](https://i.imgur.com/XjBdcUy.png)
+![Clean Desktop](https://i.imgur.com/I4reJ1K.png)
 
-![Fake Dirty](https://i.imgur.com/1ezoTIX.png)
+![Fake Dirty](https://i.imgur.com/TdBL5PI.png)
