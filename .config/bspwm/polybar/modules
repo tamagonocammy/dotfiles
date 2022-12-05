@@ -193,13 +193,13 @@ label-monitor = %name%
 ;label-dimmed-focused-background = ${color.BACKGROUND}
 
 label-focused = %name%
-label-focused-foreground = ${color.RED}
+label-focused-foreground = ${color.BLUE}
 label-focused-background = ${color.BACKGROUND}
 ;label-focused-underline = ${color.MAGENTA}
 label-focused-padding = 1
 
 label-occupied = %name%
-label-occupied-foreground = ${color.ALTMAGENTA}
+label-occupied-foreground = ${color.ALTWHITE}
 label-occupied-background = ${color.BACKGROUND}
 ;label-occupied-underline = ${color.ALTMAGENTA}
 label-occupied-padding = 1
@@ -211,11 +211,11 @@ label-urgent-background = ${color.BACKGROUND}
 label-urgent-padding = 1
 
 label-empty = %name%
-label-empty-foreground = ${color.FOREGROUND}
+label-empty-foreground = ${color.ALTBLACK}
 label-empty-padding = 1
 
 ; Separator in between workspaces
-label-separator = " ·"
+label-separator = " "
 label-separator-padding = 0 
 label-separator-foreground = ${color.ALTBLACK}
 
@@ -390,25 +390,14 @@ interval = 120
 label = %output%
 format-foreground = ${color.FOREGROUND}
 format-prefix = "  "
-format-prefix-foreground = ${color.BLUE}
+format-prefix-foreground = ${color.ALTCYAN}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
-[module/news]
+[module/cider]
 type = custom/script
-tail = true
-interval = 1
-format-prefix = " :"
-format-prefix-foreground = ${color.ALTBLUE}
-format = <label>
-label-padding = 1
-exec = ~/.config/bspwm/bin/scroll_news_status.sh
-;click-left = < ~/.config/polybar/scripts/news/current_url.txt xargs -I % xdg-open %
-
-[module/news-grab]
-type = custom/script
-exec = ~/.config/bspwm/bin/news.py
-interval = 900
+exec = cider-polybar -a get-currentmediaitem
+interval = 0.3
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 ;;	    __________  ______

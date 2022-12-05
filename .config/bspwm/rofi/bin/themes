@@ -68,7 +68,7 @@ set_style() {
 ## Apply random theme
 random_theme() {
 	## Set you wallpaper directory here.
-	WALLDIR="`xdg-user-dir PICTURES`/wallpapers"
+	WALLDIR="/home/cammy/Imágenes/"
 	WALFILE="$HOME/.cache/wal/colors.sh"
 	
 	if [[ `which wal` ]]; then
@@ -118,10 +118,10 @@ case $chosen in
         set_style  'forest' 'Adapta-Nokto' 'Luv-Folders-Dark' 'Vimix'
         ;;
     $theme_8)
-        set_style  'groot' 'Groot' 'Luna-Dark' 'Pear'
+        set_style  'groot' 'Groot' 'GruvboxPlus' 'Simp1e-Gruvbox-Dark'
         ;;
     $theme_9)
-        set_style  'gruvbox' 'Gruvbox' 'Luna-Dark' 'Future-dark'
+        set_style  'gruvbox' 'Gruvbox' 'GruvboxPlus' 'Future-dark'
         ;;
     $theme_10)
         set_style  'hack' 'Hack' 'Hack' 'LyraB'

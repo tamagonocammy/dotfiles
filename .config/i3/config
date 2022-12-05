@@ -29,7 +29,7 @@ gaps outer 0
 #smart_gaps on
 
 # Activate smart borders (always)
-#smart_borders on
+smart_borders on
 
 ##-- Colors ------------------------------
 
@@ -57,7 +57,7 @@ bindsym $mod+t 					exec --no-startup-id ~/.config/i3/bin/i3term.sh --full
 bindsym $mod+Shift+f 			exec --no-startup-id thunar
 bindsym $mod+Shift+e 			exec --no-startup-id code
 bindsym $mod+Shift+w 			exec --no-startup-id firefox
-bindsym $alt+Control+v 			exec --no-startup-id "alacritty --config-file ~/.config/i3/alacritty/alacritty.yml -e lvim"
+bindsym $alt+Control+v 			exec --no-startup-id "alacritty --config-file ~/.config/i3/alacritty/alacritty.yml -e vim"
 bindsym $alt+Control+n 			exec --no-startup-id "alacritty --config-file ~/.config/i3/alacritty/alacritty.yml -e nvim"
 bindsym $alt+Control+r 			exec --no-startup-id "alacritty --config-file ~/.config/i3/alacritty/alacritty.yml -e ranger"
 bindsym $alt+Control+h 			exec --no-startup-id "alacritty --config-file ~/.config/i3/alacritty/alacritty.yml -e htop"
@@ -78,10 +78,10 @@ bindsym XF86AudioRaiseVolume 	exec --no-startup-id "volume --inc"
 bindsym XF86AudioLowerVolume 	exec --no-startup-id "volume --dec"
 bindsym XF86AudioMute 			exec --no-startup-id "volume --toggle"
 bindsym XF86AudioMicMute 		exec --no-startup-id "volume --toggle-mic"
-bindsym XF86AudioNext 			exec --no-startup-id "mpc next"
-bindsym XF86AudioPrev 			exec --no-startup-id "mpc prev"
-bindsym XF86AudioPlay 			exec --no-startup-id "mpc toggle"
-bindsym XF86AudioStop 			exec --no-startup-id "mpc stop"
+bindsym XF86AudioNext 			exec --no-startup-id "playerctl next"
+bindsym XF86AudioPrev 			exec --no-startup-id "playerctl previous"
+bindsym XF86AudioPlay 			exec --no-startup-id "playerctl play-pause"
+bindsym XF86AudioStop 			exec --no-startup-id "playerctl stop"
 
 # -- Screenshots --
 bindsym Print 					exec --no-startup-id "takeshot --now"

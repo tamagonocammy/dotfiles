@@ -21,7 +21,7 @@ super + t
 
 # Rofi App Launcher
 alt + F1
-	sh ~/.config/rofi/launchers/type-4/launcher.sh
+	sh ~/.config/rofi/launchers/type-3/launcher.sh
 
 # Rofi Network Menu
 super + n
@@ -44,7 +44,7 @@ super + shift + {f,w,e}
 
 # Terminal Apps
 ctrl + alt + {v,r,h,n}
-	alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e {~/.local/bin/lvim,ranger,htop,ncmpcpp}
+	alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e {lvim,ranger,htop,ncmpcpp}
 
 # Color Picker
 super + p
@@ -111,8 +111,8 @@ super + {_,shift + }c
 	bspc node -{c,k}
 
 # Reload Keybindings
-super + Escape
-	pkill -USR1 -x sxhkd
+super + shift + r
+    pkill -usr1 -x sxhkd; notify-send 'sxhkd' 'Reloaded config'
 
 # kill window
 ctrl + alt + Escape

@@ -55,7 +55,7 @@ workspaces() {
 	name=1
 	for monitor in `bspc query -M`; do
 		#bspc monitor ${monitor} -n "$name" -d 'I' 'II' 'III' 'IV' 'V' 'VI' 'VII' 'VIII'
-		bspc monitor ${monitor} -n "$name" -d '' '' '' '' '' 'ﭮ' '' ''
+		bspc monitor ${monitor} -n "$name" -d '' '' '' '' '' 'ﭮ' '' ''
 		let name++
 	done
 }
@@ -69,7 +69,7 @@ bspc config split_ratio "$CURRENT_SRATIO"
 bspc config focused_border_color "$BLACK" 
 bspc config normal_border_color "$BACKGROUND"
 bspc config active_border_color "$MAGENTA"
-bspc config presel_feedback_color "$GREEN"
+bspc config presel_feedback_color "$MAGENTA"
 
 bspc config borderless_monocle true
 bspc config gapless_monocle true
@@ -84,10 +84,6 @@ bspc wm --adopt-orphans
 
 # remove all rules first
 bspc rule -r *:*
-
-## 1 > terminal (always open terminal on workspace-1)
-bspc rule -a Alacritty desktop='^1' follow=on focus=on
-bspc rule -a Xfce4-terminal desktop='^1' follow=on focus=on
 
 ## 2 > web (always open web browser on workspace-2)
 bspc rule -a firefox desktop='^2' follow=on focus=on
@@ -188,3 +184,7 @@ python -m http.server 8000 --directory /home/cammy/.startpage &
 
 # Set keyboard 
 setxkbmap es
+
+# Start clipboard
+
+clipit -nd &

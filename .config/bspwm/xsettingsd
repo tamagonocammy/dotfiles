@@ -1,8 +1,9 @@
 ## Copyright (C) 2020-2022 Aditya Shakya <adi1090x@gmail.com>
 ## Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
 
-Net/ThemeName "Gruvbox"
-Net/IconThemeName "GruvboxPlus"
+Net/ThemeName "Dracula"
+Net/IconThemeName "Nordic-Folders"
+Gtk/CursorThemeName "Qogirr"
 Net/EnableEventSounds "0"
 Net/EnableInputFeedbackSounds "0"
 Xft/DPI "-1"

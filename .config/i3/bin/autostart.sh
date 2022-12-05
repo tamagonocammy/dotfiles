@@ -5,12 +5,7 @@
 ## Autostart Programs
 
 # Kill already running process
-_ps=(picom dunst ksuperkey mpd xfce-polkit xfce4-power-manager)
-for _prs in "${_ps[@]}"; do
-	if [[ `pidof ${_prs}` ]]; then
-		killall -9 ${_prs}
-	fi
-done
+killall -9 picom dunst ksuperkey mpd xfce-polkit xfce4-power-manager python 
 
 # Fix cursor
 xsetroot -cursor_name left_ptr
@@ -23,18 +18,17 @@ xfce4-power-manager &
 
 # Enable Super Keys For Menu
 ksuperkey -e 'Super_L=Alt_L|F1' &
-ksuperkey -e 'Super_R=Alt_L|F1' &
 
 # Restore wallpaper
 nitrogen --restore &
 
-# Lauch notification daemon
+# Launch notification daemon
 ~/.config/i3/bin/i3dunst.sh
 
-# Lauch polybar
+# Launch polybar
 ~/.config/i3/bin/i3bar.sh
 
-# Lauch compositor
+# Launch compositor
 ~/.config/i3/bin/i3comp.sh
 
 # Start mpd

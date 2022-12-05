@@ -24,12 +24,12 @@ fixed-center = true
 width = 90%
 height = 24
 offset-x = 5%
-offset-y = 10
+offset-y = 7
 
 background = ${color.BACKGROUND}
 foreground = ${color.FOREGROUND}
 
-radius-top = 10.0
+radius-top = 10.0 
 radius-bottom = 10.0
 
 line-size = 0.5
