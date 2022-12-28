@@ -145,9 +145,5 @@ alias ga='git add'
 alias gc='git commit -m'
 alias gp='git push origin master'
 
-
-# Load Angular CLI autocompletion.
-source <(ng completion script)
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
